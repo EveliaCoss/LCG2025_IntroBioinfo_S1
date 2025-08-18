@@ -11,6 +11,7 @@ book:
     - index.qmd
     - intro.qmd
     - Parte3.qmd
+    - Parte4.qmd
   # Information
   repo-url: https://github.com/EveliaCoss/LCG2025_IntroBioinfo_S1 # link de Github
   sharing: [twitter, facebook, linkedin]

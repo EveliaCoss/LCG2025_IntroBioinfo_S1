@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Introducción a la Bioinformática",
     "section": "",
-    "text": "Información general\n\n\nSobre el curso 📌Requisitos previosAgenda 📆\n\n\nFuente del curso\n\nSemestre: 1ero\nFechas: agosto-diciembre\nLugar: LIIGH-UNAM\nDuración del curso: 2 horas por clase\n\nInstructores:\n\nJair Santiago García Sotelo - Técnico académico, LIIGH-UNAM.\nEvelia Lorena Coss-Navarrete - PostDoc, LIIGH-UNAM. Pagina web\n\nResumen:\nEn este curso se abordarán los conceptos fundamentales para el uso y manejo de las herramientas bioinformáticas básicas más relevantes y comúnmente empleadas en el área. Se incluirá el manejo adecuado del sistema operativo Linux, el uso de bases de datos biológicas, la manipulación de secuencias, así como la creación de programas con funcionalidades sencillas aplicables tanto a la bioinformática como a la programación general.\nObjetivos:\nEn esta curso aprenderás a:\n\nMis primeros pasos en bash.\nConsultar información detallada sobre archivos y directorios utilizando herramientas del sistema operativo Linux.\nPermisos y como cambiarlos.\nDiseñar y ejecutar scripts completos en Bash para automatizar tareas bioinformáticas.\nRealizar búsquedas de patrones en secuencias genéticas utilizando expresiones regulares y herramientas de línea de comandos.\n\nCitar y reutilizar el material del curso\nLos datos del curso se pueden reutilizar y adaptar libremente con la debida atribución. Todos los datos de los cursos de estos repositorios están sujetos a la licencia Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0).\n\n\n\nDebes contar con el sistema operativo Linux instalado o disponer de una terminal Bash Shell funcional en tu sistema operativo. Para más detalles sobre cómo instalar o configurar estos componentes, consulta la sección Instalaciones y requerimientos previos.\n\n\n\n\n\n\nTemas\nFechas\n\n\n\n\n\nIntroducción a la bioinformática\n\n12 agosto\n\n\n\nConceptos Unix y GNU/Linux e instalación del sistema operativo\n\n14 agosto\n\n\n\nMis primeros pasos en Bash (archivos y permisos) y creación de scripts completos\n\n19 y 21 agosto\n\n\n\nBuenas prácticas en Bioinformática\n\n26 agosto\n\n\n\nIntroducción a Markdown\n\n28 agosto",
+    "text": "Información general\n\n\nSobre el curso 📌Requisitos previosAgenda 📆\n\n\n\nSemestre: 1ero\nFechas: agosto-diciembre\nLugar: LIIGH-UNAM\nDuración del curso: 2 horas por clase\n\nInstructores:\n\nJair Santiago García Sotelo - Técnico académico, LIIGH-UNAM.\nEvelia Lorena Coss-Navarrete - PostDoc, LIIGH-UNAM. Pagina web\n\nResumen:\nEn este curso se abordarán los conceptos fundamentales para el uso y manejo de las herramientas bioinformáticas básicas más relevantes y comúnmente empleadas en el área. Se incluirá el manejo adecuado del sistema operativo Linux, el uso de bases de datos biológicas, la manipulación de secuencias, así como la creación de programas con funcionalidades sencillas aplicables tanto a la bioinformática como a la programación general.\nObjetivos:\nEn esta curso aprenderás a:\n\nMis primeros pasos en bash.\nConsultar información detallada sobre archivos y directorios utilizando herramientas del sistema operativo Linux.\nPermisos y como cambiarlos.\nDiseñar y ejecutar scripts completos en Bash para automatizar tareas bioinformáticas.\nRealizar búsquedas de patrones en secuencias genéticas utilizando expresiones regulares y herramientas de línea de comandos.\n\nCitar y reutilizar el material del curso\nLos datos del curso se pueden reutilizar y adaptar libremente con la debida atribución. Todos los datos de los cursos de estos repositorios están sujetos a la licencia Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0).\n\n\n\nDebes contar con el sistema operativo Linux instalado o disponer de una terminal Bash Shell funcional en tu sistema operativo. Para más detalles sobre cómo instalar o configurar estos componentes, consulta la sección Instalaciones y requerimientos previos.\n\n\n\n\n\n\nTemas\nFechas\n\n\n\n\n\nIntroducción a la bioinformática\n\n12 agosto\n\n\n\nConceptos Unix y GNU/Linux e instalación del sistema operativo\n\n14 agosto\n\n\n\nMis primeros pasos en Bash (archivos y permisos) y creación de scripts completos\n\n19 y 21 agosto\n\n\n\nBuenas prácticas en Bioinformática\n\n26 agosto\n\n\n\nIntroducción a Markdown\n\n28 agosto",
     "crumbs": [
       "Información general"
     ]
@@ -14,7 +14,7 @@
     "href": "intro.html",
     "title": "1  Temario",
     "section": "",
-    "text": "El Plan de clases detallado con actividades, recursos, plantillas, material de lectura esta disponible en pdf. Aquí listamos la organización de los temas y las habilidades que el alumno debe lograr.\n\n\n\nTemas\nObjetivo\n\n\n\n\nIntroducción a la bioinformática\n\n\n\n\n\nConceptos Unix y GNU/Linux e instalación del sistema operativo\n\n\n\nMis primeros pasos en Bash (archivos y permisos) y creación de scripts completos\n\n\n\nBuenas prácticas en Bioinformática\n\nAplicar buenas prácticas en bioinformática para asegurar que los análisis sean reproducibles, claros y colaborativos, mediante código modular, documentación precisa y control de calidad.\n\n\n\nIntroducción a Markdown\n\nUsar Markdown como formato estándar en bioinformática.\nComprender las fases del análisis de datos bioinformáticos.",
+    "text": "El Plan de clases detallado con actividades, recursos, plantillas, material de lectura esta disponible en pdf. Aquí listamos la organización de los temas y las habilidades que el alumno debe lograr.\n\n\n\nTemas\nObjetivo\n\n\n\n\nIntroducción a la bioinformática\n\nComprender qué es Unix, sus características principales y su utilidad en entornos científicos y técnicos.\n\n\n\nConceptos Unix y GNU/Linux y protocolos de internet\n\nIdentificar los principales protocolos de intercambio de datos en internet y entender su funcionamiento básico.\nAplicar el protocolo de transferencia de archivos (FTP/SFTP) y acceder a servidores remotos de forma segura y eficiente.\n\n\n\nMis primeros pasos en Bash (archivos y permisos) y creación de scripts completos\n\nComprender la estructura del sistema de archivos en Unix y saber desplazarse por él eficientemente.\nConocer y aplicar comandos básicos para gestionar archivos y directorios.\nIdentificar los tipos de archivos en Unix, visualizar su contenido y entender su manejo.\nUtilizar herramientas para comprimir y descomprimir archivos.\n\n\n\nBuenas prácticas en Bioinformática\n\nAplicar buenas prácticas en bioinformática para asegurar que los análisis sean reproducibles, claros y colaborativos, mediante código modular, documentación precisa y control de calidad.\n\n\n\nIntroducción a Markdown\n\nUsar Markdown como formato estándar en bioinformática.\nComprender las fases del análisis de datos bioinformáticos.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Temario</span>"
     ]
@@ -22,7 +22,7 @@
   {
     "objectID": "Parte3.html",
     "href": "Parte3.html",
-    "title": "2  Buenas practicas en R",
+    "title": "2  Buenas prácticas en bioinformática",
     "section": "",
     "text": "2.1 Materiales informativos\nNotas personales recabadas a partir de los tutoriales y ejemplos 😊. Espero que les funcione 💜\n💪 Estuve muy intensa viendo su codigo. Muchas gracias por tenerlos publico.",
     "crumbs": [
@@ -32,7 +32,7 @@
   {
     "objectID": "Parte3.html#materiales-informativos",
     "href": "Parte3.html#materiales-informativos",
-    "title": "2  Buenas practicas en R",
+    "title": "2  Buenas prácticas en bioinformática",
     "section": "",
     "text": "Curso de Joselyn Cristina Chávez Fuentes\nMe ayudo mucho este Video\nDocumentación de funciones de Andrés Arredondo Cruz",
     "crumbs": [
@@ -42,7 +42,7 @@
   {
     "objectID": "Parte3.html#un-algoritmo-nos-permite-resolver-un-problema",
     "href": "Parte3.html#un-algoritmo-nos-permite-resolver-un-problema",
-    "title": "2  Buenas practicas en R",
+    "title": "2  Buenas prácticas en bioinformática",
     "section": "2.2 Un algoritmo nos permite resolver un problema ⭐",
     "text": "2.2 Un algoritmo nos permite resolver un problema ⭐\nUn algoritmo es un método para resolver un problema mediante una serie de pasos definidos, precisos y finitos.\n\nDefinido: si se sigue dos veces, se obtiene el mismo resultado. Es reproducible.\nPreciso: implica el orden de realización de cada uno de los pasos.\nFinito: Tiene un numero determinado de pasos, implica que tiene un fin.\n\n\nUn algoritmo podemos definirlo como un programa o software.",
     "crumbs": [
@@ -52,9 +52,9 @@
   {
     "objectID": "Parte3.html#para-escribir-un-buen-software-necesitas",
     "href": "Parte3.html#para-escribir-un-buen-software-necesitas",
-    "title": "2  Buenas practicas en R",
+    "title": "2  Buenas prácticas en bioinformática",
     "section": "2.3 Para escribir un buen software necesitas:",
-    "text": "2.3 Para escribir un buen software necesitas:\n\nEscribir código mantenible (maintainable code), usar control de versiones (version control) y rastreadores de problemas (issue trackers), revisiones de código (code reviews), pruebas unitarias (unit testing) y automatización de tareas (task automation).\nWilson, et al. 2014. PLOS Biology\n\nCon el fin de previnir retracciones.\n\n\n\n\n\n\nPasos para escribir un buen software\n\n\n\n\nAnálisis del problema / Definir el problema\nDiseño del algoritmo / Diseño del programa\nCodificación / Escribir el código\nCompilación y ejecución del programa\nVerificación / Realizar pruebas\nDepuración / Detectar los errores y corregirlos\n\n\nProgramacion defensiva\n\n\nDocumentación",
+    "text": "2.3 Para escribir un buen software necesitas:\n\nEscribir código mantenible (maintainable code), usar control de versiones (version control) y rastreadores de problemas (issue trackers), revisiones de código (code reviews), pruebas unitarias (unit testing) y automatización de tareas (task automation).\nWilson, et al. 2014. PLOS Biology\n\nEn bioinformática, es fundamental garantizar el uso ético y responsable de datos sensibles, como los genomas humanos, respetando la privacidad y los marcos legales vigentes. Al mismo tiempo, se debe fomentar la ciencia abierta mediante prácticas transparentes y reproducibles, sin comprometer la integridad de la información. Estas acciones no solo fortalecen la confianza en los resultados, sino que también previenen errores graves que podrían derivar en la retracción de artículos científicos.\n\n\n\n\n\n\n\n\n\n\n\nPasos para escribir un buen software\n\n\n\n\nAnálisis del problema / Definir el problema\nDiseño del algoritmo / Diseño del programa\nCodificación / Escribir el código\nCompilación y ejecución del programa\nVerificación / Realizar pruebas\nDepuración / Detectar los errores y corregirlos\n\n\nProgramacion defensiva\n\n\nDocumentación",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Buenas prácticas en bioinformática</span>"
     ]
@@ -62,9 +62,9 @@
   {
     "objectID": "Parte3.html#paso-7-documentación",
     "href": "Parte3.html#paso-7-documentación",
-    "title": "2  Buenas practicas en R",
+    "title": "2  Buenas prácticas en bioinformática",
     "section": "2.4 Paso 7: Documentación",
-    "text": "2.4 Paso 7: Documentación\n\n\n\n\n\n\nNote\n\n\n\n\nAutor (author): Su nombre\nDia (date): Fecha de creación\nPaquetes (packages)\nDirectorio de trabajo (Working directory): En que carpeta se encuentra tu datos y programa.\nInformación descriptiva del programa (Description): ¿Para qué sirve el programa? Ej: El siguiente programa realiza la suma de dos numeros enteros a partir de la entrada del usuario y posteriormente la imprime en pantalla.\nUsage ¿Cómo se utiliza?\nArgumentos (Arguments)\n\nInformación de entrada (Data Inputs): Ej: Solo numeros enteros (sin decimales).\nInformación de salida (Outpus): Graficas, figuras, tablas, etc.",
+    "text": "2.4 Paso 7: Documentación\n\n\n\n\n\n\nNote\n\n\n\n\nTítulo (opcional)\nAutor (author): Su nombre\nDia (date): Fecha de creación\nPaquetes (packages)\nDirectorio de trabajo (Working directory): En que carpeta se encuentra tu datos y programa.\nInformación descriptiva del programa (Description): ¿Para qué sirve el programa? Ej: El siguiente programa realiza la suma de dos numeros enteros a partir de la entrada del usuario y posteriormente la imprime en pantalla.\nUsage ¿Cómo se utiliza?\nArgumentos (Arguments)\n\nInformación de entrada (Data Inputs): Ej: Solo numeros enteros (sin decimales).\nInformación de salida (Outpus): Graficas, figuras, tablas, etc.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Buenas prácticas en bioinformática</span>"
     ]
@@ -82,9 +82,19 @@
   {
     "objectID": "Parte3.html#referencias",
     "href": "Parte3.html#referencias",
-    "title": "2  Buenas practicas en R",
+    "title": "2  Buenas prácticas en bioinformática",
     "section": "2.6 Referencias",
-    "text": "2.6 Referencias\n\nHaydee tutorial: Temas Selectos de Análisis Numérico y Computación Científica: Computo científico para el análisis de datos\nAlejandra Medina tutorial: Control de versiones con GitHub y RStudio\nWilson, et al. 2014. Best Practices for Scientific Computing. PLOS Biology\nEvelia Coss - tutorial Buenas practicas en R\nEvelia Coss - Make your CV tutorial",
+    "text": "2.6 Referencias\n\nHaydee tutorial: Temas Selectos de Análisis Numérico y Computación Científica: Computo científico para el análisis de datos\nAlejandra Medina tutorial: Control de versiones con GitHub y RStudio\nWilson, et al. 2014. Best Practices for Scientific Computing. PLOS Biology\nEvelia Coss - tutorial Buenas practicas en R\nEvelia Coss - Make your CV tutorial\nMarkdwn Guide - Getting Started\nAllison Horst - Imagenes\nStatistical Computing using R and Python\nTraining Materials",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Buenas prácticas en bioinformática</span>"
+    ]
+  },
+  {
+    "objectID": "Parte3.html#puntos-claves-para-buenas-prácticas-en-bioinfo",
+    "href": "Parte3.html#puntos-claves-para-buenas-prácticas-en-bioinfo",
+    "title": "2  Buenas prácticas en bioinformática",
+    "section": "2.5 Puntos claves para buenas prácticas en bioinfo ⭐",
+    "text": "2.5 Puntos claves para buenas prácticas en bioinfo ⭐\n\nEscriba programas para personas, no para computadoras (Documenta qué hace y por qué). - Se coherente en la nomenclatura, indentación y otros aspectos del estilo.\nModularidad: Divide los programas en funciones cortas de un solo propósito. 💻 📚\nNo repitas tu código. Crea pasos reproducibles o que se repitan por si solas. ➰\nPlanifique los errores (Programacion defensiva) 🚩\nOptimice el software sólo después de que funcione correctamente. - Si funciona no lo modifiques, simplificalo.\nColaborar - Busque siempre bibliotecas de software bien mantenidas que hagan lo que necesita. 👥\n\n\n\n\n\n\n\nEjemplo de como realizo mis documentos 💜\n\n\n\nAqui les dejo el script que les doy a mis alumnos VisualizacionDatos.R del curso de Análisis de datos de RNA-Seq.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Buenas prácticas en bioinformática</span>"
     ]

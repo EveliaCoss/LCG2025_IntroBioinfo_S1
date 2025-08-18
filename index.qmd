@@ -7,8 +7,6 @@
 -   ::: {.panel-tabset group="globalInfo"}
     ### Sobre el curso 📌
 
-    Fuente del curso
-
     -   **Semestre:** 1ero
     -   **Fechas:** agosto-diciembre
     -   **Lugar:** LIIGH-UNAM

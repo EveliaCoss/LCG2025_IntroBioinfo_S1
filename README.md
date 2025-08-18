@@ -1,37 +1,35 @@
-# LCG2025_IntroBioinfo_S1
+# Introducción a la Bioinformática
+
+## Sobre el curso 📌
+
+- **Semestre:** 1ero
+- **Fechas:** agosto-diciembre
+- **Lugar:** LIIGH-UNAM
+- **Duración del curso:** 2 horas por clase
+- **Instructores:**
+  + Jair Santiago García Sotelo - Técnico académico, LIIGH-UNAM.
+  + Evelia Lorena Coss-Navarrete - PostDoc, LIIGH-UNAM. Pagina web
+
+## Descripción del curso
+
+En este curso se abordarán los conceptos fundamentales para el uso y manejo de las herramientas bioinformáticas básicas más relevantes y comúnmente empleadas en el área. Se incluirá el manejo adecuado del sistema operativo Linux, el uso de bases de datos biológicas, la manipulación de secuencias, así como la creación de programas con funcionalidades sencillas aplicables tanto a la bioinformática como a la programación general.
+
+## Temario
+
+- Introducción a la bioinformática
+- Conceptos Unix y GNU/Linux
+- Instalación del sistema operativo
+- Mis primeros pasos en Bash (archivos y permisos) 
+- Creación de scripts completos en Bash (redireccionamiento y pipelines)
+- Buenas prácticas en Bioinformática
+- Introducción a Markdown
+- Visualización, edición y creación de archivos en Bash
+- Bases de datos de biológicos
+- Análisis de archivos y expresiones regulates
+
+### Material
 
 
 
-
-> [!NOTE]  
-> Files ending with `.tsv` use tabulators, and files ending with `.csv` use
-> commas, as separators. Some files are compressed (e.g. have `.gz` or `bz2`
-> extension) to save space.
-
-> [!IMPORTANT]  
-> These files are compressed to save space. Decompress with `bunzip2 file`.
-
-> [!CAUTION]
-> Some rows have empty values in the **phenotype** and **measurement_value**
-> variables; these rows belong to the **testing dataset**.
-> 
-> Consequently, rows that do have these variables correspond to the
-> **training dataset**.
-
-
-Referencias
-
-It also pulls the
-RGI[^rgi] Docker image as described
-[here](https://github.com/arpcard/rgi#install-rgi-using-docker-singularity),
-and clones [Minpath's GitHub repository](https://github.com/mgtools/MinPath).
-This step requires Docker.
-
-[^rgi]: Alcock, B. P., Huynh, W., Chalil, R., Smith, K. W., Raphenya, A. R.,
-Wlodarski, M. A., Edalatmand, A., Petkau, A., Syed, S. A., Tsang, K. K., Baker,
-S. J. C., Dave, M., McCarthy, M. C., Mukiri, K. M., Nasir, J. A., Golbon, B.,
-Imtiaz, H., Jiang, X., Kaur, K., … McArthur, A. G. (2022, Oct 20). CARD 2023:
-expanded curation, support for machine learning, and resistome prediction at
-the Comprehensive Antibiotic Resistance Database. *Nucleic Acids Res., 51*(D1),
-D690-D699. [10.1093/nar/gkac920](https://doi.org/10.1093/nar/gkac920)
+## Referencias
 

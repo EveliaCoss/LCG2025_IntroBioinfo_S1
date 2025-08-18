@@ -20,6 +20,8 @@ Un **algoritmo** es un método para resolver un problema mediante una serie de p
 
 > Un algoritmo podemos definirlo como un **programa o software**.
 
+[![](reproducible/figures/allison-horst-code-kitchen.png)](https://allisonhorst.com/allison-horst)
+
 ## **Para escribir un buen software necesitas:**
 
 > Escribir **código mantenible (maintainable code), usar control de versiones (version control) y rastreadores de problemas (issue trackers), revisiones de código (code reviews), pruebas unitarias (unit testing) y automatización de tareas (task automation)**.
@@ -27,6 +29,8 @@ Un **algoritmo** es un método para resolver un problema mediante una serie de p
 > [Wilson, *et al.* 2014. *PLOS Biology*](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745)
 
 En bioinformática, es fundamental garantizar el uso **ético y responsable de datos sensibles**, como los genomas humanos, respetando la privacidad y los marcos legales vigentes. Al mismo tiempo, se debe fomentar la ciencia abierta **mediante prácticas transparentes y reproducibles**, sin comprometer la integridad de la información. Estas acciones no solo fortalecen la **confianza en los resultados**, sino que también previenen errores graves que podrían derivar en la **retracción de artículos científicos**.
+
+[![](reproducible/figures/what-code-quality-1.jpg){fig-align="center"}](https://devcom.com/tech-blog/code-quality-definition-how-to-improve-code-quality/)
 
 ::: callout-note
 ## Pasos para escribir un buen software
@@ -103,3 +107,8 @@ Aqui les dejo el script que les doy a mis alumnos [VisualizacionDatos.R](https:/
 -   Wilson, et al. 2014. [Best Practices for Scientific Computing](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745). PLOS Biology
 -   Evelia Coss - tutorial [Buenas practicas en R](https://github.com/EveliaCoss/Buenaspracticas_R_Mayo2024)
 -   Evelia Coss - [Make your CV tutorial](https://github.com/EveliaCoss/Make_yourCV)
+-   Markdwn Guide - [Getting Started](https://www.markdownguide.org/getting-started/)
+-   Allison Horst - [Imagenes](https://allisonhorst.com/allison-horst)
+-   [Statistical Computing using R and Python](https://srvanderplas.github.io/stat-computing-r-python/)
+-   [Training Materials](https://learning.nceas.ucsb.edu/2024-10-coreR/)
+-   [Visual Studio Code](https://damiandeluca.com.ar/como-comenzar-con-visual-studio-code-una-guia-para-principiantes)
