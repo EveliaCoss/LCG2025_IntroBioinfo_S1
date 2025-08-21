@@ -213,7 +213,7 @@ Imagen tomada de: [Allison Horst](https://allisonhorst.com/allison-horst)
 
 > Escribir código mantenible (maintainable code), usar control de versiones (version control) y rastreadores de problemas (issue trackers), revisiones de código (code reviews), pruebas unitarias (unit testing) y automatización de tareas (task automation).
 >
-> Wilson, *et al.* 2014. *PLOS Biology*
+> [Wilson, *et al.* 2014. *PLOS Biology*](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745)
 
 ```{r, echo=FALSE, out.width='60%', fig.align='center'}
 knitr::include_graphics("figures/what-code-quality-1.jpg")
@@ -278,15 +278,15 @@ Imagen tomada de: [Allison Horst](https://allisonhorst.com/allison-horst)
 
 - **Directorio de trabajo (Working directory):** En que carpeta se encuentra tu datos y programa.
 
-- **Información descriptiva del programa (Description):** ¿Para qué sirve el programa? Ej: El siguiente programa realiza la suma de dos numeros enteros a partir de la entrada del usuario y posteriormente la imprime en pantalla.
+- **Información descriptiva del programa (Description):** ¿Para qué sirve el programa? Ej: El siguiente programa realiza la suma de dos números enteros a partir de la entrada del usuario y posteriormente la imprime en pantalla.
 
 - **Usage ¿Cómo se utiliza?**
 
 - **Argumentos (Arguments)**
 
-  + Información de entrada (Data Inputs): Ej: Solo numeros enteros (sin decimales).
+  + Información de entrada (Data Inputs): Ej: Solo números enteros (sin decimales).
 
-  + Información de salida (Outpus): Graficas, figuras, tablas, etc.
+  + Información de salida (Outpus): Gráficas, figuras, tablas, etc.
 
 ]
 
@@ -316,6 +316,135 @@ knitr::include_graphics("figures/meme_documentacion.jpg")
 
 > Ejemplo de como realizo mis documentos 💜
 > Aqui les dejo el script que les doy a mis alumnos [VisualizacionDatos.R](https://github.com/EveliaCoss/RNAseq_classFEB2024/blob/main/Practica_Dia3/scripts/VisualizacionDatos.R) del curso de [Análisis de datos de RNA-Seq](https://github.com/EveliaCoss/RNAseq_classFEB2024).
+
+---
+
+## Código reproducible 🌟
+
+.pull-left[
+### Contenedores ⚡
+
+.pull-left[
+- [Docker](https://docs.docker.com/) 
+- [Singularity](https://docs.sylabs.io/guides/3.5/user-guide/introduction.html)
+- [Apptainer](https://apptainer.org/)
+]
+
+.pull-right[
+```{r, echo=FALSE, out.width='50%', fig.align='right'}
+knitr::include_graphics("figures/SingularityLogo.png")
+```
+]
+
+Se puede almacenar todo el workflow, archivos, generando código reproducible y cooperativo.
+
+> Minicurso del uso de [Docker](https://www.melbournebioinformatics.org.au/tutorials/tutorials/docker/docker/).
+
+]
+
+.pull-right[
+
+.pull-left[
+### Crear pipelines completos 🌀
+
+- [Nextflow](https://training.nextflow.io/es/) 
+- [Snakemake](https://snakemake.readthedocs.io/en/stable/tutorial/tutorial.html)
+]
+
+.pull-right[
+```{r, echo=FALSE, out.width='80%', fig.align='right'}
+knitr::include_graphics("figures/nf-core-logo.png")
+```
+] 
+
+.content-box-gray[
+Curso de Nextflow en los [VieRnes de Bioinformática (2024)](https://github.com/EveliaCoss/ViernesBioinfo2024#viernes-22-23-y-24-nextflow) con el Dr. Israel Aguilar.
+]
+
+]
+
+---
+
+## Repositorios digitales abiertos
+
+Contar con repositorios digitales de acceso **abierto** diseñado para **almacenar, compartir y preservar productos** de investigación científica.
+
+.panelset[
+.panel[.panel-name[Repositorios académicos y científicos]
+
+| Página web    | Descripción breve                                                             |
+|---------------|-------------------------------------------------------------------------------|
+| [Figshare](https://figshare.com/) | Ideal para compartir datasets, figuras, presentaciones y multimedia con DOI.       |
+| [bioRxiv](https://www.biorxiv.org/) / [medRxiv](https://www.medrxiv.org/)  | Preprints en biología y medicina, respectivamente.                       |
+
+]
+
+.panel[.panel-name[Repositorios de software y código]
+
+| Repositorio   |  Enfoque principal                                                            |
+|---------------|-------------------------------------------------------------------------------|
+| [GitHub](https://github.com/)        | Desarrollo colaborativo de software, documentación y automatización.          |
+| [GitLab](https://about.gitlab.com/gitlab-duo/agent-platform/)        | Similar a GitHub, con más control sobre privacidad y CI/CD integrado.         |
+| [Bitbucket](https://bitbucket.org/product/)     | Integración con Jira y herramientas ágiles, útil para equipos técnicos.       |
+| [Zenodo](https://zenodo.org/)      | Publicación de software, datasets y documentación con DOI; integración directa con GitHub para versionado y citación reproducible. Ideal para proyectos científicos y educativos.  |
+
+]
+]
+
+
+---
+
+## Datos en investigación
+
+Como científico puedes:
+
+- **Crear datos.** Resultado de tus experimentos, de muestreos, de curación de datos, etc.
+- **Usar datos de terceros.** Puedes a partir de éstos datos, analizarlos y descubrir nuevo conocimiento.
+  + **Datos primarios o sin procesar:** Datos originales que han sido recolectados pero aún no han sido procesados o analizados. Algunos ejemplos son los registros sonoros, observaciones, notas de campo o datos de experimentos.
+  + **Datos procesados:** Datos que han sido digitalizados, traducidos, transcritos, limpiados, validados y verificados.
+  + **Datos analizados:** Modelos, gráficos, tablas, textos u otros, que han sido creados a partir de los datos primarios y procesados, y que se pretende sean de ayuda en el descubrimiento de información útil, la presentación de conclusiones y la toma de decisiones.
+
+https://biblioguias.cepal.org/gestion-de-datos-de-investigacion/tipos-datos
+
+Diapo de https://lcg-cursos.github.io/material/introbioinfo/L2-buenas-practicas.html#22
+
+---
+class: inverse, center, middle
+
+`r fontawesome::fa("laptop-file", height = "3em")`
+# Zenodo
+
+---
+
+## Zenodo
+
+### 🔍 ¿Para qué sirve Zenodo?
+
+- **Publicar artículos, datasets, software y más:** Puedes subir desde papers y conjuntos de datos hasta scripts, presentaciones y materiales didácticos.
+- **Asignar DOI automáticamente:** Cada archivo recibe un identificador digital persistente (DOI), lo que facilita su citación y trazabilidad.
+- **Cumplir con políticas de ciencia abierta:** Ideal para proyectos financiados por organismos que exigen acceso abierto.
+- **Crear comunidades temáticas:** Puedes agrupar tus publicaciones en colecciones colaborativas.
+- **Versionado y licencias:** Permite subir nuevas versiones de un mismo trabajo y elegir licencias como CC BY 4.0.
+
+
+.content-box-gray[
+**Ejemplo práctico:** Si estás desarrollando un paquete en R, puedes subir el código, documentación, ejemplos y datasets a Zenodo. Al vincularlo con GitHub, incluso puedes generar un DOI para cada release del repositorio.
+
+- Paquete [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/articles/intro.html), 
+- Zenodo del paquete: [allisonhorst/palmerpenguins: v0.1.0](https://zenodo.org/records/3960218)
+- Zenodo de los datos: [datos de palmerpenguins](https://zenodo.org/records/14902740)
+
+]
+
+
+---
+
+GitHub
+
+---
+
+
+
 
 ---
 class: inverse, center, middle
@@ -375,8 +504,6 @@ Porque:
 | `Sphinx + MyST`        | Documentación avanzada con soporte para Markdown                             |
 | `markdown`, `mistune`  | Librerías para convertir Markdown a HTML                                     |
 | `nbconvert`            | Exportar notebooks con Markdown a PDF, HTML, LaTeX, etc.                     |
-
-
 
 ]
 ]
@@ -443,6 +570,10 @@ knitr::include_graphics("figures/vsc_interfaz.png")
 
 ]
 
+
+---
+
+
 Vamos a instalarlo de acuerdo a [nuestra plataforma](https://code.visualstudio.com/).
 
 ---
@@ -465,7 +596,6 @@ Vamos a ver como se realiza la Sintaxis de escritura y formatos básicos emplead
 - [Rmarkdown](https://github.com/EveliaCoss/RmarkdownGraphs_notes)
 
 
-
 ---
 
 ```{r, echo=FALSE, out.width='100%', fig.align='center'}
@@ -480,7 +610,14 @@ knitr::include_graphics("figures/vsc_visualizacion_v2.png")
 
 
 
+---
 
+class: center, middle
+
+`r fontawesome::fa("code", height = "3em")`
+# Fin
+
+Gracias por tu atención, respira y coméntame tus dudas. 
 
 
 
