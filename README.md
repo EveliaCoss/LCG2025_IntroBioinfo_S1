@@ -27,9 +27,15 @@ En este curso se abordarán los conceptos fundamentales para el uso y manejo de 
 - Bases de datos de biológicos
 - Análisis de archivos y expresiones regulates
 
-### Material
+### Buenas prácticas en Bioinformática
 
+- Material:  
+- Tarea:
+- Referencias:
+https://lcg-cursos.github.io/material/introbioinfo/
 
+### Introducción a Markdown
 
-## Referencias
-
+- Material:  
+- 
+- 

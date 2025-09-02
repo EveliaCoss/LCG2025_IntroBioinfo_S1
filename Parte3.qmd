@@ -102,6 +102,16 @@ Aqui les dejo el script que les doy a mis alumnos [VisualizacionDatos.R](https:/
 
 ## Referencias
 
+-   Presentación de [Reproducibilidad de Miriam Lerma](https://miriamll.github.io/teaching_R_Rmd/Repro#1)
+-   Presentación [introducción a Git, GitHub y Zenodo de Miriam Lerma](https://miriamll.github.io/teaching_R_Rmd/GitGithubZenodo#1)
+-   [Presentación de Introducción a la Bioinformática - Heladia Salgado](https://lcg-cursos.github.io/material/introbioinfo/L2-buenas-practicas.html#1)
+-   [Mi próximo artículo científico en R de Florencia D´Andrea](https://flor14.github.io/rladies-jujuy/presentacion.html?panelset=compendio&panelset1=bibliograf%25C3%25ADa#3)
+-   [Kristie Reproducible Research](https://github.com/WhitakerLab/ReproducibleResearch)
+-   [Presentación de Kristie](https://figshare.com/articles/journal_contribution/Showing_your_working_a_how_to_guide_to_reproducible_research/5443201/1?file=9410686)
+-   [FAIR- bioinformatic](https://ifb-elixirfr.github.io/IFB-FAIR-bioinfo-training/assets/pdf/Session2020/01_introduction.pdf)
+-   [Unidad 1 Bioinformática e investigación reproducible](https://github.com/AliciaMstt/BioinfInvRepro2016-II/blob/master/Unidad1/Unidad1_Bioinf_e_Investigaci%C3%B3n_Reproducible.md)
+-   [The five pillars of computational reproducibility: bioinformatics and beyond](https://academic.oup.com/bib/article/24/6/bbad375/7326135)
+-   [Investigación reproducible y análisis de datos](https://open-science-training-handbook.github.io/Open-Science-Training-Handbook_ES/02OpenScienceBasics/04ReproducibleResearchAndDataAnalysis.html)
 -   Haydee tutorial: [Temas Selectos de Análisis Numérico y Computación Científica: Computo científico para el análisis de datos](https://haydeeperuyero.github.io/Computo_Cientifico/)
 -   Alejandra Medina tutorial: [Control de versiones con GitHub y RStudio](https://comunidadbioinfo.github.io/cdsb2023/control-de-versiones-con-github-y-rstudio.html)
 -   Wilson, et al. 2014. [Best Practices for Scientific Computing](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745). PLOS Biology
@@ -112,3 +122,4 @@ Aqui les dejo el script que les doy a mis alumnos [VisualizacionDatos.R](https:/
 -   [Statistical Computing using R and Python](https://srvanderplas.github.io/stat-computing-r-python/)
 -   [Training Materials](https://learning.nceas.ucsb.edu/2024-10-coreR/)
 -   [Visual Studio Code](https://damiandeluca.com.ar/como-comenzar-con-visual-studio-code-una-guia-para-principiantes)
+-   [Articulo reproducibilidad](https://blog.ml.cmu.edu/2020/08/31/5-reproducibility/)

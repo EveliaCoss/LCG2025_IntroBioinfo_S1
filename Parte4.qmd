@@ -7,6 +7,7 @@ Markdown es un **lenguaje de marcado ligero** que permite añadir elementos de f
 -   Sencillo y legible, sin necesidad de usar editores complicados o HTML.
 -   **lenguaje de marcado ligero:** Escribir texto que incluye instrucciones simples para darle formato.
 
+::: callout-note
 ### 🧩 ¿Por qué se llama “ligero”?
 
 Porque:
@@ -14,6 +15,7 @@ Porque:
 -   Usa símbolos sencillos como `*, #,` o `-` para indicar formato.
 -   No requiere cerrar etiquetas como `<strong> o <div>` (como en HTML).
 -   Es minimalista y limpio, ideal para escribir rápido sin distracciones.
+:::
 
 ## 🧠 ¿Para qué se usa?
 
@@ -25,10 +27,10 @@ Porque:
 **En R**
 
 | Paquete / Programa | Uso principal |
-|----|----|
-| `rmarkdown` | Crear documentos reproducibles con texto, código y resultados |
+|------------------------------------|------------------------------------|
+| [`rmarkdown`](https://github.com/EveliaCoss/RmarkdownGraphs_notes) | Crear documentos reproducibles con texto, código y resultados |
 | `knitr` | Ejecutar chunks de código en RMarkdown |
-| `Quarto` | Plataforma moderna para documentos con R, Python, etc. |
+| [`Quarto`](https://quarto.org/docs/get-started/hello/vscode.html) | Plataforma moderna para documentos con R, Python, etc. |
 | `bookdown` | Crear libros técnicos con Markdown + RMarkdown |
 | `blogdown` | Generar blogs científicos usando Markdown y Hugo |
 | `flexdashboard` | Dashboards interactivos escritos en Markdown |
@@ -36,7 +38,7 @@ Porque:
 **En Python**
 
 | Paquete / Programa | Uso principal |
-|----|----|
+|------------------------------------|------------------------------------|
 | Jupyter Notebooks | Celdas Markdown para explicar y documentar junto con código |
 | `Quarto` | Igual que en R, permite combinar Markdown con código Python |
 | `mkdocs` | Generar sitios web de documentación técnica desde archivos Markdown |
@@ -59,4 +61,33 @@ La aplicación y el procesador de Markdown son dos componentes independientes. P
 
 [![Imagen tomada de: https://www.markdownguide.org/getting-started/](reproducible/figures/markdown-flowchart.png)](https://www.markdownguide.org/getting-started/)
 
+## **Sintaxis de escritura y formato básicos**
+
+Revisar la [documentación de GitHub](https://docs.github.com/es/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+
+## Ejercicio individual: Página de inicio en GitHub
+
+::: callout-note
+## Actividad
+
+1.  En GitHub, crea un repositorio con el mismo nombre de usuario. Ejemplo: Mi usuario es EveliaCoss y mi repositorio se llama EveliaCoss, dandome la siguiente liga https://github.com/EveliaCoss/EveliaCoss
+
+2.  Agrega un README al repositorio con tu informacion. Por Default ya trae una plantilla, modificala y adaptala a tu gusto.
+
+3.  Visualiza como cambia tu inicio en el Github.
+:::
+
+[![](reproducible/figures/EveliaCoss_inciio.jpg)](https://github.com/EveliaCoss)
+
 ## Referencias
+
+-   [Documentación de GitHub](https://docs.github.com/es/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+-   [Libro de Rmarkdown](https://michael-franke.github.io/intro-data-analysis/ch-01-01-Rmarkdown.html)
+-   [Ejercicios con Markdown](https://www.markdowntutorial.com/es/lesson/1/)
+-   [Curso de Heladia Salgado](https://lcg-cursos.github.io/material/introbioinfo/)
+-   Curso de [Git y GitHub Evelia Coss](https://eveliacoss.github.io/Workshop_GitGithub2025/Parte2.html)
+-   [Markdown and rmarkdown](https://faculty.washington.edu/otoomet/info201-book/markdown.html)
+-   [Galeria de Markdown](https://rmarkdown.rstudio.com/gallery.html)
+-   [Lesson 3: Basic Syntax](https://zsmith27.github.io/rmarkdown_crash-course/lesson-3-basic-syntax.html)
+-   [Introduction to Open Data Science with R](https://carpentries-incubator.github.io/open-science-with-r/aio/index.html)
+-   [Data Science for Psychologists](https://bookdown.org/hneth/ds4psy/)
