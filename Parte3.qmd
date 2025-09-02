@@ -3,7 +3,7 @@
 Notas personales recabadas a partir de los tutoriales y ejemplos 😊. Espero que les funcione 💜
 
 ::: callout-note
-Presentación completa empleando Rmarkdown
+[Presentación completa](https://eveliacoss.github.io/LCG2025_S1_Buenaspracticas_presentacion/Dia1_BuenasPracticas.html#1) empleando Rmarkdown
 :::
 
 ## Materiales informativos

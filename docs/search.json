@@ -1,0 +1,162 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Introducción a la Bioinformática",
+    "section": "",
+    "text": "Información general\n\n\nSobre el curso 📌Requisitos previosAgenda 📆\n\n\n\nSemestre: 1ero\nFechas: agosto-diciembre\nLugar: LIIGH-UNAM\nDuración del curso: 2 horas por clase\n\nInstructores:\n\nJair Santiago García Sotelo - Técnico académico, LIIGH-UNAM.\nEvelia Lorena Coss-Navarrete - PostDoc, LIIGH-UNAM. Pagina web\n\nResumen:\nEn este curso se abordarán los conceptos fundamentales para el uso y manejo de las herramientas bioinformáticas básicas más relevantes y comúnmente empleadas en el área. Se incluirá el manejo adecuado del sistema operativo Linux, el uso de bases de datos biológicas, la manipulación de secuencias, así como la creación de programas con funcionalidades sencillas aplicables tanto a la bioinformática como a la programación general.\nObjetivos:\nEn esta curso aprenderás a:\n\nMis primeros pasos en bash.\nConsultar información detallada sobre archivos y directorios utilizando herramientas del sistema operativo Linux.\nPermisos y como cambiarlos.\nDiseñar y ejecutar scripts completos en Bash para automatizar tareas bioinformáticas.\nRealizar búsquedas de patrones en secuencias genéticas utilizando expresiones regulares y herramientas de línea de comandos.\n\nCitar y reutilizar el material del curso\nLos datos del curso se pueden reutilizar y adaptar libremente con la debida atribución. Todos los datos de los cursos de estos repositorios están sujetos a la licencia Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0).\n\n\n\nDebes contar con el sistema operativo Linux instalado o disponer de una terminal Bash Shell funcional en tu sistema operativo. Para más detalles sobre cómo instalar o configurar estos componentes, consulta la sección Instalaciones y requerimientos previos.\n\n\n\n\n\n\nTemas\nFechas\n\n\n\n\n\nIntroducción a la bioinformática\n\n12 agosto\n\n\n\nConceptos Unix y GNU/Linux e instalación del sistema operativo\n\n14 agosto\n\n\n\nMis primeros pasos en Bash (archivos y permisos) y creación de scripts completos\n\n19 y 21 agosto\n\n\n\nBuenas prácticas en Bioinformática\n\n26 agosto\n\n\n\nIntroducción a Markdown\n\n28 agosto",
+    "crumbs": [
+      "Información general"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Temario",
+    "section": "",
+    "text": "El Plan de clases detallado con actividades, recursos, plantillas, material de lectura esta disponible en pdf. Aquí listamos la organización de los temas y las habilidades que el alumno debe lograr.\n\n\n\nTemas\nObjetivo\n\n\n\n\nIntroducción a la bioinformática\n\nComprender qué es Unix, sus características principales y su utilidad en entornos científicos y técnicos.\n\n\n\nConceptos Unix y GNU/Linux y protocolos de internet\n\nIdentificar los principales protocolos de intercambio de datos en internet y entender su funcionamiento básico.\nAplicar el protocolo de transferencia de archivos (FTP/SFTP) y acceder a servidores remotos de forma segura y eficiente.\n\n\n\nMis primeros pasos en Bash (archivos y permisos) y creación de scripts completos\n\nComprender la estructura del sistema de archivos en Unix y saber desplazarse por él eficientemente.\nConocer y aplicar comandos básicos para gestionar archivos y directorios.\nIdentificar los tipos de archivos en Unix, visualizar su contenido y entender su manejo.\nUtilizar herramientas para comprimir y descomprimir archivos.\n\n\n\nBuenas prácticas en Bioinformática\n\nAplicar buenas prácticas en bioinformática para asegurar que los análisis sean reproducibles, claros y colaborativos, mediante código modular, documentación precisa y control de calidad.\n\n\n\nIntroducción a Markdown\n\nUsar Markdown como formato estándar en bioinformática.\nComprender las fases del análisis de datos bioinformáticos.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Temario</span>"
+    ]
+  },
+  {
+    "objectID": "Parte3.html",
+    "href": "Parte3.html",
+    "title": "2  Buenas prácticas en bioinformática",
+    "section": "",
+    "text": "2.1 Materiales informativos\nNotas personales recabadas a partir de los tutoriales y ejemplos 😊. Espero que les funcione 💜\n💪 Estuve muy intensa viendo su codigo. Muchas gracias por tenerlos publico.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Buenas prácticas en bioinformática</span>"
+    ]
+  },
+  {
+    "objectID": "Parte3.html#materiales-informativos",
+    "href": "Parte3.html#materiales-informativos",
+    "title": "2  Buenas prácticas en bioinformática",
+    "section": "",
+    "text": "Curso de Joselyn Cristina Chávez Fuentes\nMe ayudo mucho este Video\nDocumentación de funciones de Andrés Arredondo Cruz",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Buenas prácticas en bioinformática</span>"
+    ]
+  },
+  {
+    "objectID": "Parte3.html#un-algoritmo-nos-permite-resolver-un-problema",
+    "href": "Parte3.html#un-algoritmo-nos-permite-resolver-un-problema",
+    "title": "2  Buenas prácticas en bioinformática",
+    "section": "2.2 Un algoritmo nos permite resolver un problema ⭐",
+    "text": "2.2 Un algoritmo nos permite resolver un problema ⭐\nUn algoritmo es un método para resolver un problema mediante una serie de pasos definidos, precisos y finitos.\n\nDefinido: si se sigue dos veces, se obtiene el mismo resultado. Es reproducible.\nPreciso: implica el orden de realización de cada uno de los pasos.\nFinito: Tiene un numero determinado de pasos, implica que tiene un fin.\n\n\nUn algoritmo podemos definirlo como un programa o software.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Buenas prácticas en bioinformática</span>"
+    ]
+  },
+  {
+    "objectID": "Parte3.html#para-escribir-un-buen-software-necesitas",
+    "href": "Parte3.html#para-escribir-un-buen-software-necesitas",
+    "title": "2  Buenas prácticas en bioinformática",
+    "section": "2.3 Para escribir un buen software necesitas:",
+    "text": "2.3 Para escribir un buen software necesitas:\n\nEscribir código mantenible (maintainable code), usar control de versiones (version control) y rastreadores de problemas (issue trackers), revisiones de código (code reviews), pruebas unitarias (unit testing) y automatización de tareas (task automation).\nWilson, et al. 2014. PLOS Biology\n\nEn bioinformática, es fundamental garantizar el uso ético y responsable de datos sensibles, como los genomas humanos, respetando la privacidad y los marcos legales vigentes. Al mismo tiempo, se debe fomentar la ciencia abierta mediante prácticas transparentes y reproducibles, sin comprometer la integridad de la información. Estas acciones no solo fortalecen la confianza en los resultados, sino que también previenen errores graves que podrían derivar en la retracción de artículos científicos.\n\n\n\n\n\n\n\n\n\n\n\nPasos para escribir un buen software\n\n\n\n\nAnálisis del problema / Definir el problema\nDiseño del algoritmo / Diseño del programa\nCodificación / Escribir el código\nCompilación y ejecución del programa\nVerificación / Realizar pruebas\nDepuración / Detectar los errores y corregirlos\n\n\nProgramacion defensiva\n\n\nDocumentación",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Buenas prácticas en bioinformática</span>"
+    ]
+  },
+  {
+    "objectID": "Parte3.html#paso-7-documentación",
+    "href": "Parte3.html#paso-7-documentación",
+    "title": "2  Buenas prácticas en bioinformática",
+    "section": "2.4 Paso 7: Documentación",
+    "text": "2.4 Paso 7: Documentación\n\n\n\n\n\n\nNote\n\n\n\n\nTítulo (opcional)\nAutor (author): Su nombre\nDia (date): Fecha de creación\nPaquetes (packages)\nDirectorio de trabajo (Working directory): En que carpeta se encuentra tu datos y programa.\nInformación descriptiva del programa (Description): ¿Para qué sirve el programa? Ej: El siguiente programa realiza la suma de dos numeros enteros a partir de la entrada del usuario y posteriormente la imprime en pantalla.\nUsage ¿Cómo se utiliza?\nArgumentos (Arguments)\n\nInformación de entrada (Data Inputs): Ej: Solo numeros enteros (sin decimales).\nInformación de salida (Outpus): Graficas, figuras, tablas, etc.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Buenas prácticas en bioinformática</span>"
+    ]
+  },
+  {
+    "objectID": "Parte3.html#puntos-claves-para-buenas-prácticas-en-bioinfo",
+    "href": "Parte3.html#puntos-claves-para-buenas-prácticas-en-bioinfo",
+    "title": "2  Buenas prácticas en bioinformática",
+    "section": "2.5 Puntos claves para buenas prácticas en bioinfo ⭐",
+    "text": "2.5 Puntos claves para buenas prácticas en bioinfo ⭐\n\nEscriba programas para personas, no para computadoras (Documenta qué hace y por qué). - Se coherente en la nomenclatura, indentación y otros aspectos del estilo.\nModularidad: Divide los programas en funciones cortas de un solo propósito. 💻 📚\nNo repitas tu código. Crea pasos reproducibles o que se repitan por si solas. ➰\nPlanifique los errores (Programacion defensiva) 🚩\nOptimice el software sólo después de que funcione correctamente. - Si funciona no lo modifiques, simplificalo.\nColaborar - Busque siempre bibliotecas de software bien mantenidas que hagan lo que necesita. 👥\n\n\n\n\n\n\n\nEjemplo de como realizo mis documentos 💜\n\n\n\nAqui les dejo el script que les doy a mis alumnos VisualizacionDatos.R del curso de Análisis de datos de RNA-Seq.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Buenas prácticas en bioinformática</span>"
+    ]
+  },
+  {
+    "objectID": "Parte3.html#referencias",
+    "href": "Parte3.html#referencias",
+    "title": "2  Buenas prácticas en bioinformática",
+    "section": "2.6 Referencias",
+    "text": "2.6 Referencias\n\nPresentación de Reproducibilidad de Miriam Lerma\nPresentación introducción a Git, GitHub y Zenodo de Miriam Lerma\nPresentación de Introducción a la Bioinformática - Heladia Salgado\nMi próximo artículo científico en R de Florencia D´Andrea\nKristie Reproducible Research\nPresentación de Kristie\nFAIR- bioinformatic\nUnidad 1 Bioinformática e investigación reproducible\nThe five pillars of computational reproducibility: bioinformatics and beyond\nInvestigación reproducible y análisis de datos\nHaydee tutorial: Temas Selectos de Análisis Numérico y Computación Científica: Computo científico para el análisis de datos\nAlejandra Medina tutorial: Control de versiones con GitHub y RStudio\nWilson, et al. 2014. Best Practices for Scientific Computing. PLOS Biology\nEvelia Coss - tutorial Buenas practicas en R\nEvelia Coss - Make your CV tutorial\nMarkdwn Guide - Getting Started\nAllison Horst - Imagenes\nStatistical Computing using R and Python\nTraining Materials\nVisual Studio Code\nArticulo reproducibilidad",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Buenas prácticas en bioinformática</span>"
+    ]
+  },
+  {
+    "objectID": "Parte4.html",
+    "href": "Parte4.html",
+    "title": "3  Introducción a Markdown",
+    "section": "",
+    "text": "3.1 ¿Qué es Markdown?\nMarkdown es un lenguaje de marcado ligero que permite añadir elementos de formato a documentos de texto plano. Creado por John Gruber en 2004, Markdown es actualmente uno de los lenguajes más populares del mundo.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introducción a Markdown</span>"
+    ]
+  },
+  {
+    "objectID": "Parte4.html#qué-es-markdown",
+    "href": "Parte4.html#qué-es-markdown",
+    "title": "3  Introducción a Markdown",
+    "section": "",
+    "text": "Sencillo y legible, sin necesidad de usar editores complicados o HTML.\nlenguaje de marcado ligero: Escribir texto que incluye instrucciones simples para darle formato.\n\n\n\n\n\n\n\n🧩 ¿Por qué se llama “ligero”?\n\n\n\nPorque:\n\nUsa símbolos sencillos como *, #, o - para indicar formato.\nNo requiere cerrar etiquetas como &lt;strong&gt; o &lt;div&gt; (como en HTML).\nEs minimalista y limpio, ideal para escribir rápido sin distracciones.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introducción a Markdown</span>"
+    ]
+  },
+  {
+    "objectID": "Parte4.html#para-qué-se-usa",
+    "href": "Parte4.html#para-qué-se-usa",
+    "title": "3  Introducción a Markdown",
+    "section": "3.2 🧠 ¿Para qué se usa?",
+    "text": "3.2 🧠 ¿Para qué se usa?\n\nCrear documentación técnica o científica\nEscribir README.md en proyectos de GitHub\nGenerar contenido para sitios web\nCrear tesis, notas, libros, presentaciones y posters\n\nEn R\n\n\n\nPaquete / Programa\nUso principal\n\n\n\n\nrmarkdown\nCrear documentos reproducibles con texto, código y resultados\n\n\nknitr\nEjecutar chunks de código en RMarkdown\n\n\nQuarto\nPlataforma moderna para documentos con R, Python, etc.\n\n\nbookdown\nCrear libros técnicos con Markdown + RMarkdown\n\n\nblogdown\nGenerar blogs científicos usando Markdown y Hugo\n\n\nflexdashboard\nDashboards interactivos escritos en Markdown\n\n\n\nEn Python\n\n\n\n\n\n\n\nPaquete / Programa\nUso principal\n\n\n\n\nJupyter Notebooks\nCeldas Markdown para explicar y documentar junto con código\n\n\nQuarto\nIgual que en R, permite combinar Markdown con código Python\n\n\nmkdocs\nGenerar sitios web de documentación técnica desde archivos Markdown\n\n\nSphinx + MyST\nDocumentación avanzada con soporte para Markdown\n\n\nmarkdown, mistune\nLibrerías para convertir Markdown a HTML\n\n\nnbconvert\nExportar notebooks con Markdown a PDF, HTML, LaTeX, etc.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introducción a Markdown</span>"
+    ]
+  },
+  {
+    "objectID": "Parte4.html#cómo-funciona",
+    "href": "Parte4.html#cómo-funciona",
+    "title": "3  Introducción a Markdown",
+    "section": "3.3 ¿Cómo funciona?",
+    "text": "3.3 ¿Cómo funciona?\nPasos generales:\n\nCrear un archivo Markdown con un editor de texto o una aplicación específica. El archivo debe tener la extensión .md o .markdown.\nSe abre el archivo Markdown en una aplicación Markdown.\nSe utiliza la aplicación Markdown para convertir el archivo Markdown en un documento HTML.\nVisualización del archivo HTML en un navegador web o use la aplicación Markdown para convertirlo a otro formato de archivo, como PDF.\n\n\n\n\n\n\n\nNote\n\n\n\nLa aplicación y el procesador de Markdown son dos componentes independientes. Para simplificar, los he combinado en un solo elemento (“aplicación de Markdown”) en la figura a continuación.\n\n\n\n\n\nImagen tomada de: https://www.markdownguide.org/getting-started/",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introducción a Markdown</span>"
+    ]
+  },
+  {
+    "objectID": "Parte4.html#sintaxis-de-escritura-y-formato-básicos",
+    "href": "Parte4.html#sintaxis-de-escritura-y-formato-básicos",
+    "title": "3  Introducción a Markdown",
+    "section": "3.4 Sintaxis de escritura y formato básicos",
+    "text": "3.4 Sintaxis de escritura y formato básicos\nRevisar la documentación de GitHub",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introducción a Markdown</span>"
+    ]
+  },
+  {
+    "objectID": "Parte4.html#ejercicio-individual-página-de-inicio-en-github",
+    "href": "Parte4.html#ejercicio-individual-página-de-inicio-en-github",
+    "title": "3  Introducción a Markdown",
+    "section": "3.5 Ejercicio individual: Página de inicio en GitHub",
+    "text": "3.5 Ejercicio individual: Página de inicio en GitHub\n\n\n\n\n\n\nActividad\n\n\n\n\nEn GitHub, crea un repositorio con el mismo nombre de usuario. Ejemplo: Mi usuario es EveliaCoss y mi repositorio se llama EveliaCoss, dandome la siguiente liga https://github.com/EveliaCoss/EveliaCoss\nAgrega un README al repositorio con tu informacion. Por Default ya trae una plantilla, modificala y adaptala a tu gusto.\nVisualiza como cambia tu inicio en el Github.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introducción a Markdown</span>"
+    ]
+  },
+  {
+    "objectID": "Parte4.html#referencias",
+    "href": "Parte4.html#referencias",
+    "title": "3  Introducción a Markdown",
+    "section": "3.6 Referencias",
+    "text": "3.6 Referencias\n\nDocumentación de GitHub\nLibro de Rmarkdown\nEjercicios con Markdown\nCurso de Heladia Salgado\nCurso de Git y GitHub Evelia Coss\nMarkdown and rmarkdown\nGaleria de Markdown\nLesson 3: Basic Syntax\nIntroduction to Open Data Science with R\nData Science for Psychologists",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introducción a Markdown</span>"
+    ]
+  }
+]

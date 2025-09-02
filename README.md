@@ -31,12 +31,12 @@ En este curso se abordarán los conceptos fundamentales para el uso y manejo de 
 
 - Instructora: Evelia Coss
 - Fecha: 2 de septiembre, 2025 
-- Material: Presentación  
-- Tarea: 
+- Material: [Presentación](https://eveliacoss.github.io/LCG2025_S1_Buenaspracticas_presentacion/Dia1_BuenasPracticas.html#1)  
+- Tarea: Checa las [instrucciones](https://eveliacoss.github.io/LCG2025_S1_Buenaspracticas_presentacion/Dia1_BuenasPracticas.html?panelset_002=repositorios-acad%25C3%25A9micos-y-cient%25C3%25ADficos2#41)
 
 
 ### Introducción a Markdown
 
 - Instructora: Evelia Coss
 - Fecha: 4 de septiembre, 2025
-- Material: Libro  
+- Material: [Libro](https://eveliacoss.github.io/LCG2025_IntroBioinfo_S1/)  
