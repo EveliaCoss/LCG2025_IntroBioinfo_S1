@@ -29,13 +29,14 @@ En este curso se abordarán los conceptos fundamentales para el uso y manejo de 
 
 ### Buenas prácticas en Bioinformática
 
-- Material:  
-- Tarea:
-- Referencias:
-https://lcg-cursos.github.io/material/introbioinfo/
+- Instructora: Evelia Coss
+- Fecha: 2 de septiembre, 2025 
+- Material: Presentación  
+- Tarea: 
+
 
 ### Introducción a Markdown
 
-- Material:  
-- 
-- 
+- Instructora: Evelia Coss
+- Fecha: 4 de septiembre, 2025
+- Material: Libro  

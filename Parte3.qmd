@@ -2,6 +2,10 @@
 
 Notas personales recabadas a partir de los tutoriales y ejemplos 😊. Espero que les funcione 💜
 
+::: callout-note
+Presentación completa empleando Rmarkdown
+:::
+
 ## Materiales informativos
 
 -   [Curso de Joselyn Cristina Chávez Fuentes](https://comunidadbioinfo.github.io/cdsb2023/creaci%C3%B3n-de-vi%C3%B1etas.html)

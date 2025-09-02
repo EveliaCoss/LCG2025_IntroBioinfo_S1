@@ -29,6 +29,18 @@ format:
     code-fold: show # Ocultar codigo
     code-copy: true # Copy button
     freeze: false  # Desactivar congelamiento
+  
+  pdf:
+    documentclass: book
+    toc: true
+    number-sections: true
+    keep-tex: true
+    include-in-header: 
+      text: |
+        \usepackage{graphicx}
+        \usepackage{float}
+    papersize: a4
+    fontsize: 11pt  
 
 editor: visual
 
