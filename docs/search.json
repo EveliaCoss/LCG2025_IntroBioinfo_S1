@@ -334,7 +334,7 @@
     "href": "ScriptBash.html",
     "title": "6  Wildcards y Streams",
     "section": "",
-    "text": "6.1 Caracteres y strings\nEsto nos dice que el archivo cuenta con 300 lineas, 600 palabras y 12,934 caracteres.\nLos caracteres son unidades de información que se representan con símbolos. Pueden ser de varios tipos como alfanuméricos, números enteros, signos de puntuación. Varios caracteres son interpretados por la shell de manera especial. Estos se llaman caracteres especiales, claro, y permiten desarrollar alguna lógica, dependiendo del contexto. Por ejemplo, algunos caracteres: @ # . ? ! , / \\ &gt; ~ a µ g § R.\nLos strings son arreglos de caracteres. Esto quiere decir que son caracteres en conjunto y con un orden en particular. Por ejemplo el string pizza tiene 4 diferentes caracteres: i, p, z, a. Diferentes combinaciones de caracteres pueden formar diferentes strings.\nCreemos un string y luego imprimámoslo en la pantalla del Terminal. Escribe los siguientes comandos:",
+    "text": "6.1 Caracteres y strings\nEsto nos dice que el archivo cuenta con 300 lineas, 600 palabras y 12,934 caracteres.\nLos caracteres son unidades de información que se representan con símbolos. Pueden ser de varios tipos como alfanuméricos, números enteros, signos de puntuación. Varios caracteres son interpretados por la shell de manera especial. Estos se llaman caracteres especiales, claro, y permiten desarrollar alguna lógica, dependiendo del contexto. Por ejemplo, algunos caracteres: @ # . ? ! , / \\ &gt; ~ a µ g § R |(pipe).\nLos strings son arreglos de caracteres. Esto quiere decir que son caracteres en conjunto y con un orden en particular. Por ejemplo el string pizza tiene 4 diferentes caracteres: i, p, z, a. Diferentes combinaciones de caracteres pueden formar diferentes strings.\nCreemos un string y luego imprimámoslo en la pantalla del Terminal. Escribe los siguientes comandos:",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Wildcards y Streams</span>"
     ]
@@ -354,7 +354,7 @@
     "href": "ScriptBash.html#wildcards",
     "title": "6  Wildcards y Streams",
     "section": "6.2 Wildcards",
-    "text": "6.2 Wildcards\nLos wildcards o wild characters son símbolos utilizados para representar uno o más caracteres. Se pueden utilizar con otros comandos para facilitar el procesamiento o búsqueda de archivos, directorios y datos en general.\n\n\n\n\n\n\n\nWildcard\nFunción\n\n\n\n\n*\nAsocia uno o más caracteres especificados por el usuario, con caracteres en un string con el que se opera.\n\n\n?\nAsocia solo un caracter a la vez en un string.\n\n\n[ ]\nAsocia cuaquiera de los caracteres dentro en un string.\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nEl wildcard más usado es * porque es muy versátil.\n\n\n\n\n\n\n\n\nEjercicio 4\n\n\n\nEl wildcard * me permitiría encontrar todos los archivos en una carpeta que tengan la palabra TESIS en ellos. Primero generemos estos archivos:\ncd ~/taller_unix/3_manejo_terminal \ntouch MI_TESIS.tex MI_TESIS_tutor2.tex TESIS.tex TESIS_YA_ACABATE.tex TESIS_finaaaaal.tex TESIS_final.tex TESIS_tutor1.tex TESIS_tutor2.tex a_reporte_01.txt b_reporte_02.txt c_reporte_03.txt z_reporte_30.txt \n\nEnlista todos los archivos que comiencen con “TESIS”.\nEnlista todos los archivos que terminen con el string “.tex”\nBuscar todos los archivos contengan la palabra “TESIS\" pero con 3 caracteres desconocidos antes.\nBuscar los archivos que terminen con el número 1 o 2 en su nombre antes de la extensión del archivo.\nEncontrar los archivos que terminen en dos números del 1 al 3 y del 0 al 2 antes del formato del archivo.\nEncontrar todos los archivos con este formato ?_reporte_[0-3][0-3].txt\nEncontrar todos los archivos que contengan por a o. z.\nBorramos todos estor archivos que terminen en “.txt” y “.tex”\n\n\n\n\n\n\n\nSolución\n\n\n\n\n\n1. ls -l TESIS*\n2. ls -l *.tex\n3. ls -l ???TESIS*\n4. ls -l *[1-2].tex\n5. ls -l *[0-3][0-2].txt\n6. ls -l ?_reporte_[0-3][0-3].txt\n7. ls -l *[az]*\n8. rm *.tex *.txt\n\n\n\n\n\n\n\n\n\n\n\nEjercicios de repaso\n\n\n\nPuedes seguir repasando y aprendiendo de las expresiones regulares en la pagina de RegexOne.",
+    "text": "6.2 Wildcards\nLos wildcards o wild characters son símbolos utilizados para representar uno o más caracteres. Se pueden utilizar con otros comandos para facilitar el procesamiento o búsqueda de archivos, directorios y datos en general.\n\n\n\n\n\n\n\nWildcard\nFunción\n\n\n\n\n*\nAsocia uno o más caracteres especificados por el usuario, con caracteres en un string con el que se opera.\n\n\n?\nAsocia solo un caracter a la vez en un string.\n\n\n[ ]\nAsocia cuaquiera de los caracteres dentro en un string.\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nEl wildcard más usado es * porque es muy versátil.\n\n\n\n\n\n\n\n\nEjercicio 4\n\n\n\nEl wildcard * me permitiría encontrar todos los archivos en una carpeta que tengan la palabra TESIS en ellos. Primero crea la carpeta:\ntaller_unix\nDespués, debemos generar estos archivos:\ncd taller_unix/\ntouch MI_TESIS.tex MI_TESIS_tutor2.tex TESIS.tex TESIS_YA_ACABATE.tex TESIS_finaaaaal.tex TESIS_final.tex TESIS_tutor1.tex TESIS_tutor2.tex a_reporte_01.txt b_reporte_02.txt c_reporte_03.txt z_reporte_30.txt \n\nEnlista todos los archivos que comiencen con “TESIS”.\nEnlista todos los archivos que terminen con el string “.tex”\nBuscar todos los archivos contengan la palabra “TESIS\" pero con 3 caracteres desconocidos antes.\nBuscar los archivos que terminen con el número 1 o 2 en su nombre antes de la extensión del archivo (.tex).\nEncontrar los archivos que terminen en dos números del 1 al 3 y del 0 al 2 antes del formato del archivo (.txt).\nEncontrar todos los archivos con este formato ?_reporte_[0-3][0-3].txt\nEncontrar todos los archivos que contengan por a o. z.\nBorramos todos estor archivos que terminen en “.txt” y “.tex”\n\n\n\n\n\n\n\nSolución\n\n\n\n\n\n1. ls -l TESIS*\n2. ls -l *.tex\n3. ls -l ???TESIS*\n4. ls -l *[1-2].tex\n5. ls -l *[1-3][0-2].txt\n6. ls -l ?_reporte_[0-3][0-3].txt\n7. ls -l *[az]* o ls -l *[a,z]*\n8. rm *.tex *.txt\n\n\n\n\n\n\n\n\n\n\n\nEjercicios de repaso\n\n\n\nPuedes seguir repasando y aprendiendo de las expresiones regulares en la pagina de RegexOne.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Wildcards y Streams</span>"
     ]
@@ -374,59 +374,89 @@
     "href": "ScriptBash.html#material-suplementario",
     "title": "6  Wildcards y Streams",
     "section": "6.4 Material suplementario",
-    "text": "6.4 Material suplementario\n\nRSG Ecuador. Scripts en Bash\nRSG Ecuador. Wildcards y Streams\nRSG Ecuador. Expresiones regulares (regex)\nWildcard Selection in Bash",
+    "text": "6.4 Material suplementario\n\nRSG Ecuador. Scripts en Bash\nRSG Ecuador. Wildcards y Streams\nRSG Ecuador. Expresiones regulares (regex)\nWildcard Selection in Bash\nExpresiones regulares",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Wildcards y Streams</span>"
     ]
   },
   {
+    "objectID": "genes_orf.html",
+    "href": "genes_orf.html",
+    "title": "7  Definición actualizada y didáctica del gen",
+    "section": "",
+    "text": "7.1 Potencial codificante\ny en casos simples es considerado: un gen es una secuencia de ADN que codifica un producto proteico o de ARN (mRNA o no codificante).\nEl potencial codificante se refiere a la capacidad de una secuencia de ADN o ARN para ser traducida en una proteína funcional. Se evalúa mediante características como la presencia de codones de inicio y parada, la longitud del marco de lectura, la conservación evolutiva y el uso de codones típico de genes.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Definición actualizada y didáctica del gen</span>"
+    ]
+  },
+  {
+    "objectID": "genes_orf.html#marco-de-lectura-abierto-orf",
+    "href": "genes_orf.html#marco-de-lectura-abierto-orf",
+    "title": "7  Definición actualizada y didáctica del gen",
+    "section": "7.2 Marco de lectura abierto (ORF)",
+    "text": "7.2 Marco de lectura abierto (ORF)\nUn marco de lectura abierto (ORF) es una secuencia de nucleótidos que comienza con un codón de inicio (generalmente AUG) y termina con un codón de paro (UAA, UAG o UGA), sin interrupciones que impidan la traducción. Es una señal estructural que sugiere que la región podría codificar una proteína, aunque no garantiza funcionalidad.\n\n\n\nRef. Griffiths. Introduction to genetic analysis. Pp 500 libro electronico cap 14. Genomes and genomics\n\n\n\n\n\n\n\n\nNote\n\n\n\n\nNo todos los ORFs son funcionales: algunos pueden ser artefactos o pseudogenes.\nEn transcriptómica y metagenómica, se usan algoritmos para predecir genes basados en ORFs y potencial codificante.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Definición actualizada y didáctica del gen</span>"
+    ]
+  },
+  {
+    "objectID": "genes_orf.html#cómo-distinguimos-transcritos-codificantes-de-no-codificantes",
+    "href": "genes_orf.html#cómo-distinguimos-transcritos-codificantes-de-no-codificantes",
+    "title": "7  Definición actualizada y didáctica del gen",
+    "section": "7.3 ¿Cómo distinguimos transcritos codificantes de no codificantes?",
+    "text": "7.3 ¿Cómo distinguimos transcritos codificantes de no codificantes?\nLa distinción entre transcritos codificantes y no codificantes es esencial para la anotación funcional del transcriptoma. Aunque los lncRNAs no codifican proteínas, es necesario descartar evidencia de codificación antes de clasificarlos como tales.\n\n\n7.3.1 Tipos de archivos comunes en bioinformática\n\n\n\nFormato\nDescripción\nEmpleo\nEjemplo\n\n\n\n\nFASTA (.fasta / .fa)\nContiene secuencias de nucleótidos o aminoácidos. Cada entrada inicia con &gt; seguido de un identificador.\nGenoma de referencia, proteínas, transcriptos/nucleótidos\n&gt;seq1\nATGCGTACGTAGCTAG\n\n\nFASTQ (.fastq)\nSimilar a FASTA pero incluye calidad de lectura por base (lecturas de secuenciación).\nesencial en pipelines de secuenciación (RNA-seq, WGS).\n@SEQ_ID\nGATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAA\n+\n!''*((((***+))%%%++)(%%%%).1***-+*''))**\n\n\nGTF/GFF (.gtf / .gff)\nArchivos de anotación genómica: definen genes, exones, intrones, etc.\nclave para anotación estructural y funcional.\nchr1  HAVANA  exon  11869  12227  .  +  .  gene_id \"ENSG00000223972\";\n\n\nBED (.bed)\nDefine regiones genómicas (intervalos), útil para visualización y análisis de cobertura.\nLocalización de genes, clasificación de genes, visualización (IGV, UCSC Genome Browser)\nchr7  127471196  127472363  region1\n\n\n\n\n\n7.3.2 Herramientas bioinformáticas clave\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nAquí les dejo el link al Método de selección de lncRNAs empleado en Arabidopsis thaliana. Relacionado con el artículo Transcriptome-guided annotation and functional classification of long non-coding RNAs in Arabidopsis thaliana.\n\n\n\n\n\nSoftware\nPropósito\nFunción\nSecuencia de interés (input)\nBase de datos\n\n\n\n\ngffread\nObtener el FASTA de las secuencias seleccionadas\ngffread\nArchivo de anotación (GTF) y genoma de referencia (FASTA)\nNA\n\n\nEMBOSS/v6.6.0\nObtener el tamaño de las secuencias\ninfoseq\nSecuencias/nucleótidos (FASTA)\nNA\n\n\nkentUtils/v302\nExtraer la secuencia FASTA a partir de IDs y Generar archivo BED a partir del GTF\nfaSomeRecords, gtfToGenePred y genePredToBed\nSecuencias/nucleótidos (FASTA) y IDs.\nArchivo de anotación (GTF) y genoma de referencia (FASTA)\nNA\n\n\nTransDecoder\nPredicción del ORF y la “proteína” codificada\nTransDecoder.LongOrfs y TransDecoder.Predict\nSecuencias/nucleótidos (FASTA)\nNA\n\n\nblastn\nComparación con proteínas conocidas\nblastn\nproteína (.pep)\nUniProtKB/Swiss-Prot (proteínas)\n\n\nblastp\nComparación con proteínas conocidas\nblastp\nSecuencias/nucleótidos (FASTA)\nUniProtKB/Swiss-Prot (nucleótidos)\n\n\nblastx\nComparación con proteínas conocidas\nblastx\nnucleótidos (traducidos)\nUniProtKB/Swiss-Prot (proteínas)\n\n\nblastdbcmd\nExtraer información de la base de datos de BLAST\nblastdbcmd\nIDs de las secuencias\nRefSeq non-redundant proteins\n\n\nSignalP\nPredicción de péptidos señal\nsignalp\nproteína\nNA\n\n\nTMHMM\nPredicción de dominios transmembranales\ntmhmm\nproteína\nNA\n\n\nPhobius\nPredicción de dominios transmembranales y péptidos señal\nphobius.pl\nproteína\nNA\n\n\nHMMER\nBúsqueda de dominios conservados\nhmmscan\nproteína\nPfam\n\n\nInfernal\nBusca coincidencias estructurales en secuencias usando modelos de covarianza y escanea bases de datos\ncmsearch\nSecuencias/nucleótidos (FASTA)\nRfam\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n\nSi el transcrito no tiene similitud con proteínas conocidas, no contiene péptido señal, no tiene dominios transmembranales, y no presenta dominios conservados, es probablemente no codificante.\nSi alguno de estos elementos está presente, se debe considerar como potencialmente codificante y excluirlo de la clasificación como no codificante.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Definición actualizada y didáctica del gen</span>"
+    ]
+  },
+  {
+    "objectID": "genes_orf.html#material-suplementario",
+    "href": "genes_orf.html#material-suplementario",
+    "title": "7  Definición actualizada y didáctica del gen",
+    "section": "7.4 Material suplementario",
+    "text": "7.4 Material suplementario\n\nCurso del Dr. Cei Abreu - BLAST en la línea de comando\nPipeline for lncRNA annotation from RNA-seq data (PLAR)\nlncRNA Identification - P.generosa lncRNAs using CPC2 and bedtools\nRNA-seq Bioinformatics",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Definición actualizada y didáctica del gen</span>"
+    ]
+  },
+  {
     "objectID": "Annotation_lncRNAs.html",
     "href": "Annotation_lncRNAs.html",
-    "title": "7  Exploración y clasificación de lncRNAs",
+    "title": "8  Exploración y clasificación de lncRNAs",
     "section": "",
-    "text": "7.0.1 Introducción didáctica\nLos lncRNAs (long non-coding RNAs o ARN largos no codificantes) representan una clase diversa de transcritos que no codifican proteínas pero desempeñan funciones clave en la regulación génica. Este capítulo se enfoca en:",
+    "text": "8.0.1 Introducción didáctica\nLos lncRNAs (long non-coding RNAs o ARN largos no codificantes) representan una clase diversa de transcritos que no codifican proteínas pero desempeñan funciones clave en la regulación génica. Este capítulo se enfoca en:",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Exploración y clasificación de lncRNAs</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Exploración y clasificación de lncRNAs</span>"
     ]
   },
   {
     "objectID": "Annotation_lncRNAs.html#características-de-los-lncrnas",
     "href": "Annotation_lncRNAs.html#características-de-los-lncrnas",
-    "title": "7  Exploración y clasificación de lncRNAs",
-    "section": "7.1 Características de los lncRNAs",
-    "text": "7.1 Características de los lncRNAs\nLos lncRNAs son moléculas de ARN de más de 200 nucleótidos que no codifican proteínas, pero desempeñan funciones clave en la regulación génica y celular. Aquí tienes un resumen bilingüe y modular de sus características principales:\n\nLongitud &gt;200 nucleótidos\nExpresión específica por tejido y etapa: Se expresan de forma diferencial según el tipo celular, tejido (como el testículo) y etapa del desarrollo\nRegulación génica en cis y trans: Modulando la expresión de genes vecinos o lejanos.\nDiversidad de mecanismos moleculares\n\n\n\n\nModificado de Sun & Kraus, 2015. Endocrine Reviews.",
+    "title": "8  Exploración y clasificación de lncRNAs",
+    "section": "8.1 Características de los lncRNAs",
+    "text": "8.1 Características de los lncRNAs\nLos lncRNAs son moléculas de ARN de más de 200 nucleótidos que no codifican proteínas, pero desempeñan funciones clave en la regulación génica y celular. Aquí tienes un resumen bilingüe y modular de sus características principales:\n\nLongitud &gt;200 nucleótidos\nExpresión específica por tejido y etapa: Se expresan de forma diferencial según el tipo celular, tejido (como el testículo) y etapa del desarrollo\nRegulación génica en cis y trans: Modulando la expresión de genes vecinos o lejanos.\nDiversidad de mecanismos moleculares\n\n\n\n\nModificado de Sun & Kraus, 2015. Endocrine Reviews.",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Exploración y clasificación de lncRNAs</span>"
-    ]
-  },
-  {
-    "objectID": "Annotation_lncRNAs.html#cómo-distinguimos-transcritos-codificantes-de-no-codificantes",
-    "href": "Annotation_lncRNAs.html#cómo-distinguimos-transcritos-codificantes-de-no-codificantes",
-    "title": "7  Exploración y clasificación de lncRNAs",
-    "section": "7.2 ¿Cómo distinguimos transcritos codificantes de no codificantes?",
-    "text": "7.2 ¿Cómo distinguimos transcritos codificantes de no codificantes?\nLa distinción entre transcritos codificantes y no codificantes es esencial para la anotación funcional del transcriptoma. Aunque los lncRNAs no codifican proteínas, es necesario descartar evidencia de codificación antes de clasificarlos como tales.\n\n\n7.2.1 Herramientas bioinformáticas clave\n\n\n\n\n\n\nImportant\n\n\n\nAquí les dejo el link al Método de selección de lncRNAs empleado en Arabidopsis thaliana. Relacionado con el artículo Transcriptome-guided annotation and functional classification of long non-coding RNAs in Arabidopsis thaliana.\n\n\n\n\n\nSoftware\nPropósito\nFunción\nSecuencia de interés (input)\nBase de datos\n\n\n\n\ngffread\nObtener el FASTA de las secuencias seleccionadas\ngffread\nArchivo de anotación (GTF) y genoma de referencia (FASTA)\nNA\n\n\nEMBOSS/v6.6.0\nObtener el tamaño de las secuencias\ninfoseq\nSecuencias/nucleótidos (FASTA)\nNA\n\n\nkentUtils/v302\nExtraer la secuencia FASTA a partir de IDs y Generar archivo BED a partir del GTF\nfaSomeRecords, gtfToGenePred y genePredToBed\nSecuencias/nucleótidos (FASTA) y IDs.\nArchivo de anotación (GTF) y genoma de referencia (FASTA)\nNA\n\n\nTransDecoder\nPredicción del ORF y la “proteína” codificada\nTransDecoder.LongOrfs y TransDecoder.Predict\nSecuencias/nucleótidos (FASTA)\nNA\n\n\nblastn\nComparación con proteínas conocidas\nblastn\nproteína (.pep)\nUniProtKB/Swiss-Prot (proteínas)\n\n\nblastp\nComparación con proteínas conocidas\nblastp\nSecuencias/nucleótidos (FASTA)\nUniProtKB/Swiss-Prot (nucleótidos)\n\n\nblastx\nComparación con proteínas conocidas\nblastx\nnucleótidos (traducidos)\nUniProtKB/Swiss-Prot (proteínas)\n\n\nblastdbcmd\nExtraer información de la base de datos de BLAST\nblastdbcmd\nIDs de las secuencias\nRefSeq non-redundant proteins\n\n\nSignalP\nPredicción de péptidos señal\nsignalp\nproteína\nNA\n\n\nTMHMM\nPredicción de dominios transmembranales\ntmhmm\nproteína\nNA\n\n\nPhobius\nPredicción de dominios transmembranales y péptidos señal\nphobius.pl\nproteína\nNA\n\n\nHMMER\nBúsqueda de dominios conservados\nhmmscan\nproteína\nPfam\n\n\nInfernal\nBusca coincidencias estructurales en secuencias usando modelos de covarianza y escanea bases de datos\ncmsearch\nSecuencias/nucleótidos (FASTA)\nRfam\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n\nSi el transcrito no tiene similitud con proteínas conocidas, no contiene péptido señal, no tiene dominios transmembranales, y no presenta dominios conservados, es probablemente no codificante.\nSi alguno de estos elementos está presente, se debe considerar como potencialmente codificante y excluirlo de la clasificación como lncRNA.",
-    "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Exploración y clasificación de lncRNAs</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Exploración y clasificación de lncRNAs</span>"
     ]
   },
   {
     "objectID": "Annotation_lncRNAs.html#cómo-clasifican-los-lncrnas",
     "href": "Annotation_lncRNAs.html#cómo-clasifican-los-lncrnas",
-    "title": "7  Exploración y clasificación de lncRNAs",
-    "section": "7.3 ¿Cómo clasifican los lncRNAs?",
-    "text": "7.3 ¿Cómo clasifican los lncRNAs?\n\n\n\nModificado de Shafiq S, et al, 2015. Biochimica et Biophysica Acta\n\n\nEjercicio de clasificacion de lncRNAs en humanos\nhttps://www.gencodegenes.org/human/\nhttps://github.com/RegRNALab/Transcriptome-guided_lncRNA_annotation/blob/master/02_Classification_of_lncRNAs_by_categories.md\nBedtools intersect\nhttps://bedtools.readthedocs.io/en/latest/content/quick-start.html",
+    "title": "8  Exploración y clasificación de lncRNAs",
+    "section": "8.2 ¿Cómo clasifican los lncRNAs?",
+    "text": "8.2 ¿Cómo clasifican los lncRNAs?\n\n\n\nModificado de Shafiq S, et al, 2015. Biochimica et Biophysica Acta",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Exploración y clasificación de lncRNAs</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Exploración y clasificación de lncRNAs</span>"
     ]
   },
   {
     "objectID": "Annotation_lncRNAs.html#material-suplementario",
     "href": "Annotation_lncRNAs.html#material-suplementario",
-    "title": "7  Exploración y clasificación de lncRNAs",
-    "section": "7.4 Material suplementario",
-    "text": "7.4 Material suplementario\n\nCurso del Dr. Cei Abreu - BLAST en la línea de comando\nPipeline for lncRNA annotation from RNA-seq data (PLAR)\nlncRNA Identification - P.generosa lncRNAs using CPC2 and bedtools\nRNA-seq Bioinformatics",
+    "title": "8  Exploración y clasificación de lncRNAs",
+    "section": "9.1 Material suplementario",
+    "text": "9.1 Material suplementario\n\nPipeline for lncRNA annotation from RNA-seq data (PLAR)\nlncRNA Identification - P.generosa lncRNAs using CPC2 and bedtools\nRNA-seq Bioinformatics",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Exploración y clasificación de lncRNAs</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Exploración y clasificación de lncRNAs</span>"
     ]
   }
 ]
