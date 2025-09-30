@@ -1,0 +1,91 @@
+# Exploración y clasificación de lncRNAs
+
+### Introducción didáctica
+
+Los **lncRNAs (long non-coding RNAs o ARN largos no codificantes)** representan una clase diversa de transcritos que no codifican proteínas pero desempeñan funciones clave en la regulación génica. Este capítulo se enfoca en:
+
+-   🔍 **Anotación de nuevos transcritos** a partir de datos de RNA-seq
+-   🧠 **Clasificación funcional y estructural de lncRNAs**
+-   🛠️ **Ejercicios prácticos en Bash** para identificar y clasificar lncRNAs intergénicos
+
+## Características de los lncRNAs
+
+Los lncRNAs son moléculas de ARN de más de **200 nucleótidos que no codifican proteínas**, pero desempeñan funciones clave en la regulación génica y celular. Aquí tienes un resumen bilingüe y modular de sus características principales:
+
+-   Longitud \>200 nucleótidos
+-   **Expresión específica por tejido y etapa:** Se expresan de forma diferencial según el tipo celular, tejido (como el testículo) y etapa del desarrollo
+-   **Regulación génica en *cis* y *trans:*** Modulando la expresión de genes vecinos o lejanos.
+-   **Diversidad de mecanismos moleculares**
+
+[![Modificado de Sun & Kraus, 2015. Endocrine Reviews.](img/caracteristicas_lncRNas.png)](https://academic.oup.com/edrv/article-abstract/36/1/25/2354679)
+
+## ¿Cómo distinguimos transcritos codificantes de no codificantes?
+
+La distinción entre transcritos **codificantes** y **no codificantes** es esencial para la anotación funcional del transcriptoma. Aunque los lncRNAs no codifican proteínas, es necesario **descartar evidencia de codificación** antes de clasificarlos como tales.
+
+[![](img/lncRNAs_notes.jpg)](https://www.sciencedirect.com/science/article/pii/S1874939915001728?via%3Dihub)
+
+### Herramientas bioinformáticas clave
+
+::: callout-important
+Aquí les dejo el link al [Método de selección](https://github.com/RegRNALab/Transcriptome-guided_lncRNA_annotation/blob/master/01_Strict_Method.md) de lncRNAs empleado en *Arabidopsis thaliana.* Relacionado con el artículo [**Transcriptome-guided annotation and functional classification of long non-coding RNAs in *Arabidopsis thaliana***](https://www.nature.com/articles/s41598-022-18254-0)***.***
+:::
+
++-----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+----------------------------------------------------+-----------------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| Software                                                                                | Propósito                                                                                              | Función                                            | **Secuencia de interés (input)**                          | Base de datos                                                                                    |
++:=======================================================================================:+:======================================================================================================:+:==================================================:+:=========================================================:+:================================================================================================:+
+| [**`gffread`**](https://github.com/gpertea/gffread)                                     | Obtener el FASTA de las secuencias seleccionadas                                                       | `gffread`                                          | Archivo de anotación (GTF) y genoma de referencia (FASTA) | NA                                                                                               |
++-----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+----------------------------------------------------+-----------------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| [`EMBOSS/v6.6.0`](http://emboss.sourceforge.net/apps/cvs/emboss/apps/infoseq.html)      | Obtener el tamaño de las secuencias                                                                    | `infoseq`                                          | Secuencias/nucleótidos (FASTA)                            | NA                                                                                               |
++-----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+----------------------------------------------------+-----------------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| [`kentUtils/v302`](https://github.com/ENCODE-DCC/kentUtils)                             | Extraer la secuencia FASTA a partir de IDs y Generar archivo BED a partir del GTF                      | `faSomeRecords`, `gtfToGenePred` y `genePredToBed` | Secuencias/nucleótidos (FASTA) y IDs.                     | NA                                                                                               |
+|                                                                                         |                                                                                                        |                                                    |                                                           |                                                                                                  |
+|                                                                                         |                                                                                                        |                                                    | Archivo de anotación (GTF) y genoma de referencia (FASTA) |                                                                                                  |
++-----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+----------------------------------------------------+-----------------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| [`TransDecoder`](https://github.com/TransDecoder/TransDecoder)                          | Predicción del ORF y la "proteína" codificada                                                          | `TransDecoder.LongOrfs` y `TransDecoder.Predict`   | Secuencias/nucleótidos (FASTA)                            | NA                                                                                               |
++-----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+----------------------------------------------------+-----------------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| [`blastn`](https://github.com/ncbi/blast_plus_docs)                                     | Comparación con proteínas conocidas                                                                    | `blastn`                                           | proteína (`.pep`)                                         | [UniProtKB/Swiss-Prot](https://www.uniprot.org/help/downloads) (proteínas)                       |
++-----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+----------------------------------------------------+-----------------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| [`blastp`](https://github.com/ncbi/blast_plus_docs)                                     | Comparación con proteínas conocidas                                                                    | `blastp`                                           | Secuencias/nucleótidos (FASTA)                            | [UniProtKB/Swiss-Prot](https://www.uniprot.org/help/downloads) (nucleótidos)                     |
++-----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+----------------------------------------------------+-----------------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| [`blastx`](https://github.com/ncbi/blast_plus_docs)                                     | Comparación con proteínas conocidas                                                                    | `blastx`                                           | nucleótidos (traducidos)                                  | [UniProtKB/Swiss-Prot](https://www.uniprot.org/help/downloads) (proteínas)                       |
++-----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+----------------------------------------------------+-----------------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| [`blastdbcmd`](https://www.ncbi.nlm.nih.gov/books/NBK569853/)                           | Extraer información de la base de datos de BLAST                                                       | `blastdbcmd`                                       | IDs de las secuencias                                     | [RefSeq non-redundant proteins](https://www.ncbi.nlm.nih.gov/refseq/about/nonredundantproteins/) |
++-----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+----------------------------------------------------+-----------------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| [`SignalP`](https://vcru.wisc.edu/simonlab/bioinformatics/programs/install/signalp.htm) | Predicción de péptidos señal                                                                           | `signalp`                                          | proteína                                                  | NA                                                                                               |
++-----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+----------------------------------------------------+-----------------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| [`TMHMM`](https://services.healthtech.dtu.dk/services/TMHMM-2.0/)                       | Predicción de dominios transmembranales                                                                | `tmhmm`                                            | proteína                                                  | NA                                                                                               |
++-----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+----------------------------------------------------+-----------------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| [`Phobius`](https://phobius.sbc.su.se/)                                                 | Predicción de dominios transmembranales y péptidos señal                                               | `phobius.pl`                                       | proteína                                                  | NA                                                                                               |
++-----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+----------------------------------------------------+-----------------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| [`HMMER`](https://www.howtoinstall.me/ubuntu/18-04/hmmer/)                              | Búsqueda de dominios conservados                                                                       | `hmmscan`                                          | proteína                                                  | [Pfam](http://pfam.xfam.org/)                                                                    |
++-----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+----------------------------------------------------+-----------------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| [`Infernal`](http://eddylab.org/infernal/)                                              | Busca coincidencias estructurales en secuencias usando modelos de covarianza y escanea bases de datos  | `cmsearch`                                         | Secuencias/nucleótidos (FASTA)                            | [Rfam](https://rfam.org/)                                                                        |
++-----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+----------------------------------------------------+-----------------------------------------------------------+--------------------------------------------------------------------------------------------------+
+
+::: callout-note
+-   Si el transcrito **no tiene similitud con proteínas conocidas**, **no contiene péptido señal**, **no tiene dominios transmembranales**, y **no presenta dominios conservados**, es **probablemente no codificante**.
+
+-   Si alguno de estos elementos está presente, se debe considerar como **potencialmente codificante** y excluirlo de la clasificación como lncRNA.
+:::
+
+## ¿Cómo clasifican los lncRNAs?
+
+![Modificado de Shafiq S, et al, 2015. Biochimica et Biophysica Acta](img/lncRNAs_classification.png)
+
+Ejercicio de clasificacion de lncRNAs en humanos
+
+<https://www.gencodegenes.org/human/>
+
+<https://github.com/RegRNALab/Transcriptome-guided_lncRNA_annotation/blob/master/02_Classification_of_lncRNAs_by_categories.md>
+
+Bedtools intersect
+
+<https://bedtools.readthedocs.io/en/latest/content/quick-start.html>
+
+## Material suplementario
+
+-   Curso del Dr. Cei Abreu - [BLAST en la línea de comando](http://datos.langebio.cinvestav.mx/~cei/cursos/BioinfoBP/sesion03.html)
+-   [Pipeline for lncRNA annotation from RNA-seq data (PLAR)](https://www.weizmann.ac.il/dept/irb/igor-ulitsky/pipeline-lncrna-annotation-rna-seq-data-plar)
+-   [lncRNA Identification - P.generosa lncRNAs using CPC2 and bedtools](https://robertslab.github.io/sams-notebook/posts/2023/2023-05-02-lncRNA-Identification---P.generosa-lncRNAs-using-CPC2-and-bedtools/index.html)
+-   [RNA-seq Bioinformatics](https://rnabio.org/module-01-inputs/0001/05/01/RNAseq_Data/)
