@@ -472,31 +472,61 @@
   {
     "objectID": "Anotation_ejercicios.html",
     "href": "Anotation_ejercicios.html",
-    "title": "9  Archivo FASTA",
+    "title": "9  Extracción de información de diversos archivos",
     "section": "",
-    "text": "9.1 Encabezado FASTA explicado (UniProtKB)\nEste ejemplo describe una proteína curada manualmente en UniProt (Swiss-Prot), identificada como (+)-T-muurolol synthase, una enzima que convierte farnesyl diphosphate en terpenos. Proviene de la cepa ATCC 27064 de Streptomyces clavuligerus. El gen responsable es SCLAV_p0068, y hay evidencia experimental directa de su existencia (PE=1).\nejercicios con la salida de blast\nejercicios con BED",
+    "text": "9.1 Archivo FASTA",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Archivo FASTA</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>**Extracción de información de diversos archivos**</span>"
     ]
   },
   {
-    "objectID": "Anotation_ejercicios.html#encabezado-fasta-explicado-uniprotkb",
-    "href": "Anotation_ejercicios.html#encabezado-fasta-explicado-uniprotkb",
-    "title": "9  Archivo FASTA",
+    "objectID": "Anotation_ejercicios.html#archivo-fasta",
+    "href": "Anotation_ejercicios.html#archivo-fasta",
+    "title": "9  Extracción de información de diversos archivos",
     "section": "",
-    "text": "&gt;sp|B5GW45|TMUUS_STRC2 (+)-T-muurolol synthase ((2E,6E)-farnesyl diphosphate cyclizing) OS=Streptomyces clavuligerus (...) OX=443255 GN=SCLAV_p0068 PE=1 SV=1\n\n\n\n\n\n\n\n\nCampo\nSignificado\nTraducción didáctica\n\n\n\n\nsp\nSwiss-Prot: base de datos revisada manualmente\nEntrada curada por expertos\n\n\nB5GW45\nAccession number: identificador único de la proteína\nClave única en UniProt\n\n\nTMUUS_STRC2\nNombre corto: nombre de la proteína + especie\nAbreviación de la enzima en Streptomyces clavuligerus\n\n\n(+)-T-muurolol synthase\nNombre funcional: enzima que cicla farnesyl diphosphate\nEnzima que produce terpenos\n\n\n(2E,6E)-farnesyl diphosphate cyclizing\nActividad específica\nTipo de reacción química que realiza\n\n\nOS=Streptomyces clavuligerus (...)\nOrganism Species: especie y cepas\nOrganismo fuente y cepas de referencia\n\n\nOX=443255\nOrganism Taxonomy ID\nID taxonómico en NCBI\n\n\nGN=SCLAV_p0068\nGene Name\nNombre del gen que codifica esta proteína\n\n\nPE=1\nProtein Existence: nivel de evidencia\n\nNivel 1 = evidencia experimental a nivel proteína\nNivel 2 = evidencia experimental a nivel ARN (ej. RT-PCR, RNA-seq)\nNivel 3 = Inferida por homología con proteínas similares en otros organismos\nNivel 4 = Predicción computacional sin evidencia experimental directa\nNivel 5 = Existencia incierta; datos insuficientes o contradictorios\n\n\n\nSV=1\nSequence Version\nVersión de la secuencia en UniProt\n\n\n\n\n\n\n\n\n\nEjercicio 7. Extracción de información de archivos fasta\n\n\n\n\nColocate dentro de la carpeta _files de unix.bioinfo.rsgecuador-gh-pages. En mi caso sería empleando:\ncd /Users/ecoss/Documents/LCG2025_IntroBioinfo_S1/practica/unix.bioinfo.rsgecuador-gh-pages/_files\nCambia los permisos para que las OTRAS personas cuenten con todos los permisos (escritura, lectura y ejecución) sobre el archivo S_clavuligerus_proteome.fasta.\n¿Cuántas líneas tiene el archivo S_clavuligerus_proteome.fasta?\n¿Cuántos registros (“&gt;”) tiene el archivo S_clavuligerus_proteome.fasta?\n¿Cuántas veces aparece el motivo DDXXD en el archivo S_clavuligerus_proteome.fasta?\n¿Cuántos de esos registros son “Uncharacterized protein”?\n¿Cuántos de esos registros cuentan con evidencia experimental (PE=1)?\n¿De cuántos provienen las secuencias presentes en el archivo S_clavuligerus_proteome.fasta?\n\n\n\n\n\n\n\nSolución\n\n\n\n\n\n1. cd TU_DIRECCION\n2. chmod 757 S_clavuligerus_proteome.fasta\n3. wc -l S_clavuligerus_proteome.fasta # 40739\n4. grep -c \"&gt;\" S_clavuligerus_proteome.fasta # 6439 o grep '^&gt;' S_clavuligerus_proteome.fasta | wc -l # 6439\n5. grep -v '^&gt;' S_clavuligerus_proteome.fasta | tr -d '\\n' | grep -oE 'DD[A-Z]{2}D' | wc -l #314 \n6. grep '^&gt;' S_clavuligerus_proteome.fasta | grep -oE 'Uncharacterized protein' | wc -l #2689 \n7. grep '^&gt;' S_clavuligerus_proteome.fasta | grep 'PE=1' | wc -l # 6 registros\n8. grep '^&gt;' S_clavuligerus_proteome.fasta | grep -o 'OS=[^=]*' | sort | uniq | wc -l # solo una especie",
+    "text": "9.1.1 Encabezado FASTA explicado (UniProtKB)\nEste ejemplo describe una proteína curada manualmente en UniProt (Swiss-Prot), identificada como (+)-T-muurolol synthase, una enzima que convierte farnesyl diphosphate en terpenos. Proviene de la cepa ATCC 27064 de Streptomyces clavuligerus. El gen responsable es SCLAV_p0068, y hay evidencia experimental directa de su existencia (PE=1).\n&gt;sp|B5GW45|TMUUS_STRC2 (+)-T-muurolol synthase ((2E,6E)-farnesyl diphosphate cyclizing) OS=Streptomyces clavuligerus (...) OX=443255 GN=SCLAV_p0068 PE=1 SV=1\n\n\n\n\n\n\n\n\nCampo\nSignificado\nTraducción didáctica\n\n\n\n\nsp\nSwiss-Prot: base de datos revisada manualmente\nEntrada curada por expertos\n\n\nB5GW45\nAccession number: identificador único de la proteína\nClave única en UniProt\n\n\nTMUUS_STRC2\nNombre corto: nombre de la proteína + especie\nAbreviación de la enzima en Streptomyces clavuligerus\n\n\n(+)-T-muurolol synthase\nNombre funcional: enzima que cicla farnesyl diphosphate\nEnzima que produce terpenos\n\n\n(2E,6E)-farnesyl diphosphate cyclizing\nActividad específica\nTipo de reacción química que realiza\n\n\nOS=Streptomyces clavuligerus (...)\nOrganism Species: especie y cepas\nOrganismo fuente y cepas de referencia\n\n\nOX=443255\nOrganism Taxonomy ID\nID taxonómico en NCBI\n\n\nGN=SCLAV_p0068\nGene Name\nNombre del gen que codifica esta proteína\n\n\nPE=1\nProtein Existence: nivel de evidencia\n\nNivel 1 = evidencia experimental a nivel proteína\nNivel 2 = evidencia experimental a nivel ARN (ej. RT-PCR, RNA-seq)\nNivel 3 = Inferida por homología con proteínas similares en otros organismos\nNivel 4 = Predicción computacional sin evidencia experimental directa\nNivel 5 = Existencia incierta; datos insuficientes o contradictorios\n\n\n\nSV=1\nSequence Version\nVersión de la secuencia en UniProt\n\n\n\n\n\n\n\n\n\nEjercicio 7. Extracción de información de archivos fasta\n\n\n\n\nColocate dentro de la carpeta _files de unix.bioinfo.rsgecuador-gh-pages. En mi caso sería empleando:\ncd /Users/ecoss/Documents/LCG2025_IntroBioinfo_S1/practica/unix.bioinfo.rsgecuador-gh-pages/_files\nContesta las siguientes preguntas empleando el archivo S_clavuligerus_proteome.fasta\nCambia los permisos para que las OTRAS personas cuenten con todos los permisos (escritura, lectura y ejecución) sobre el archivo FASTA.\n¿Cuántas líneas tiene el archivo FASTA?\n¿Cuántos registros (“&gt;”) tiene el archivo FASTA?\n¿Cuántas veces aparece el motivo DDXXD en el archivo FASTA?\n¿Cuántos de esos registros son “Uncharacterized protein”?\n¿Cuántos de esos registros cuentan con evidencia experimental (PE=1)?\n¿De cuántos provienen las secuencias presentes en el archivo FASTA?\n\n\n\n\n\n\n\nSolución\n\n\n\n\n\n1. cd TU_DIRECCION\n2. chmod 757 S_clavuligerus_proteome.fasta\n3. wc -l S_clavuligerus_proteome.fasta # 40739\n4. grep -c \"&gt;\" S_clavuligerus_proteome.fasta # 6439 o grep '^&gt;' S_clavuligerus_proteome.fasta | wc -l # 6439\n5. grep -v '^&gt;' S_clavuligerus_proteome.fasta | tr -d '\\n' | grep -oE 'DD[A-Z]{2}D' | wc -l #314 \n6. grep '^&gt;' S_clavuligerus_proteome.fasta | grep -oE 'Uncharacterized protein' | wc -l #2689 \n7. grep '^&gt;' S_clavuligerus_proteome.fasta | grep 'PE=1' | wc -l # 6 registros\n8. grep '^&gt;' S_clavuligerus_proteome.fasta | grep -o 'OS=[^=]*' | sort | uniq | wc -l # solo una especie",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Archivo FASTA</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>**Extracción de información de diversos archivos**</span>"
+    ]
+  },
+  {
+    "objectID": "Anotation_ejercicios.html#archivo-de-salida-de-blast",
+    "href": "Anotation_ejercicios.html#archivo-de-salida-de-blast",
+    "title": "9  Extracción de información de diversos archivos",
+    "section": "9.2 Archivo de salida de BLAST",
+    "text": "9.2 Archivo de salida de BLAST\n\n9.2.1 sadasdasdd\n\n\n\n\n\n\nEjercicio 7. Extracción de información de archivos fasta\n\n\n\n\nColocate dentro de la carpeta _files de unix.bioinfo.rsgecuador-gh-pages. En mi caso sería empleando:\ncd /Users/ecoss/Documents/LCG2025_IntroBioinfo_S1/practica/unix.bioinfo.rsgecuador-gh-pages/_files\nContesta las siguientes preguntas empleando el archivo S_clavuligerus_proteome.fasta\nCambia los permisos para que las OTRAS personas cuenten con todos los permisos (escritura, lectura y ejecución) sobre el archivo FASTA.\n¿Cuántas líneas tiene el archivo FASTA?\n¿Cuántos registros (“&gt;”) tiene el archivo FASTA?\n¿Cuántas veces aparece el motivo DDXXD en el archivo FASTA?\n¿Cuántos de esos registros son “Uncharacterized protein”?\n¿Cuántos de esos registros cuentan con evidencia experimental (PE=1)?\n¿De cuántos provienen las secuencias presentes en el archivo FASTA?\n\n\n\n\n\n\n\nSolución\n\n\n\n\n\n1.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>**Extracción de información de diversos archivos**</span>"
+    ]
+  },
+  {
+    "objectID": "Anotation_ejercicios.html#archivo-bed",
+    "href": "Anotation_ejercicios.html#archivo-bed",
+    "title": "9  Extracción de información de diversos archivos",
+    "section": "9.3 Archivo BED",
+    "text": "9.3 Archivo BED\n\n9.3.1 dadsasd\n\n\n\n\n\n\nEjercicio 7. Extracción de información de archivos fasta\n\n\n\n\nColocate dentro de la carpeta _files de unix.bioinfo.rsgecuador-gh-pages. En mi caso sería empleando:\ncd /Users/ecoss/Documents/LCG2025_IntroBioinfo_S1/practica/unix.bioinfo.rsgecuador-gh-pages/_files\nContesta las siguientes preguntas empleando el archivo S_clavuligerus_proteome.fasta\nCambia los permisos para que las OTRAS personas cuenten con todos los permisos (escritura, lectura y ejecución) sobre el archivo FASTA.\n¿Cuántas líneas tiene el archivo FASTA?\n¿Cuántos registros (“&gt;”) tiene el archivo FASTA?\n¿Cuántas veces aparece el motivo DDXXD en el archivo FASTA?\n¿Cuántos de esos registros son “Uncharacterized protein”?\n¿Cuántos de esos registros cuentan con evidencia experimental (PE=1)?\n¿De cuántos provienen las secuencias presentes en el archivo FASTA?\n\n\n\n\n\n\n\nSolución\n\n\n\n\n\n1.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>**Extracción de información de diversos archivos**</span>"
+    ]
+  },
+  {
+    "objectID": "Anotation_ejercicios.html#archivo-gtf",
+    "href": "Anotation_ejercicios.html#archivo-gtf",
+    "title": "9  Extracción de información de diversos archivos",
+    "section": "9.4 Archivo GTF",
+    "text": "9.4 Archivo GTF\n\n9.4.1 dada\n\n\n\n\n\n\nEjercicio 7. Extracción de información de archivos fasta\n\n\n\n\nColocate dentro de la carpeta _files de unix.bioinfo.rsgecuador-gh-pages. En mi caso sería empleando:\ncd /Users/ecoss/Documents/LCG2025_IntroBioinfo_S1/practica/unix.bioinfo.rsgecuador-gh-pages/_files\nContesta las siguientes preguntas empleando el archivo S_clavuligerus_proteome.fasta\n\n\n\n\n\n\n\n\nSolución\n\n\n\n\n\n1.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>**Extracción de información de diversos archivos**</span>"
     ]
   },
   {
     "objectID": "Anotation_ejercicios.html#material-suplementario",
     "href": "Anotation_ejercicios.html#material-suplementario",
-    "title": "9  Archivo FASTA",
-    "section": "9.2 Material suplementario",
-    "text": "9.2 Material suplementario\n\nPipeline for lncRNA annotation from RNA-seq data (PLAR)\nlncRNA Identification - P.generosa lncRNAs using CPC2 and bedtools\nRNA-seq Bioinformatics",
+    "title": "9  Extracción de información de diversos archivos",
+    "section": "9.5 Material suplementario",
+    "text": "9.5 Material suplementario\n\nComandos de Unix para minería de datos",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Archivo FASTA</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>**Extracción de información de diversos archivos**</span>"
     ]
   },
   {

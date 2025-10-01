@@ -1,4 +1,4 @@
-# **Extracción de información de diversos archivos**
+# Extracción de información de diversos archivos
 
 ## Archivo FASTA
 

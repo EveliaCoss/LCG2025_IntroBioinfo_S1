@@ -1,4 +1,6 @@
-# Exploración y clasificación de lncRNAs
+# Aplicaciones
+
+## Exploración y clasificación de lncRNAs
 
 ### Introducción didáctica
 
@@ -8,7 +10,7 @@ Los **lncRNAs (long non-coding RNAs o ARN largos no codificantes)** representan 
 -   🧠 **Clasificación funcional y estructural de lncRNAs**
 -   🛠️ **Ejercicios prácticos en Bash** para identificar y clasificar lncRNAs intergénicos
 
-## Características de los lncRNAs
+### Características de los lncRNAs
 
 Los lncRNAs son moléculas de ARN de más de **200 nucleótidos que no codifican proteínas**, pero desempeñan funciones clave en la regulación génica y celular. Aquí tienes un resumen bilingüe y modular de sus características principales:
 
@@ -19,25 +21,15 @@ Los lncRNAs son moléculas de ARN de más de **200 nucleótidos que no codifican
 
 [![Modificado de Sun & Kraus, 2015. Endocrine Reviews.](img/caracteristicas_lncRNas.png)](https://academic.oup.com/edrv/article-abstract/36/1/25/2354679)
 
-## ¿Cómo clasifican los lncRNAs?
+### ¿Cómo clasifican los lncRNAs?
+
+[Bedtools](https://bedtools.readthedocs.io/en/latest/) puede emplearse eficazmente en la [clasificación de lncRNAs](https://github.com/RegRNALab/Transcriptome-guided_lncRNA_annotation/blob/master/02_Classification_of_lncRNAs_by_categories.md) al facilitar el análisis espacial de sus coordenadas genómicas mediante archivos BED. Por ejemplo, permite identificar si una lncRNA se solapa con regiones codificantes, intrones, promotores u otras anotaciones funcionales, lo cual es clave para distinguir entre tipos como intergénicas, intrónicas o antisentido. Al usar comandos como [`intersect`](https://bedtools.readthedocs.io/en/latest/content/quick-start.html), `closest` o `coverage`, los investigadores pueden comparar las posiciones de las lncRNAs con otros elementos genómicos, generando clasificaciones reproducibles y fácilmente integrables en flujos bioinformáticos.
 
 ![Modificado de Shafiq S, et al, 2015. Biochimica et Biophysica Acta](img/lncRNAs_classification.png)
 
-zcat
-
-# Detección de genes codificantes vecinos (neighboring gene pair)
+### Detección de genes codificantes vecinos (neighboring gene pair)
 
 [![Figura 3. Predicción de la función del ARN largo no codificante (lincRNA) basada en la red de coexpresión. Las relaciones de coexpresión entre los genes codificantes (nodos azules) y los genes lincRNA (nodos amarillos) constituyen una red completa. En la subred del módulo, por ejemplo, hay 4 genes lincRNA y 39 genes codificantes, entre los cuales 24 (nodos azul oscuro) tienen la función X y 15 (nodos azul claro) tienen otras funciones. Este módulo está significativamente enriquecido con la función X a través del análisis estadístico. En consecuencia, los cuatro lincRNA de este módulo se predicen como función X. Traducción realizada con la versión gratuita del traductor DeepL.com](img/coexpression.jpeg)](https://academic.oup.com/bib/article/18/5/789/2562763?login=true)
-
-Ejercicio de clasificacion de lncRNAs en humanos
-
-<https://www.gencodegenes.org/human/>
-
-<https://github.com/RegRNALab/Transcriptome-guided_lncRNA_annotation/blob/master/02_Classification_of_lncRNAs_by_categories.md>
-
-Bedtools intersect
-
-<https://bedtools.readthedocs.io/en/latest/content/quick-start.html>
 
 ## Material suplementario
 

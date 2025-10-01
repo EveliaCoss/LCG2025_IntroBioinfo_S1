@@ -123,9 +123,12 @@ bash demo.sh secuencias_bash.fastq
 
 Ahora que ya sabes realizar Script en Bash, podrias intentar realizar la actividad de [6. Extracción de información de archivos fastq](https://rsg-ecuador.github.io/unix.bioinfo.rsgecuador/content/Curso_basico/05_Ejercicios_procesamiento_ficheros_Bioinfo/5_Info_fastq.html) del curso de [GNU/Linuz para Bioinformatica](https://rsg-ecuador.github.io/unix.bioinfo.rsgecuador/README.html) organizado por RSG Ecuador.
 
-## Ejercicio 6. Extracción de información de archivos fastq
+## Extracción de información de archivos fastq
 
 En este ejercicio se obtendrá información de archivos fastq, que cotienen secuencias de nucleótidos y la calidad de su proceso de secuenciación. Para esto usaremos los archivos `secuencias1.fastq`, `secuencias2.fastq` y `secuencias3.fastq` que se encuentra en la carpeta `_files` dentro del directorio raíz del repositorio de GitHub [unix.bioinfo.rsgecuador](https://github.com/RSG-Ecuador/unix.bioinfo.rsgecuador/tree/gh-pages) .
+
+:::::: callout-note
+### Ejercicio 6
 
 **Ejercicio 6.1** La letra `N` representa un nucleótido que no pudo ser leído correctamente, y se reporta como ninguno, o `missing data`. Imprime el número de secuencias que tenga diez `N` seguidas por cada uno de los archivos `fastq` de la carpeta `_files`.
 
@@ -134,7 +137,7 @@ Es posible realizar esto con un comando de una sola línea, intenta resolverlo d
 :::
 
 ::: {.callout-tip collapse="true" icon="false"}
-## Solución
+#### Solución
 
 ``` {.bash code-copy="true" eval="false"}
 # cd C:/Users/ecoss/Documents/Respaldos/Github_notes/Workshop_Bash2024/data/unix.bioinfo.rsgecuador-gh-pages
@@ -171,7 +174,7 @@ Salida:
 **Ejercicio 6.2** Ahora, determina el número de secuencias (lineas) de cada archivo `.fastq` por separado. Se conoce que los títulos de las corridas de las secuencias en cada archivo `.fastq` empiezan con el string `@SRR098026`.
 
 ::: {.callout-tip collapse="true" icon="false"}
-## Solución
+#### Solución
 
 ``` bash
 #!/bin/bash
@@ -198,6 +201,7 @@ Salida:
 -   `secuencias2.fastq` - 75
 -   `secuencias3.fastq` - 75
 :::
+::::::
 
 ## Material suplementario
 

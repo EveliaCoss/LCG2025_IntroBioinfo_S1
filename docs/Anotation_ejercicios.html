@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>9&nbsp; Archivo FASTA – Introducción a la Bioinformática</title>
+<title>9&nbsp; Extracción de información de diversos archivos – Introducción a la Bioinformática</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -283,7 +283,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Anotation_ejercicios.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Archivo FASTA</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Anotation_ejercicios.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Extracción de información de diversos archivos</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -392,7 +392,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Anotation_ejercicios.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Archivo FASTA</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Extracción de información de diversos archivos</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -417,8 +417,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#encabezado-fasta-explicado-uniprotkb" id="toc-encabezado-fasta-explicado-uniprotkb" class="nav-link active" data-scroll-target="#encabezado-fasta-explicado-uniprotkb"><span class="header-section-number">9.1</span> Encabezado FASTA explicado (UniProtKB)</a></li>
-  <li><a href="#material-suplementario" id="toc-material-suplementario" class="nav-link" data-scroll-target="#material-suplementario"><span class="header-section-number">9.2</span> Material suplementario</a></li>
+  <li><a href="#archivo-fasta" id="toc-archivo-fasta" class="nav-link active" data-scroll-target="#archivo-fasta"><span class="header-section-number">9.1</span> Archivo FASTA</a>
+  <ul>
+  <li><a href="#encabezado-fasta-explicado-uniprotkb" id="toc-encabezado-fasta-explicado-uniprotkb" class="nav-link" data-scroll-target="#encabezado-fasta-explicado-uniprotkb"><span class="header-section-number">9.1.1</span> Encabezado FASTA explicado (UniProtKB)</a></li>
+  </ul></li>
+  <li><a href="#archivo-de-salida-de-blast" id="toc-archivo-de-salida-de-blast" class="nav-link" data-scroll-target="#archivo-de-salida-de-blast"><span class="header-section-number">9.2</span> Archivo de salida de BLAST</a>
+  <ul>
+  <li><a href="#sadasdasdd" id="toc-sadasdasdd" class="nav-link" data-scroll-target="#sadasdasdd"><span class="header-section-number">9.2.1</span> sadasdasdd</a></li>
+  </ul></li>
+  <li><a href="#archivo-bed" id="toc-archivo-bed" class="nav-link" data-scroll-target="#archivo-bed"><span class="header-section-number">9.3</span> Archivo BED</a>
+  <ul>
+  <li><a href="#dadsasd" id="toc-dadsasd" class="nav-link" data-scroll-target="#dadsasd"><span class="header-section-number">9.3.1</span> dadsasd</a></li>
+  </ul></li>
+  <li><a href="#archivo-gtf" id="toc-archivo-gtf" class="nav-link" data-scroll-target="#archivo-gtf"><span class="header-section-number">9.4</span> Archivo GTF</a>
+  <ul>
+  <li><a href="#dada" id="toc-dada" class="nav-link" data-scroll-target="#dada"><span class="header-section-number">9.4.1</span> dada</a></li>
+  </ul></li>
+  <li><a href="#material-suplementario" id="toc-material-suplementario" class="nav-link" data-scroll-target="#material-suplementario"><span class="header-section-number">9.5</span> Material suplementario</a></li>
   </ul>
 </nav>
     </div>
@@ -428,7 +443,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Archivo FASTA</span></h1>
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title"><strong>Extracción de información de diversos archivos</strong></span></h1>
 </div>
 
 
@@ -445,8 +460,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="encabezado-fasta-explicado-uniprotkb" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="encabezado-fasta-explicado-uniprotkb"><span class="header-section-number">9.1</span> Encabezado FASTA explicado (UniProtKB)</h2>
+<section id="archivo-fasta" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="archivo-fasta"><span class="header-section-number">9.1</span> Archivo FASTA</h2>
+<section id="encabezado-fasta-explicado-uniprotkb" class="level3" data-number="9.1.1">
+<h3 data-number="9.1.1" class="anchored" data-anchor-id="encabezado-fasta-explicado-uniprotkb"><span class="header-section-number">9.1.1</span> Encabezado FASTA explicado (UniProtKB)</h3>
 <p>Este ejemplo describe una proteína curada manualmente en UniProt (Swiss-Prot), identificada como <strong>(+)-T-muurolol synthase</strong>, una enzima que convierte farnesyl diphosphate en terpenos. Proviene de la cepa ATCC 27064 de <em>Streptomyces clavuligerus</em>. El gen responsable es <strong>SCLAV_p0068</strong>, y hay evidencia experimental directa de su existencia (PE=1).</p>
 <pre><code>&gt;sp|B5GW45|TMUUS_STRC2 (+)-T-muurolol synthase ((2E,6E)-farnesyl diphosphate cyclizing) OS=Streptomyces clavuligerus (...) OX=443255 GN=SCLAV_p0068 PE=1 SV=1</code></pre>
 <table class="caption-top table">
@@ -533,14 +550,15 @@ Ejercicio 7. Extracción de información de archivos fasta
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li><p>Colocate dentro de la carpeta <code>_files</code> de <code>unix.bioinfo.rsgecuador-gh-pages</code>. En mi caso sería empleando:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /Users/ecoss/Documents/LCG2025_IntroBioinfo_S1/practica/unix.bioinfo.rsgecuador-gh-pages/_files</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p>Cambia los permisos para que las OTRAS personas cuenten con todos los permisos (escritura, lectura y ejecución) sobre el archivo <code>S_clavuligerus_proteome.fasta</code>.</p></li>
-<li><p>¿Cuántas líneas tiene el archivo <code>S_clavuligerus_proteome.fasta</code>?</p></li>
-<li><p>¿Cuántos registros (“&gt;”) tiene el archivo <code>S_clavuligerus_proteome.fasta</code>?</p></li>
-<li><p>¿Cuántas veces aparece el motivo <code>DDXXD</code> en el archivo <code>S_clavuligerus_proteome.fasta</code>?</p></li>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /Users/ecoss/Documents/LCG2025_IntroBioinfo_S1/practica/unix.bioinfo.rsgecuador-gh-pages/_files</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Contesta las siguientes preguntas empleando el archivo <code>S_clavuligerus_proteome.fasta</code></p></li>
+<li><p>Cambia los permisos para que las OTRAS personas cuenten con todos los permisos (escritura, lectura y ejecución) sobre el archivo <code>FASTA</code>.</p></li>
+<li><p>¿Cuántas líneas tiene el archivo <code>FASTA</code>?</p></li>
+<li><p>¿Cuántos registros (“&gt;”) tiene el archivo FASTA?</p></li>
+<li><p>¿Cuántas veces aparece el motivo <code>DDXXD</code> en el archivo <code>FASTA</code>?</p></li>
 <li><p>¿Cuántos de esos registros son “Uncharacterized protein”?</p></li>
 <li><p>¿Cuántos de esos registros cuentan con evidencia experimental (PE=1)?</p></li>
-<li><p>¿De cuántos provienen las secuencias presentes en el archivo <code>S_clavuligerus_proteome.fasta</code>?</p></li>
+<li><p>¿De cuántos provienen las secuencias presentes en el archivo <code>FASTA</code>?</p></li>
 </ol>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -567,15 +585,144 @@ Solución
 </div>
 </div>
 </div>
-<p>ejercicios con la salida de blast</p>
-<p>ejercicios con BED</p>
 </section>
-<section id="material-suplementario" class="level2" data-number="9.2">
-<h2 data-number="9.2" class="anchored" data-anchor-id="material-suplementario"><span class="header-section-number">9.2</span> Material suplementario</h2>
+</section>
+<section id="archivo-de-salida-de-blast" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="archivo-de-salida-de-blast"><span class="header-section-number">9.2</span> Archivo de salida de BLAST</h2>
+<section id="sadasdasdd" class="level3" data-number="9.2.1">
+<h3 data-number="9.2.1" class="anchored" data-anchor-id="sadasdasdd"><span class="header-section-number">9.2.1</span> sadasdasdd</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Ejercicio 7. Extracción de información de archivos fasta
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>Colocate dentro de la carpeta <code>_files</code> de <code>unix.bioinfo.rsgecuador-gh-pages</code>. En mi caso sería empleando:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /Users/ecoss/Documents/LCG2025_IntroBioinfo_S1/practica/unix.bioinfo.rsgecuador-gh-pages/_files</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Contesta las siguientes preguntas empleando el archivo <code>S_clavuligerus_proteome.fasta</code></p></li>
+<li><p>Cambia los permisos para que las OTRAS personas cuenten con todos los permisos (escritura, lectura y ejecución) sobre el archivo <code>FASTA</code>.</p></li>
+<li><p>¿Cuántas líneas tiene el archivo <code>FASTA</code>?</p></li>
+<li><p>¿Cuántos registros (“&gt;”) tiene el archivo FASTA?</p></li>
+<li><p>¿Cuántas veces aparece el motivo <code>DDXXD</code> en el archivo <code>FASTA</code>?</p></li>
+<li><p>¿Cuántos de esos registros son “Uncharacterized protein”?</p></li>
+<li><p>¿Cuántos de esos registros cuentan con evidencia experimental (PE=1)?</p></li>
+<li><p>¿De cuántos provienen las secuencias presentes en el archivo <code>FASTA</code>?</p></li>
+</ol>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<pre><code>1. </code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="archivo-bed" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="archivo-bed"><span class="header-section-number">9.3</span> Archivo BED</h2>
+<section id="dadsasd" class="level3" data-number="9.3.1">
+<h3 data-number="9.3.1" class="anchored" data-anchor-id="dadsasd"><span class="header-section-number">9.3.1</span> dadsasd</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Ejercicio 7. Extracción de información de archivos fasta
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>Colocate dentro de la carpeta <code>_files</code> de <code>unix.bioinfo.rsgecuador-gh-pages</code>. En mi caso sería empleando:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /Users/ecoss/Documents/LCG2025_IntroBioinfo_S1/practica/unix.bioinfo.rsgecuador-gh-pages/_files</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Contesta las siguientes preguntas empleando el archivo <code>S_clavuligerus_proteome.fasta</code></p></li>
+<li><p>Cambia los permisos para que las OTRAS personas cuenten con todos los permisos (escritura, lectura y ejecución) sobre el archivo <code>FASTA</code>.</p></li>
+<li><p>¿Cuántas líneas tiene el archivo <code>FASTA</code>?</p></li>
+<li><p>¿Cuántos registros (“&gt;”) tiene el archivo FASTA?</p></li>
+<li><p>¿Cuántas veces aparece el motivo <code>DDXXD</code> en el archivo <code>FASTA</code>?</p></li>
+<li><p>¿Cuántos de esos registros son “Uncharacterized protein”?</p></li>
+<li><p>¿Cuántos de esos registros cuentan con evidencia experimental (PE=1)?</p></li>
+<li><p>¿De cuántos provienen las secuencias presentes en el archivo <code>FASTA</code>?</p></li>
+</ol>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<pre><code>1.</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="archivo-gtf" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="archivo-gtf"><span class="header-section-number">9.4</span> Archivo GTF</h2>
+<section id="dada" class="level3" data-number="9.4.1">
+<h3 data-number="9.4.1" class="anchored" data-anchor-id="dada"><span class="header-section-number">9.4.1</span> dada</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Ejercicio 7. Extracción de información de archivos fasta
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>Colocate dentro de la carpeta <code>_files</code> de <code>unix.bioinfo.rsgecuador-gh-pages</code>. En mi caso sería empleando:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /Users/ecoss/Documents/LCG2025_IntroBioinfo_S1/practica/unix.bioinfo.rsgecuador-gh-pages/_files</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Contesta las siguientes preguntas empleando el archivo <code>S_clavuligerus_proteome.fasta</code></p></li>
+<li></li>
+</ol>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<pre><code>1. </code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="material-suplementario" class="level2" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="material-suplementario"><span class="header-section-number">9.5</span> Material suplementario</h2>
 <ul>
-<li><a href="https://www.weizmann.ac.il/dept/irb/igor-ulitsky/pipeline-lncrna-annotation-rna-seq-data-plar">Pipeline for lncRNA annotation from RNA-seq data (PLAR)</a></li>
-<li><a href="https://robertslab.github.io/sams-notebook/posts/2023/2023-05-02-lncRNA-Identification---P.generosa-lncRNAs-using-CPC2-and-bedtools/index.html">lncRNA Identification - P.generosa lncRNAs using CPC2 and bedtools</a></li>
-<li><a href="https://rnabio.org/module-01-inputs/0001/05/01/RNAseq_Data/">RNA-seq Bioinformatics</a></li>
+<li><a href="https://plantsandpython.github.io/PlantsAndPython/L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/1_Practica.html">Comandos de Unix para minería de datos</a></li>
 </ul>
 
 
