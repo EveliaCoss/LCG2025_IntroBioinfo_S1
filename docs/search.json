@@ -330,8 +330,8 @@
     ]
   },
   {
-    "objectID": "ScriptBash.html",
-    "href": "ScriptBash.html",
+    "objectID": "REGEX.html",
+    "href": "REGEX.html",
     "title": "6  Wildcards y Streams",
     "section": "",
     "text": "6.1 Caracteres y strings\nEsto nos dice que el archivo cuenta con 300 lineas, 600 palabras y 12,934 caracteres.\nLos caracteres son unidades de información que se representan con símbolos. Pueden ser de varios tipos como alfanuméricos, números enteros, signos de puntuación. Varios caracteres son interpretados por la shell de manera especial. Estos se llaman caracteres especiales, claro, y permiten desarrollar alguna lógica, dependiendo del contexto. Por ejemplo, algunos caracteres: @ # . ? ! , / \\ &gt; ~ a µ g § R |(pipe).\nLos strings son arreglos de caracteres. Esto quiere decir que son caracteres en conjunto y con un orden en particular. Por ejemplo el string pizza tiene 4 diferentes caracteres: i, p, z, a. Diferentes combinaciones de caracteres pueden formar diferentes strings.\nCreemos un string y luego imprimámoslo en la pantalla del Terminal. Escribe los siguientes comandos:",
@@ -340,8 +340,8 @@
     ]
   },
   {
-    "objectID": "ScriptBash.html#caracteres-y-strings",
-    "href": "ScriptBash.html#caracteres-y-strings",
+    "objectID": "REGEX.html#caracteres-y-strings",
+    "href": "REGEX.html#caracteres-y-strings",
     "title": "6  Wildcards y Streams",
     "section": "",
     "text": "Note\n\n\n\nCada caracter se asocia a una combinación diferente de teclas en el teclado del computador.\n\n\n\n\nmi_primer_string=\"Taller de bioinformática\"\necho $mi_primer_string",
@@ -350,8 +350,8 @@
     ]
   },
   {
-    "objectID": "ScriptBash.html#wildcards",
-    "href": "ScriptBash.html#wildcards",
+    "objectID": "REGEX.html#wildcards",
+    "href": "REGEX.html#wildcards",
     "title": "6  Wildcards y Streams",
     "section": "6.2 Wildcards",
     "text": "6.2 Wildcards\nLos wildcards o wild characters son símbolos utilizados para representar uno o más caracteres. Se pueden utilizar con otros comandos para facilitar el procesamiento o búsqueda de archivos, directorios y datos en general.\n\n\n\n\n\n\n\nWildcard\nFunción\n\n\n\n\n*\nAsocia uno o más caracteres especificados por el usuario, con caracteres en un string con el que se opera.\n\n\n?\nAsocia solo un caracter a la vez en un string.\n\n\n[ ]\nAsocia cuaquiera de los caracteres dentro en un string.\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nEl wildcard más usado es * porque es muy versátil.\n\n\n\n\n\n\n\n\nEjercicio 4\n\n\n\nEl wildcard * me permitiría encontrar todos los archivos en una carpeta que tengan la palabra TESIS en ellos. Primero crea la carpeta:\ntaller_unix\nDespués, debemos generar estos archivos:\ncd taller_unix/\ntouch MI_TESIS.tex MI_TESIS_tutor2.tex TESIS.tex TESIS_YA_ACABATE.tex TESIS_finaaaaal.tex TESIS_final.tex TESIS_tutor1.tex TESIS_tutor2.tex a_reporte_01.txt b_reporte_02.txt c_reporte_03.txt z_reporte_30.txt \n\nEnlista todos los archivos que comiencen con “TESIS”.\nEnlista todos los archivos que terminen con el string “.tex”\nBuscar todos los archivos contengan la palabra “TESIS\" pero con 3 caracteres desconocidos antes.\nBuscar los archivos que terminen con el número 1 o 2 en su nombre antes de la extensión del archivo (.tex).\nEncontrar los archivos que terminen en dos números del 1 al 3 y del 0 al 2 antes del formato del archivo (.txt).\nEncontrar todos los archivos con este formato ?_reporte_[0-3][0-3].txt\nEncontrar todos los archivos que contengan por a o. z.\nBorramos todos estor archivos que terminen en “.txt” y “.tex”\n\n\n\n\n\n\n\nSolución\n\n\n\n\n\n1. ls -l TESIS*\n2. ls -l *.tex\n3. ls -l ???TESIS*\n4. ls -l *[1-2].tex\n5. ls -l *[1-3][0-2].txt\n6. ls -l ?_reporte_[0-3][0-3].txt\n7. ls -l *[az]* o ls -l *[a,z]*\n8. rm *.tex *.txt\n\n\n\n\n\n\n\n\n\n\n\nEjercicios de repaso\n\n\n\nPuedes seguir repasando y aprendiendo de las expresiones regulares en la pagina de RegexOne.",
@@ -360,8 +360,8 @@
     ]
   },
   {
-    "objectID": "ScriptBash.html#operadores-de-redirección-de-datos-io",
-    "href": "ScriptBash.html#operadores-de-redirección-de-datos-io",
+    "objectID": "REGEX.html#operadores-de-redirección-de-datos-io",
+    "href": "REGEX.html#operadores-de-redirección-de-datos-io",
     "title": "6  Wildcards y Streams",
     "section": "6.3 Operadores de redirección de datos I/O",
     "text": "6.3 Operadores de redirección de datos I/O\nUsualmente cuando trabajamos con datos, es necesario pasar el resultado de un comando a otro para hacer un procesamiento de datos apilado, como en un algortimo. Un stream o corriente esta hecha de datos. Es una corriente de datos. Un ejemplo muy familiar es el teclado y la pantalla. El teclado tiene una interfaz en donde por cada tecla presionada, un caracter se guarda en un archivo. Se dice entonces que es una corriente de  entrada. Cuando la pantalla nos muestra lo que estamos escribiendo entonces la data sale hacia nosotros y eso convierte a la pantalla en una corriente de salida. Los dispositivos que hacen este tipo de transmisión de datos se llaman dispositivos I/O (input y output). Los operadores que se encargan de esto se conocen como operadores de redirección. Tres importantes son:\n\n\n\n\n\n\n\nComando\nFunción\n\n\n\n\n&gt;\nStream de salida de datos. Sobre escribre sobre un archivo.\n\n\n&gt;&gt;\nStream de salida de datos. Adjunta nueva salida a datos preexistentes en un archivo.\n\n\n&lt;\nStream de entrada de datos. Recibe datos para procesamiento con algun comando.\n\n\n\n\n\n\n\n\n\nEjercicio 5\n\n\n\n\nCrea el archivo bacterias_generos.txt e imprime su contenido empleando los siguientes comandos:\necho -e \"\\nRickettsia\\nOrientia\\nWolbachia\\nAegyptianella\\nAnaplasma\\nCowdria\\nEhrlichia\\nNeorickettsia\\nCaedibacter\\nHolospora\\nLyticum\\nOdyssella\\nSymbiotes\\nTectibacter\" &gt; bacterias_generos.txt\ncat bacterias_generos.txt\nAgrega una nueva especie en la última fila empleando “&gt;&gt;”.\necho -e \"\\nEscherichia\\n:D\" &gt;&gt; bacterias_generos.txt\ncat bacterias_generos.txt\nAhora usaremos el comando sort para reordenar todos los géneros. Sin embargo notamos que el archivo original no cambia nunca.\nsort &lt; bacterias_generos.txt\nPara hacer un cambio en el archivo bacterias_generos.txt, usamos este comando. Notamos que ahora no usamos &gt;&gt; sino solo &gt;. Esto va a borrar el contenido previo con géneros desordenados y ahora los va a ordenar. El cambio no se puede deshacer, así que ten cuidado con el operador &gt; para que no pierdas datos.\n(sort &lt; bacterias_generos.txt) &gt; bacterias_generos_sorted.txt\ncat bacterias_generos_sorted.txt\n\n\n\n\n\n\n\n\n\nAdvertencia\n\n\n\nEl operador &gt; sobre escribe archivos. Ten cuidado al usarlo para que no pierdas datos.",
@@ -370,8 +370,8 @@
     ]
   },
   {
-    "objectID": "ScriptBash.html#material-suplementario",
-    "href": "ScriptBash.html#material-suplementario",
+    "objectID": "REGEX.html#material-suplementario",
+    "href": "REGEX.html#material-suplementario",
     "title": "6  Wildcards y Streams",
     "section": "6.4 Material suplementario",
     "text": "6.4 Material suplementario\n\nRSG Ecuador. Scripts en Bash\nRSG Ecuador. Wildcards y Streams\nRSG Ecuador. Expresiones regulares (regex)\nWildcard Selection in Bash\nExpresiones regulares",
@@ -404,7 +404,7 @@
     "href": "genes_orf.html#cómo-distinguimos-transcritos-codificantes-de-no-codificantes",
     "title": "7  Definición actualizada y didáctica del gen",
     "section": "7.3 ¿Cómo distinguimos transcritos codificantes de no codificantes?",
-    "text": "7.3 ¿Cómo distinguimos transcritos codificantes de no codificantes?\nLa distinción entre transcritos codificantes y no codificantes es esencial para la anotación funcional del transcriptoma. Aunque los lncRNAs no codifican proteínas, es necesario descartar evidencia de codificación antes de clasificarlos como tales.\n\n\n7.3.1 Tipos de archivos comunes en bioinformática\n\n\n\nFormato\nDescripción\nEmpleo\nEjemplo\n\n\n\n\nFASTA (.fasta / .fa)\nContiene secuencias de nucleótidos o aminoácidos. Cada entrada inicia con &gt; seguido de un identificador.\nGenoma de referencia, proteínas, transcriptos/nucleótidos\n&gt;seq1\nATGCGTACGTAGCTAG\n\n\nFASTQ (.fastq)\nSimilar a FASTA pero incluye calidad de lectura por base (lecturas de secuenciación).\nesencial en pipelines de secuenciación (RNA-seq, WGS).\n@SEQ_ID\nGATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAA\n+\n!''*((((***+))%%%++)(%%%%).1***-+*''))**\n\n\nGTF/GFF (.gtf / .gff)\nArchivos de anotación genómica: definen genes, exones, intrones, etc.\nclave para anotación estructural y funcional.\nchr1  HAVANA  exon  11869  12227  .  +  .  gene_id \"ENSG00000223972\";\n\n\nBED (.bed)\nDefine regiones genómicas (intervalos), útil para visualización y análisis de cobertura.\nLocalización de genes, clasificación de genes, visualización (IGV, UCSC Genome Browser)\nchr7  127471196  127472363  region1\n\n\n\n\n\n7.3.2 Herramientas bioinformáticas clave\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nAquí les dejo el link al Método de selección de lncRNAs empleado en Arabidopsis thaliana. Relacionado con el artículo Transcriptome-guided annotation and functional classification of long non-coding RNAs in Arabidopsis thaliana.\n\n\n\n\n\nSoftware\nPropósito\nFunción\nSecuencia de interés (input)\nBase de datos\n\n\n\n\ngffread\nObtener el FASTA de las secuencias seleccionadas\ngffread\nArchivo de anotación (GTF) y genoma de referencia (FASTA)\nNA\n\n\nEMBOSS/v6.6.0\nObtener el tamaño de las secuencias\ninfoseq\nSecuencias/nucleótidos (FASTA)\nNA\n\n\nkentUtils/v302\nExtraer la secuencia FASTA a partir de IDs y Generar archivo BED a partir del GTF\nfaSomeRecords, gtfToGenePred y genePredToBed\nSecuencias/nucleótidos (FASTA) y IDs.\nArchivo de anotación (GTF) y genoma de referencia (FASTA)\nNA\n\n\nTransDecoder\nPredicción del ORF y la “proteína” codificada\nTransDecoder.LongOrfs y TransDecoder.Predict\nSecuencias/nucleótidos (FASTA)\nNA\n\n\nblastn\nComparación con proteínas conocidas\nblastn\nproteína (.pep)\nUniProtKB/Swiss-Prot (proteínas)\n\n\nblastp\nComparación con proteínas conocidas\nblastp\nSecuencias/nucleótidos (FASTA)\nUniProtKB/Swiss-Prot (nucleótidos)\n\n\nblastx\nComparación con proteínas conocidas\nblastx\nnucleótidos (traducidos)\nUniProtKB/Swiss-Prot (proteínas)\n\n\nblastdbcmd\nExtraer información de la base de datos de BLAST\nblastdbcmd\nIDs de las secuencias\nRefSeq non-redundant proteins\n\n\nSignalP\nPredicción de péptidos señal\nsignalp\nproteína\nNA\n\n\nTMHMM\nPredicción de dominios transmembranales\ntmhmm\nproteína\nNA\n\n\nPhobius\nPredicción de dominios transmembranales y péptidos señal\nphobius.pl\nproteína\nNA\n\n\nHMMER\nBúsqueda de dominios conservados\nhmmscan\nproteína\nPfam\n\n\nInfernal\nBusca coincidencias estructurales en secuencias usando modelos de covarianza y escanea bases de datos\ncmsearch\nSecuencias/nucleótidos (FASTA)\nRfam\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n\nSi el transcrito no tiene similitud con proteínas conocidas, no contiene péptido señal, no tiene dominios transmembranales, y no presenta dominios conservados, es probablemente no codificante.\nSi alguno de estos elementos está presente, se debe considerar como potencialmente codificante y excluirlo de la clasificación como no codificante.",
+    "text": "7.3 ¿Cómo distinguimos transcritos codificantes de no codificantes?\nLa distinción entre transcritos codificantes y no codificantes es esencial para la anotación funcional del transcriptoma. Aunque los lncRNAs no codifican proteínas, es necesario descartar evidencia de codificación antes de clasificarlos como tales.\n\n\n7.3.1 Tipos de archivos comunes en bioinformática\n\n\n\nFormato\nDescripción\nEmpleo\nEjemplo\n\n\n\n\nFASTA (.fasta / .fa)\nContiene secuencias de nucleótidos o aminoácidos. Cada entrada inicia con &gt; seguido de un identificador.\nGenoma de referencia, proteínas, transcriptos/nucleótidos\n&gt;seq1\nATGCGTACGTAGCTAG\n\n\nFASTQ (.fastq)\nSimilar a FASTA pero incluye calidad de lectura por base (lecturas de secuenciación).\nesencial en pipelines de secuenciación (RNA-seq, WGS).\n@SEQ_ID\nGATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAA\n+\n!''*((((***+))%%%++)(%%%%).1***-+*''))**\n\n\nGTF/GFF (.gtf / .gff)\nArchivos de anotación genómica: definen genes, exones, intrones, etc.\nclave para anotación estructural y funcional.\nchr1  HAVANA  exon  11869  12227  .  +  .  gene_id \"ENSG00000223972\";\n\n\nBED (.bed)\nDefine regiones genómicas (intervalos), útil para visualización y análisis de cobertura.\nLocalización de genes, clasificación de genes, visualización (IGV, UCSC Genome Browser)\nchr7  127471196  127472363  region1\n\n\n\n\n\n7.3.2 Herramientas bioinformáticas clave\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nAquí les dejo el link al Método de selección de lncRNAs empleado en Arabidopsis thaliana. Relacionado con el artículo Transcriptome-guided annotation and functional classification of long non-coding RNAs in Arabidopsis thaliana.\n\n\n\n\n\nSoftware\nPropósito\nFunción\nSecuencia de interés (input)\nBase de datos\n\n\n\n\ngffread\nObtener el FASTA de las secuencias seleccionadas\ngffread\nArchivo de anotación (GTF) y genoma de referencia (FASTA)\nNA\n\n\nEMBOSS/v6.6.0\nObtener el tamaño de las secuencias\ninfoseq\nSecuencias/nucleótidos (FASTA)\nNA\n\n\nkentUtils/v302\nExtraer la secuencia FASTA a partir de IDs y Generar archivo BED a partir del GTF\nfaSomeRecords, gtfToGenePred y genePredToBed\nSecuencias/nucleótidos (FASTA) y IDs.\nArchivo de anotación (GTF) y genoma de referencia (FASTA)\nNA\n\n\nTransDecoder\nPredicción del ORF y la “proteína” codificada\nTransDecoder.LongOrfs y TransDecoder.Predict\nSecuencias/nucleótidos (FASTA)\nNA\n\n\nblastn\nComparación con proteínas conocidas\nblastn\nproteína (.pep)\nUniProtKB/Swiss-Prot (proteínas)\n\n\nblastp\nComparación con proteínas conocidas\nblastp\nSecuencias/nucleótidos (FASTA)\nUniProtKB/Swiss-Prot (nucleótidos)\n\n\nblastx\nComparación con proteínas conocidas\nblastx\nnucleótidos (traducidos)\nUniProtKB/Swiss-Prot (proteínas)\n\n\nblastdbcmd\nExtraer información de la base de datos de BLAST\nblastdbcmd\nIDs de las secuencias\nRefSeq non-redundant proteins\n\n\nSignalP\nPredicción de péptidos señal\nsignalp\nproteína\nNA\n\n\nTMHMM\nPredicción de dominios transmembranales\ntmhmm\nproteína\nNA\n\n\nPhobius\nPredicción de dominios transmembranales y péptidos señal\nphobius.pl\nproteína\nNA\n\n\nHMMER\nBúsqueda de dominios conservados\nhmmscan\nproteína\nPfam\n\n\nInfernal\nBusca coincidencias estructurales en secuencias usando modelos de covarianza y escanea bases de datos\ncmsearch\nSecuencias/nucleótidos (FASTA)\nRfam\n\n\n\n\n\n\nDiagrama de flujo de la anotación de lncRNAs en Arabidopsis thaliana\n\n\n\n\n\n\n\n\nNote\n\n\n\n\nSi el transcrito no tiene similitud con proteínas conocidas, no contiene péptido señal, no tiene dominios transmembranales, y no presenta dominios conservados, es probablemente no codificante.\nSi alguno de estos elementos está presente, se debe considerar como potencialmente codificante y excluirlo de la clasificación como no codificante.",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Definición actualizada y didáctica del gen</span>"
     ]
@@ -420,43 +420,133 @@
     ]
   },
   {
+    "objectID": "ScriptBash.html",
+    "href": "ScriptBash.html",
+    "title": "8  Scripts en Bash",
+    "section": "",
+    "text": "8.1 Actividad grupal\nLos scripts son archivos de texto que contienen instrucciones ejecutables por un intérprete de un lenguaje de programación para la ejecución de tareas. El formato .sh se utiliza para escribir scripts ejecutables por un intérprete como Bash. En esta sección crearemos varios scripts de Bash y usaremos varios comandos y operadores.\nPaso 1. Crear un script en Bash con el nombre demo.sh empleando nano.\nPaso 2. Copia el siguiente código dentro del script demo.sh y guarda los cambios.\nEste código realizará las siguientes instrucciones:\nPaso 3. Deberías correr el script así, una vez que hayas descargado el archivo secuencias_bash.fastq:",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Scripts en Bash</span>"
+    ]
+  },
+  {
+    "objectID": "ScriptBash.html#actividad-grupal",
+    "href": "ScriptBash.html#actividad-grupal",
+    "title": "8  Scripts en Bash",
+    "section": "",
+    "text": "nano demo.sh\n\n\n#!/bin/bash\n# File: demo.sh\n\n# Input de archivo\n# 2. Mostrar el archivo y número de argumentos\necho \"Archivo a procesar &gt; $@\"\necho \"Numero de argumentos: $#\"\n\n# 3. Conteo de secuencias y separación de malas lecturas\nnumero_secuencias=$(grep -c '^@SRR098026' $@)\ngrep -B1 -A2 NNNNNNNNNN $@ &gt; malas_lecturas.fastq\nmalas=$(cat malas_lecturas.fastq | wc -l)\necho \"Número de malas lecturas: $malas\"\n\n# 4. Búsqueda de patrones\necho \"Desea buscar patrones (y/n): \"\nread d\n\nif [[ $d == \"y\" ]]; then\n    echo \"Los patrones se guardarán en: patrones.txt\"\n    echo -e 'ACTG\\nCCCCC\\nNNNCNNN\\nNNNGNNN\\nTTTT\\nTATA\\nAAA' &gt; patrones.txt\n    grep -f patrones.txt $@ &gt; busqueda.txt\n    echo \"Búsqueda de patrones guardada en: busqueda.txt\"\nelse\n    echo \"ok :P\"\nfi\n\n# Mensaje final\necho \"Fin :)\"\n\n\n\n\n\n\nExplicación del código\n\n\n\n\n\n\n1. Comentarios y declaración de archivo\n#!/bin/bash: Indica que el script se ejecutará usando el intérprete de Bash.\n# File: demo.sh: Un comentario que indica el nombre del archivo del script.\n2. Mostrar el archivo y número de argumentos\necho \"Archivo a procesar &gt; $@\": Muestra el nombre del archivo que se pasará como argumento al script. $@ representa todos los argumentos pasados al script.\necho \"Numero de argumentos: $#\": Muestra cuántos argumentos ha recibido el script. $# indica el número de argumentos.\n3. Contar secuencias y separar malas lecturas\nnumero_secuencias=$(grep -c '^@SRR098026' $@): Usa grep para contar cuántas secuencias empiezan con @SRR098026 en el archivo (probablemente sea un prefijo en un archivo FASTQ que identifica secuencias de interés). -c cuenta las coincidencias.\ngrep -B1 -A2 NNNNNNNNNN $@ &gt; malas_lecturas.fastq: Busca secuencias de calidad baja o problemáticas (que contengan 10 nucleótidos seguidos de N, que representan bases no determinadas).\n\n-B1: Muestra 1 línea antes de cada coincidencia de NNNNNNNNNN.\n-A2: Muestra 2 líneas después de la coincidencia.\nEl resultado se guarda en un archivo llamado malas_lecturas.fastq.\n\nmalas=$(cat malas_lecturas.fastq | wc -l): Cuenta el número total de líneas en malas_lecturas.fastq (esto indica la cantidad de malas lecturas encontradas).\necho \"Número de malas lecturas: $malas\": Muestra la cantidad de malas lecturas encontradas\necho \"Numero de argumentos: $#\": Muestra cuántos argumentos ha recibido el script. $# indica el número de argumentos.\n4. Búsqueda de patrones\necho \"Desea buscar patrones (y/n): \": Pregunta al usuario si desea buscar patrones específicos en el archivo.\nread d: Lee la respuesta del usuario y la guarda en la variable d.\nif [[ $d == \"y\" ]]; then: Si la respuesta es “y” (sí), el script procede a buscar los patrones.\n\necho -e 'ACTG\\nCCCCC\\nNNNCNNN\\nNNNGNNN\\nTTTT\\nTATA\\nAAA' &gt; patrones.txt: Crea un archivo patrones.txt que contiene una lista de secuencias de interés (patrones a buscar).\ngrep -f patrones.txt $@ &gt; busqueda.txt: Busca los patrones contenidos en patrones.txt dentro del archivo de entrada. El resultado de la búsqueda se guarda en busqueda.txt.\necho \"Búsqueda de patrones guardada en: busqueda.txt\": Informa al usuario que los resultados de la búsqueda se guardaron en el archivo busqueda.txt.\n\nelse: Si la respuesta es “n” (no), simplemente muestra un mensaje.\n\n\n\n\n\n\nTomará como input el nombre del archivo ./_files/secuencias_bash.fastq de secuencias fastq para analizar.\nBuscará dentro del archivo provisto por el usuario las secuencias con el string @SRR098026 y las contará.\nExportará las malas secuencias a un archivo llamado malas_lecturas.fastq, usando el string “NNNNNNNNNN” como plantilla.\nReportará el número de malas secuencias.\nLuego buscaremos patrones en el archivo buenas_lecturas.fastq, si es que el usuario lo desea.\n\n\nbash demo.sh secuencias_bash.fastq",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Scripts en Bash</span>"
+    ]
+  },
+  {
+    "objectID": "ScriptBash.html#repaso",
+    "href": "ScriptBash.html#repaso",
+    "title": "8  Scripts en Bash",
+    "section": "8.2 Repaso",
+    "text": "8.2 Repaso\nAhora que ya sabes realizar Script en Bash, podrias intentar realizar la actividad de 6. Extracción de información de archivos fastq del curso de GNU/Linuz para Bioinformatica organizado por RSG Ecuador.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Scripts en Bash</span>"
+    ]
+  },
+  {
+    "objectID": "ScriptBash.html#ejercicio-6.-extracción-de-información-de-archivos-fastq",
+    "href": "ScriptBash.html#ejercicio-6.-extracción-de-información-de-archivos-fastq",
+    "title": "8  Scripts en Bash",
+    "section": "8.3 Ejercicio 6. Extracción de información de archivos fastq",
+    "text": "8.3 Ejercicio 6. Extracción de información de archivos fastq\nEn este ejercicio se obtendrá información de archivos fastq, que cotienen secuencias de nucleótidos y la calidad de su proceso de secuenciación. Para esto usaremos los archivos secuencias1.fastq, secuencias2.fastq y secuencias3.fastq que se encuentra en la carpeta _files dentro del directorio raíz del repositorio de GitHub unix.bioinfo.rsgecuador .\nEjercicio 6.1 La letra N representa un nucleótido que no pudo ser leído correctamente, y se reporta como ninguno, o missing data. Imprime el número de secuencias que tenga diez N seguidas por cada uno de los archivos fastq de la carpeta _files.\n\n\n\n\n\n\nNote\n\n\n\nEs posible realizar esto con un comando de una sola línea, intenta resolverlo de esta forma.\n\n\n\n\n\n\n\n\nSolución\n\n\n\n\n\n# cd C:/Users/ecoss/Documents/Respaldos/Github_notes/Workshop_Bash2024/data/unix.bioinfo.rsgecuador-gh-pages\n\n#!/bin/bash\n# File: countseq.sh\n\n# Ruta a la carpeta que contiene los archivos .fastq\nFOLDER=\"_files\"\n\n# Iterar sobre cada archivo .fastq en la carpeta\nfor file in \"$FOLDER\"/*[1-3].fastq; do\n  # Imprimir el nombre del archivo\n  echo \"Archivo: $file\"\n  \n  # Usar grep para buscar secuencias que contengan 10 'N' seguidas y contar cuántas veces aparecen\n  count=$(grep -c 'NNNNNNNNNN' $file )\n  \n  # Imprimir el número de secuencias encontradas\n  echo \"Número de secuencias con 10 N seguidas: $count\"\n  echo \"---------------------------------------\"\ndone\nRecuerda para ejecutar este codigo deberas encontrarte dentro de la carpeta descomprimida unix.bioinfo.rsgecuador-gh-pages/y ejecutar: ./countseq.sh.\nSalida:\n\nsecuencias1.fastq - 1\nsecuencias2.fastq - 58\nsecuencias3.fastq - 75\n\n\n\n\nEjercicio 6.2 Ahora, determina el número de secuencias (lineas) de cada archivo .fastq por separado. Se conoce que los títulos de las corridas de las secuencias en cada archivo .fastq empiezan con el string @SRR098026.\n\n\n\n\n\n\nSolución\n\n\n\n\n\n#!/bin/bash\n# File: countNseq.sh\n\n# Ruta a la carpeta que contiene los archivos .fastq\nFOLDER=\"_files\"\n\n# Iterar sobre cada archivo .fastq en la carpeta\nfor file in \"$FOLDER\"/*[1-3].fastq; do\n  echo \"Archivo: $file\"\n  \n  # Usar grep para contar cuántas líneas empiezan con '@SRR098026'\n  count=$(grep -c '^@SRR098026' $file )\n  \n  echo \"Número de secuencias: $count\"\n  echo \"---------------------------------------\"\ndone\nSalida:\n\nsecuencias1.fastq - 99\nsecuencias2.fastq - 75\nsecuencias3.fastq - 75",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Scripts en Bash</span>"
+    ]
+  },
+  {
+    "objectID": "ScriptBash.html#material-suplementario",
+    "href": "ScriptBash.html#material-suplementario",
+    "title": "8  Scripts en Bash",
+    "section": "8.4 Material suplementario",
+    "text": "8.4 Material suplementario\n\nRSG Ecuador. Scripts en Bash\nRSG Ecuador. Wildcards y Streams\nRSG Ecuador. Expresiones regulares (regex)\nWildcard Selection in Bash",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Scripts en Bash</span>"
+    ]
+  },
+  {
+    "objectID": "Anotation_ejercicios.html",
+    "href": "Anotation_ejercicios.html",
+    "title": "9  Archivo FASTA",
+    "section": "",
+    "text": "9.1 Encabezado FASTA explicado (UniProtKB)\nEste ejemplo describe una proteína curada manualmente en UniProt (Swiss-Prot), identificada como (+)-T-muurolol synthase, una enzima que convierte farnesyl diphosphate en terpenos. Proviene de la cepa ATCC 27064 de Streptomyces clavuligerus. El gen responsable es SCLAV_p0068, y hay evidencia experimental directa de su existencia (PE=1).\nejercicios con la salida de blast\nejercicios con BED",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Archivo FASTA</span>"
+    ]
+  },
+  {
+    "objectID": "Anotation_ejercicios.html#encabezado-fasta-explicado-uniprotkb",
+    "href": "Anotation_ejercicios.html#encabezado-fasta-explicado-uniprotkb",
+    "title": "9  Archivo FASTA",
+    "section": "",
+    "text": "&gt;sp|B5GW45|TMUUS_STRC2 (+)-T-muurolol synthase ((2E,6E)-farnesyl diphosphate cyclizing) OS=Streptomyces clavuligerus (...) OX=443255 GN=SCLAV_p0068 PE=1 SV=1\n\n\n\n\n\n\n\n\nCampo\nSignificado\nTraducción didáctica\n\n\n\n\nsp\nSwiss-Prot: base de datos revisada manualmente\nEntrada curada por expertos\n\n\nB5GW45\nAccession number: identificador único de la proteína\nClave única en UniProt\n\n\nTMUUS_STRC2\nNombre corto: nombre de la proteína + especie\nAbreviación de la enzima en Streptomyces clavuligerus\n\n\n(+)-T-muurolol synthase\nNombre funcional: enzima que cicla farnesyl diphosphate\nEnzima que produce terpenos\n\n\n(2E,6E)-farnesyl diphosphate cyclizing\nActividad específica\nTipo de reacción química que realiza\n\n\nOS=Streptomyces clavuligerus (...)\nOrganism Species: especie y cepas\nOrganismo fuente y cepas de referencia\n\n\nOX=443255\nOrganism Taxonomy ID\nID taxonómico en NCBI\n\n\nGN=SCLAV_p0068\nGene Name\nNombre del gen que codifica esta proteína\n\n\nPE=1\nProtein Existence: nivel de evidencia\n\nNivel 1 = evidencia experimental a nivel proteína\nNivel 2 = evidencia experimental a nivel ARN (ej. RT-PCR, RNA-seq)\nNivel 3 = Inferida por homología con proteínas similares en otros organismos\nNivel 4 = Predicción computacional sin evidencia experimental directa\nNivel 5 = Existencia incierta; datos insuficientes o contradictorios\n\n\n\nSV=1\nSequence Version\nVersión de la secuencia en UniProt\n\n\n\n\n\n\n\n\n\nEjercicio 7. Extracción de información de archivos fasta\n\n\n\n\nColocate dentro de la carpeta _files de unix.bioinfo.rsgecuador-gh-pages. En mi caso sería empleando:\ncd /Users/ecoss/Documents/LCG2025_IntroBioinfo_S1/practica/unix.bioinfo.rsgecuador-gh-pages/_files\nCambia los permisos para que las OTRAS personas cuenten con todos los permisos (escritura, lectura y ejecución) sobre el archivo S_clavuligerus_proteome.fasta.\n¿Cuántas líneas tiene el archivo S_clavuligerus_proteome.fasta?\n¿Cuántos registros (“&gt;”) tiene el archivo S_clavuligerus_proteome.fasta?\n¿Cuántas veces aparece el motivo DDXXD en el archivo S_clavuligerus_proteome.fasta?\n¿Cuántos de esos registros son “Uncharacterized protein”?\n¿Cuántos de esos registros cuentan con evidencia experimental (PE=1)?\n¿De cuántos provienen las secuencias presentes en el archivo S_clavuligerus_proteome.fasta?\n\n\n\n\n\n\n\nSolución\n\n\n\n\n\n1. cd TU_DIRECCION\n2. chmod 757 S_clavuligerus_proteome.fasta\n3. wc -l S_clavuligerus_proteome.fasta # 40739\n4. grep -c \"&gt;\" S_clavuligerus_proteome.fasta # 6439 o grep '^&gt;' S_clavuligerus_proteome.fasta | wc -l # 6439\n5. grep -v '^&gt;' S_clavuligerus_proteome.fasta | tr -d '\\n' | grep -oE 'DD[A-Z]{2}D' | wc -l #314 \n6. grep '^&gt;' S_clavuligerus_proteome.fasta | grep -oE 'Uncharacterized protein' | wc -l #2689 \n7. grep '^&gt;' S_clavuligerus_proteome.fasta | grep 'PE=1' | wc -l # 6 registros\n8. grep '^&gt;' S_clavuligerus_proteome.fasta | grep -o 'OS=[^=]*' | sort | uniq | wc -l # solo una especie",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Archivo FASTA</span>"
+    ]
+  },
+  {
+    "objectID": "Anotation_ejercicios.html#material-suplementario",
+    "href": "Anotation_ejercicios.html#material-suplementario",
+    "title": "9  Archivo FASTA",
+    "section": "9.2 Material suplementario",
+    "text": "9.2 Material suplementario\n\nPipeline for lncRNA annotation from RNA-seq data (PLAR)\nlncRNA Identification - P.generosa lncRNAs using CPC2 and bedtools\nRNA-seq Bioinformatics",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Archivo FASTA</span>"
+    ]
+  },
+  {
     "objectID": "Annotation_lncRNAs.html",
     "href": "Annotation_lncRNAs.html",
-    "title": "8  Exploración y clasificación de lncRNAs",
+    "title": "10  Exploración y clasificación de lncRNAs",
     "section": "",
-    "text": "8.0.1 Introducción didáctica\nLos lncRNAs (long non-coding RNAs o ARN largos no codificantes) representan una clase diversa de transcritos que no codifican proteínas pero desempeñan funciones clave en la regulación génica. Este capítulo se enfoca en:",
+    "text": "10.0.1 Introducción didáctica\nLos lncRNAs (long non-coding RNAs o ARN largos no codificantes) representan una clase diversa de transcritos que no codifican proteínas pero desempeñan funciones clave en la regulación génica. Este capítulo se enfoca en:",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Exploración y clasificación de lncRNAs</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Exploración y clasificación de lncRNAs</span>"
     ]
   },
   {
     "objectID": "Annotation_lncRNAs.html#características-de-los-lncrnas",
     "href": "Annotation_lncRNAs.html#características-de-los-lncrnas",
-    "title": "8  Exploración y clasificación de lncRNAs",
-    "section": "8.1 Características de los lncRNAs",
-    "text": "8.1 Características de los lncRNAs\nLos lncRNAs son moléculas de ARN de más de 200 nucleótidos que no codifican proteínas, pero desempeñan funciones clave en la regulación génica y celular. Aquí tienes un resumen bilingüe y modular de sus características principales:\n\nLongitud &gt;200 nucleótidos\nExpresión específica por tejido y etapa: Se expresan de forma diferencial según el tipo celular, tejido (como el testículo) y etapa del desarrollo\nRegulación génica en cis y trans: Modulando la expresión de genes vecinos o lejanos.\nDiversidad de mecanismos moleculares\n\n\n\n\nModificado de Sun & Kraus, 2015. Endocrine Reviews.",
+    "title": "10  Exploración y clasificación de lncRNAs",
+    "section": "10.1 Características de los lncRNAs",
+    "text": "10.1 Características de los lncRNAs\nLos lncRNAs son moléculas de ARN de más de 200 nucleótidos que no codifican proteínas, pero desempeñan funciones clave en la regulación génica y celular. Aquí tienes un resumen bilingüe y modular de sus características principales:\n\nLongitud &gt;200 nucleótidos\nExpresión específica por tejido y etapa: Se expresan de forma diferencial según el tipo celular, tejido (como el testículo) y etapa del desarrollo\nRegulación génica en cis y trans: Modulando la expresión de genes vecinos o lejanos.\nDiversidad de mecanismos moleculares\n\n\n\n\nModificado de Sun & Kraus, 2015. Endocrine Reviews.",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Exploración y clasificación de lncRNAs</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Exploración y clasificación de lncRNAs</span>"
     ]
   },
   {
     "objectID": "Annotation_lncRNAs.html#cómo-clasifican-los-lncrnas",
     "href": "Annotation_lncRNAs.html#cómo-clasifican-los-lncrnas",
-    "title": "8  Exploración y clasificación de lncRNAs",
-    "section": "8.2 ¿Cómo clasifican los lncRNAs?",
-    "text": "8.2 ¿Cómo clasifican los lncRNAs?\n\n\n\nModificado de Shafiq S, et al, 2015. Biochimica et Biophysica Acta",
+    "title": "10  Exploración y clasificación de lncRNAs",
+    "section": "10.2 ¿Cómo clasifican los lncRNAs?",
+    "text": "10.2 ¿Cómo clasifican los lncRNAs?\n\n\n\nModificado de Shafiq S, et al, 2015. Biochimica et Biophysica Acta\n\n\nzcat",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Exploración y clasificación de lncRNAs</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Exploración y clasificación de lncRNAs</span>"
     ]
   },
   {
     "objectID": "Annotation_lncRNAs.html#material-suplementario",
     "href": "Annotation_lncRNAs.html#material-suplementario",
-    "title": "8  Exploración y clasificación de lncRNAs",
-    "section": "9.1 Material suplementario",
-    "text": "9.1 Material suplementario\n\nPipeline for lncRNA annotation from RNA-seq data (PLAR)\nlncRNA Identification - P.generosa lncRNAs using CPC2 and bedtools\nRNA-seq Bioinformatics",
+    "title": "10  Exploración y clasificación de lncRNAs",
+    "section": "11.1 Material suplementario",
+    "text": "11.1 Material suplementario\n\nPipeline for lncRNA annotation from RNA-seq data (PLAR)\nlncRNA Identification - P.generosa lncRNAs using CPC2 and bedtools\nRNA-seq Bioinformatics",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Exploración y clasificación de lncRNAs</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Exploración y clasificación de lncRNAs</span>"
+    ]
+  },
+  {
+    "objectID": "awk.html",
+    "href": "awk.html",
+    "title": "11  AWK",
+    "section": "",
+    "text": "AWK es un lenguaje de programación diseñado para procesar datos de texto, ya sean ficheros o flujos de datos. El nombre AWK deriva de las iniciales de los apellidos de sus autores: Alfred Aho, Peter Weinberger, y Brian Kernighan. awk, cuando está escrito todo en minúsculas, hace referencia al programa de UNIX que interpreta programas escritos en el lenguaje de programación AWK. Es decir, AWK es un lenguaje interpretado por el intérprete de comandos.\n\n\n\n\n\n\nAWK\n\n\n\nPara el ejercicio 6.3 debes saber sobre AWK, puedes aprender mas sobre el siguiento esta guia Curso avanzado de programación AWK y Bash para bioinformática y biocómputo en sistemas GNU/Linux.\n\n\nAqui les dejo la informacion que se puede consultar, solo sepan que existe.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>AWK</span>"
     ]
   }
 ]

@@ -23,7 +23,11 @@ Los lncRNAs son moléculas de ARN de más de **200 nucleótidos que no codifican
 
 ![Modificado de Shafiq S, et al, 2015. Biochimica et Biophysica Acta](img/lncRNAs_classification.png)
 
+zcat
+
 # Detección de genes codificantes vecinos (neighboring gene pair)
+
+[![Figura 3. Predicción de la función del ARN largo no codificante (lincRNA) basada en la red de coexpresión. Las relaciones de coexpresión entre los genes codificantes (nodos azules) y los genes lincRNA (nodos amarillos) constituyen una red completa. En la subred del módulo, por ejemplo, hay 4 genes lincRNA y 39 genes codificantes, entre los cuales 24 (nodos azul oscuro) tienen la función X y 15 (nodos azul claro) tienen otras funciones. Este módulo está significativamente enriquecido con la función X a través del análisis estadístico. En consecuencia, los cuatro lincRNA de este módulo se predicen como función X. Traducción realizada con la versión gratuita del traductor DeepL.com](img/coexpression.jpeg)](https://academic.oup.com/bib/article/18/5/789/2562763?login=true)
 
 Ejercicio de clasificacion de lncRNAs en humanos
 

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; Análisis de datos de RNA-Seq – Introducción a la Bioinformática</title>
+<title>11&nbsp; AWK – Introducción a la Bioinformática</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,41 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -65,8 +30,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./REGEX.html" rel="next">
-<link href="./Bash.html" rel="prev">
+<link href="./Annotation_lncRNAs.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -283,7 +247,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Rnaseq_intro.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Análisis de datos de RNA-Seq</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./awk.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">AWK</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -367,7 +331,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Rnaseq_intro.html" class="sidebar-item-text sidebar-link active">
+  <a href="./Rnaseq_intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Análisis de datos de RNA-Seq</span></span></a>
   </div>
 </li>
@@ -403,7 +367,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./awk.html" class="sidebar-item-text sidebar-link">
+  <a href="./awk.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">AWK</span></span></a>
   </div>
 </li>
@@ -412,31 +376,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#bioinformática-se-conforma-de-la-computación-biológica-matemáticas-y-estadística" id="toc-bioinformática-se-conforma-de-la-computación-biológica-matemáticas-y-estadística" class="nav-link active" data-scroll-target="#bioinformática-se-conforma-de-la-computación-biológica-matemáticas-y-estadística"><span class="header-section-number">5.1</span> Bioinformática se conforma de la computación, biológica, matemáticas y estadística</a></li>
-  <li><a href="#transcriptoma" id="toc-transcriptoma" class="nav-link" data-scroll-target="#transcriptoma"><span class="header-section-number">5.2</span> Transcriptoma</a>
-  <ul>
-  <li><a href="#porque-es-importante-medir-los-cambios-en-la-expresión-génica-transcriptoma" id="toc-porque-es-importante-medir-los-cambios-en-la-expresión-génica-transcriptoma" class="nav-link" data-scroll-target="#porque-es-importante-medir-los-cambios-en-la-expresión-génica-transcriptoma"><span class="header-section-number">5.2.1</span> <strong>¿Porque es importante medir los cambios en la expresión génica (transcriptoma)?</strong></a></li>
-  </ul></li>
-  <li><a href="#el-transcriptoma-varía-según" id="toc-el-transcriptoma-varía-según" class="nav-link" data-scroll-target="#el-transcriptoma-varía-según"><span class="header-section-number">5.3</span> El transcriptoma varía según:</a></li>
-  <li><a href="#idea-principal-de-rna-seq" id="toc-idea-principal-de-rna-seq" class="nav-link" data-scroll-target="#idea-principal-de-rna-seq"><span class="header-section-number">5.4</span> <strong>Idea principal de RNA-Seq</strong></a>
-  <ul>
-  <li><a href="#relacionar-un-fenotipo-con-los-cambios-de-expresión-de-los-genes-en-una-condición-dada" id="toc-relacionar-un-fenotipo-con-los-cambios-de-expresión-de-los-genes-en-una-condición-dada" class="nav-link" data-scroll-target="#relacionar-un-fenotipo-con-los-cambios-de-expresión-de-los-genes-en-una-condición-dada"><span class="header-section-number">5.4.1</span> <strong>Relacionar un fenotipo con los cambios de expresión de los genes en una condición dada</strong></a></li>
-  </ul></li>
-  <li><a href="#pipeline-general" id="toc-pipeline-general" class="nav-link" data-scroll-target="#pipeline-general"><span class="header-section-number">5.5</span> Pipeline general</a></li>
-  <li><a href="#control-de-calidad-de-los-datos" id="toc-control-de-calidad-de-los-datos" class="nav-link" data-scroll-target="#control-de-calidad-de-los-datos"><span class="header-section-number">6</span> <strong>Control de calidad de los datos</strong></a>
-  <ul>
-  <li><a href="#quality-check-quality-control" id="toc-quality-check-quality-control" class="nav-link" data-scroll-target="#quality-check-quality-control"><span class="header-section-number">6.1</span> Quality Check / Quality Control</a></li>
-  <li><a href="#archivos-fastq-fastq.gz-fq.gz" id="toc-archivos-fastq-fastq.gz-fq.gz" class="nav-link" data-scroll-target="#archivos-fastq-fastq.gz-fq.gz"><span class="header-section-number">6.2</span> Archivos fastq (<code>fastq.gz</code> / <code>fq.gz</code>)</a></li>
-  <li><a href="#phred-quality-score-puntuación-de-calidad" id="toc-phred-quality-score-puntuación-de-calidad" class="nav-link" data-scroll-target="#phred-quality-score-puntuación-de-calidad"><span class="header-section-number">6.3</span> Phred Quality score / Puntuación de calidad</a></li>
-  <li><a href="#material-suplementario" id="toc-material-suplementario" class="nav-link" data-scroll-target="#material-suplementario"><span class="header-section-number">6.4</span> Material suplementario</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -444,7 +385,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Análisis de datos de RNA-Seq</span></h1>
+<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">AWK</span></h1>
 </div>
 
 
@@ -461,180 +402,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="bioinformática-se-conforma-de-la-computación-biológica-matemáticas-y-estadística" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="bioinformática-se-conforma-de-la-computación-biológica-matemáticas-y-estadística"><span class="header-section-number">5.1</span> Bioinformática se conforma de la computación, biológica, matemáticas y estadística</h2>
-<p>La bioinformática, en relación con la <strong>genética y la genómica</strong>, es una <strong>subdisciplina científica</strong> que implica el uso de <strong>ciencias informáticas</strong> para recopilar, almacenar, analizar y diseminar datos biológicos*, como secuencias de ADN y aminoácidos o anotaciones sobre esas secuencias <a href="https://www.genome.gov/es/genetics-glossary/Bioinformatica">NIH, 2023</a>.</p>
-</section>
-<section id="transcriptoma" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="transcriptoma"><span class="header-section-number">5.2</span> Transcriptoma</h2>
-<p>Es el conjunto de todas las moléculas de RNA producidos por el genoma bajo <strong>condiciones específicas</strong> o en <strong>una célula específica (scRNA-Seq)</strong> o en <strong>una población de células (bulk RNA-Seq)</strong>.</p>
-<section id="porque-es-importante-medir-los-cambios-en-la-expresión-génica-transcriptoma" class="level3" data-number="5.2.1">
-<h3 data-number="5.2.1" class="anchored" data-anchor-id="porque-es-importante-medir-los-cambios-en-la-expresión-génica-transcriptoma"><span class="header-section-number">5.2.1</span> <strong>¿Porque es importante medir los cambios en la expresión génica (transcriptoma)?</strong></h3>
-<ul>
-<li><p>Las variaciones en la expresión entre condiciones se puede relacionar con los cambios en los <strong>procesos biológicos</strong>.</p></li>
-<li><p>El transcriptoma nos da una aproximación de los cambios relativos en la expresión génica de los <strong>genes codificantes y no codificantes</strong>.</p></li>
-</ul>
+<p><strong>AWK</strong>&nbsp;es un lenguaje de programación diseñado para procesar datos de texto, ya sean ficheros o flujos de datos. El nombre&nbsp;<strong>AWK</strong>&nbsp;deriva de las iniciales de los apellidos de sus autores: Alfred&nbsp;<strong>A</strong>ho, Peter&nbsp;<strong>W</strong>einberger, y Brian&nbsp;<strong>K</strong>ernighan.&nbsp;<code>awk</code>, cuando está escrito todo en minúsculas, hace referencia al programa de UNIX que interpreta programas escritos en el lenguaje de programación AWK. Es decir,&nbsp;<strong>AWK</strong>&nbsp;es un lenguaje interpretado por el intérprete de comandos.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Palabras claves:
+AWK
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<ul>
-<li>Genoma - Fijo</li>
-<li>Transcriptoma - Altamente variable</li>
-</ul>
+<p>Para el ejercicio 6.3 debes saber sobre AWK, puedes aprender mas sobre el siguiento esta guia <a href="https://vinuesa.github.io/intro2linux/index.html#el-lenguaje-de-procesamiento-de-patrones-awk-y-su-sucesor-gawk"><strong>Curso avanzado de programación AWK y Bash para bioinformática y biocómputo en sistemas GNU/Linux</strong></a><strong>.</strong></p>
 </div>
 </div>
-</section>
-</section>
-<section id="el-transcriptoma-varía-según" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="el-transcriptoma-varía-según"><span class="header-section-number">5.3</span> El transcriptoma varía según:</h2>
-<ul>
-<li>Tejido / Órgano</li>
-<li>Célula</li>
-<li>Ambiente (estrés)</li>
-<li>Medicamentos (tratamientos)</li>
-<li>Salud</li>
-<li>Edad</li>
-<li>Etapa del desarrollo</li>
-</ul>
-</section>
-<section id="idea-principal-de-rna-seq" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="idea-principal-de-rna-seq"><span class="header-section-number">5.4</span> <strong>Idea principal de RNA-Seq</strong></h2>
-<section id="relacionar-un-fenotipo-con-los-cambios-de-expresión-de-los-genes-en-una-condición-dada" class="level3" data-number="5.4.1">
-<h3 data-number="5.4.1" class="anchored" data-anchor-id="relacionar-un-fenotipo-con-los-cambios-de-expresión-de-los-genes-en-una-condición-dada"><span class="header-section-number">5.4.1</span> <strong>Relacionar un fenotipo con los cambios de expresión de los genes en una condición dada</strong></h3>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://www.acobiom.com/en/rna-seq-en/"><img src="https://www.acobiom.com/wp-content/uploads/2022/09/cropped-cropped-RNA-Seq-Experiment-1.png" class="img-fluid figure-img"></a></p>
-<figcaption>Imagen tomada de: https://www.acobiom.com/en/rna-seq-en/</figcaption>
-</figure>
-</div>
-</section>
-</section>
-<section id="pipeline-general" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="pipeline-general"><span class="header-section-number">5.5</span> Pipeline general</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://biocorecrg.github.io/RNAseq_course_2019/workflow.html"><img src="https://biocorecrg.github.io/RNAseq_course_2019/images/RNAseq_workflow.png" class="img-fluid figure-img"></a></p>
-<figcaption>Imagen proveniente de mRNA-Seq data analysis workflow</figcaption>
-</figure>
-</div>
-</section>
-<section id="control-de-calidad-de-los-datos" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> <strong>Control de calidad de los datos</strong></h1>
-<section id="quality-check-quality-control" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="quality-check-quality-control"><span class="header-section-number">6.1</span> Quality Check / Quality Control</h2>
-<ul>
-<li><p><strong>Uno de los pasos más importantes. Dedícale tiempo.</strong></p></li>
-<li><p>La calidad de tus datos importa, bibliotecas mal secuenciadas genera datos desconfiables.</p></li>
-<li><p>Debes analizar su calidad para poder reclamar en la secuenciación (~1 semana).</p></li>
-</ul>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Programas:
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FastQC</a></li>
-<li><a href="https://multiqc.info/">MultiQC</a></li>
-</ul>
-</div>
-</div>
-</section>
-<section id="archivos-fastq-fastq.gz-fq.gz" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="archivos-fastq-fastq.gz-fq.gz"><span class="header-section-number">6.2</span> Archivos fastq (<code>fastq.gz</code> / <code>fq.gz</code>)</h2>
-<ul>
-<li><p>Derivan del formato FASTA.</p></li>
-<li><p><strong>Muestra la calidad de cada nucleótido.</strong></p></li>
-<li><p>Cada secuencia está representada por 4 líneas:</p>
-<ul>
-<li><div>
-<ol type="1">
-<li><p>@ ID del read + información de la corrida</p></li>
-<li><p>Secuencia</p></li>
-<li><p>Símbolo “+”</p></li>
-<li><p>Información de la calidad de secuenciación de cada base. Cada letra o símbolo representa a una base de la secuencia codificado en formato (Escala <em>Phred</em> y código <a href="https://www.drive5.com/usearch/manual/quality_score.html"><em>ASCII</em></a>)</p></li>
-</ol>
-</div></li>
-</ul></li>
-</ul>
-<p><a href="https://eveliacoss.github.io/RNAseq_classFEB2024/Presentaciones/Dia1_AspectosGenerales.html#45"><img src="img/fastq_example.png" class="img-fluid"></a></p>
-</section>
-<section id="phred-quality-score-puntuación-de-calidad" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="phred-quality-score-puntuación-de-calidad"><span class="header-section-number">6.3</span> Phred Quality score / Puntuación de calidad</h2>
-<p>Q = -10 x log10(P) # where P is the probability that a base call is erroneous</p>
-<ul>
-<li><p>Q = Phred Quality score</p></li>
-<li><p>P = Probability of incorrect base call</p></li>
-</ul>
-<p><img src="img/Phred_example.png" class="img-fluid"></p>
-<p>El valor máximo de calidad es = ~40 (zona verde) y los valores &lt; 20 se consideran de baja calidad.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Ejemplo de Buena calidad
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Reporte de FastQC con <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/good_sequence_short_fastqc.html">buena calidad</a> de las lecturas en la zona verde.</p>
-</div>
-</div>
-<p><a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/good_sequence_short_fastqc.html"><img src="img/GoodQC.png" class="img-fluid"></a></p>
-<p>En resumen:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://es.wikipedia.org/wiki/Formato_FASTQ#:~:text=El%20formato%20FASTQ%20es%20un,%C3%BAnico%20car%C3%A1cter%20del%20c%C3%B3digo%20ASCII."><img src="img/Calidad_Phred_33.png" class="img-fluid figure-img"></a></p>
-<figcaption>Visualización de la estructura de un archivo FASTQ y la interpretación de la escala de calidad Phred para nucleótidos. Se clasifican las bases según su precisión en tres categorías: baja calidad (Q &lt; 20), calidad media (20 ≤ Q &lt; 30) y alta calidad (Q ≥ 30).</figcaption>
-</figure>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Ejercicio 3
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ol type="1">
-<li><p>Visualiza el contenido del archivo “_files/secuencias_bash.fastq” empleando head.</p>
-<div class="sourceCode" id="cb1" data-code-copy="true" data-eval="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> _files/secuencias_bash.fastq</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p>Calcula el numero de lineas contenidas en este archivo.</p>
-<div class="sourceCode" id="cb2" data-code-copy="true" data-eval="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wc</span> <span class="at">-l</span> _files/secuencias_bash.fastq</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p>Imprime las lineas 4 a 8 del archivo.</p>
-<div class="sourceCode" id="cb3" data-code-copy="true" data-eval="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>   <span class="fu">sed</span> <span class="at">-n</span> <span class="st">'4,8p'</span> _files/secuencias_bash.fastq</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p>Podemos utilizar la función <code>grep -c</code> para contar el número de secuencias de un archivo (de nuevo, sustituya archivo por el nombre de uno de los archivos):</p>
-<div class="sourceCode" id="cb4" data-code-copy="true" data-eval="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>   <span class="fu">grep</span> <span class="at">-c</span> <span class="st">"^@SRR"</span> _files/secuencias_bash.fastq</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-</ol>
-</div>
-</div>
-</section>
-<section id="material-suplementario" class="level2" data-number="6.4">
-<h2 data-number="6.4" class="anchored" data-anchor-id="material-suplementario"><span class="header-section-number">6.4</span> Material suplementario</h2>
-<ul>
-<li><a href="https://biocorecrg.github.io/RNAseq_course_2019/workflow.html">mRNA-Seq data analysis workflow</a></li>
-<li><a href="https://hbctraining.github.io/Training-modules/planning_successful_rnaseq/lessons/QC_raw_data.html">Quality Control using FastQC</a></li>
-<li><a href="https://learnmetabarcoding.github.io/LearnMetabarcoding/processing/fastq.html">Fundamentals: FASTQ files</a></li>
-<li><a href="https://es.wikipedia.org/wiki/Formato_FASTQ#:~:text=El%20formato%20FASTQ%20es%20un,%C3%BAnico%20car%C3%A1cter%20del%20c%C3%B3digo%20ASCII.">Wikipedia: Formato FASTQ</a></li>
-</ul>
+<p>Aqui les dejo la <a href="https://vinuesa.github.io/intro2linux/index.html#el-lenguaje-de-procesamiento-de-patrones-awk-y-su-sucesor-gawk">informacion</a> que se puede consultar, solo sepan que existe.</p>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1051,14 +835,11 @@ Ejercicio 3
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./Bash.html" class="pagination-link" aria-label="Mis primeros pasos en Bash">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Mis primeros pasos en Bash</span></span>
+      <a href="./Annotation_lncRNAs.html" class="pagination-link" aria-label="Exploración y clasificación de lncRNAs">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Exploración y clasificación de lncRNAs</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./REGEX.html" class="pagination-link" aria-label="Wildcards y Streams">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Wildcards y Streams</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

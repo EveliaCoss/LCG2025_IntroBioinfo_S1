@@ -1,0 +1,192 @@
+# **Extracción de información de diversos archivos**
+
+## Archivo FASTA
+
+### Encabezado FASTA explicado (UniProtKB)
+
+Este ejemplo describe una proteína curada manualmente en UniProt (Swiss-Prot), identificada como **(+)-T-muurolol synthase**, una enzima que convierte farnesyl diphosphate en terpenos. Proviene de la cepa ATCC 27064 de *Streptomyces clavuligerus*. El gen responsable es **SCLAV_p0068**, y hay evidencia experimental directa de su existencia (PE=1).
+
+```         
+>sp|B5GW45|TMUUS_STRC2 (+)-T-muurolol synthase ((2E,6E)-farnesyl diphosphate cyclizing) OS=Streptomyces clavuligerus (...) OX=443255 GN=SCLAV_p0068 PE=1 SV=1
+```
+
++------------------------------------------+-------------------------------------------------------------+----------------------------------------------------------------------------------+
+| Campo                                    | Significado                                                 | Traducción didáctica                                                             |
++==========================================+=============================================================+==================================================================================+
+| `sp`                                     | **Swiss-Prot**: base de datos revisada manualmente          | Entrada curada por expertos                                                      |
++------------------------------------------+-------------------------------------------------------------+----------------------------------------------------------------------------------+
+| `B5GW45`                                 | **Accession number**: identificador único de la proteína    | Clave única en UniProt                                                           |
++------------------------------------------+-------------------------------------------------------------+----------------------------------------------------------------------------------+
+| `TMUUS_STRC2`                            | **Nombre corto**: nombre de la proteína + especie           | Abreviación de la enzima en *Streptomyces clavuligerus*                          |
++------------------------------------------+-------------------------------------------------------------+----------------------------------------------------------------------------------+
+| `(+)-T-muurolol synthase`                | **Nombre funcional**: enzima que cicla farnesyl diphosphate | Enzima que produce terpenos                                                      |
++------------------------------------------+-------------------------------------------------------------+----------------------------------------------------------------------------------+
+| `(2E,6E)-farnesyl diphosphate cyclizing` | **Actividad específica**                                    | Tipo de reacción química que realiza                                             |
++------------------------------------------+-------------------------------------------------------------+----------------------------------------------------------------------------------+
+| `OS=Streptomyces clavuligerus (...)`     | **Organism Species**: especie y cepas                       | Organismo fuente y cepas de referencia                                           |
++------------------------------------------+-------------------------------------------------------------+----------------------------------------------------------------------------------+
+| `OX=443255`                              | **Organism Taxonomy ID**                                    | ID taxonómico en NCBI                                                            |
++------------------------------------------+-------------------------------------------------------------+----------------------------------------------------------------------------------+
+| `GN=SCLAV_p0068`                         | **Gene Name**                                               | Nombre del gen que codifica esta proteína                                        |
++------------------------------------------+-------------------------------------------------------------+----------------------------------------------------------------------------------+
+| `PE=1`                                   | **Protein Existence**: nivel de evidencia                   | -   Nivel 1 = evidencia experimental a nivel proteína                            |
+|                                          |                                                             |                                                                                  |
+|                                          |                                                             | -   Nivel 2 = evidencia experimental a nivel ARN (ej. RT-PCR, RNA-seq)           |
+|                                          |                                                             |                                                                                  |
+|                                          |                                                             | -   Nivel 3 = Inferida por homología con proteínas similares en otros organismos |
+|                                          |                                                             |                                                                                  |
+|                                          |                                                             | -   Nivel 4 = Predicción computacional sin evidencia experimental directa        |
+|                                          |                                                             |                                                                                  |
+|                                          |                                                             | -   Nivel 5 = Existencia incierta; datos insuficientes o contradictorios         |
++------------------------------------------+-------------------------------------------------------------+----------------------------------------------------------------------------------+
+| `SV=1`                                   | **Sequence Version**                                        | Versión de la secuencia en UniProt                                               |
++------------------------------------------+-------------------------------------------------------------+----------------------------------------------------------------------------------+
+
+:::: callout-note
+### Ejercicio 7. Extracción de información de archivos fasta
+
+1.  Colocate dentro de la carpeta `_files` de `unix.bioinfo.rsgecuador-gh-pages`. En mi caso sería empleando:
+
+    ``` bash
+    cd /Users/ecoss/Documents/LCG2025_IntroBioinfo_S1/practica/unix.bioinfo.rsgecuador-gh-pages/_files
+    ```
+
+    Contesta las siguientes preguntas empleando el archivo `S_clavuligerus_proteome.fasta`
+
+2.  Cambia los permisos para que las OTRAS personas cuenten con todos los permisos (escritura, lectura y ejecución) sobre el archivo `FASTA`.
+
+3.  ¿Cuántas líneas tiene el archivo `FASTA`?
+
+4.  ¿Cuántos registros ("\>") tiene el archivo FASTA?
+
+5.  ¿Cuántas veces aparece el motivo `DDXXD` en el archivo `FASTA`?
+
+6.  ¿Cuántos de esos registros son "Uncharacterized protein"?
+
+7.  ¿Cuántos de esos registros cuentan con evidencia experimental (PE=1)?
+
+8.  ¿De cuántos provienen las secuencias presentes en el archivo `FASTA`?
+
+::: {.callout-tip collapse="true" icon="false"}
+#### Solución
+
+```         
+1. cd TU_DIRECCION
+2. chmod 757 S_clavuligerus_proteome.fasta
+3. wc -l S_clavuligerus_proteome.fasta # 40739
+4. grep -c ">" S_clavuligerus_proteome.fasta # 6439 o grep '^>' S_clavuligerus_proteome.fasta | wc -l # 6439
+5. grep -v '^>' S_clavuligerus_proteome.fasta | tr -d '\n' | grep -oE 'DD[A-Z]{2}D' | wc -l #314 
+6. grep '^>' S_clavuligerus_proteome.fasta | grep -oE 'Uncharacterized protein' | wc -l #2689 
+7. grep '^>' S_clavuligerus_proteome.fasta | grep 'PE=1' | wc -l # 6 registros
+8. grep '^>' S_clavuligerus_proteome.fasta | grep -o 'OS=[^=]*' | sort | uniq | wc -l # solo una especie
+```
+:::
+::::
+
+## Archivo de salida de BLAST
+
+### sadasdasdd
+
+:::: callout-note
+### Ejercicio 7. Extracción de información de archivos fasta
+
+1.  Colocate dentro de la carpeta `_files` de `unix.bioinfo.rsgecuador-gh-pages`. En mi caso sería empleando:
+
+    ``` bash
+    cd /Users/ecoss/Documents/LCG2025_IntroBioinfo_S1/practica/unix.bioinfo.rsgecuador-gh-pages/_files
+    ```
+
+    Contesta las siguientes preguntas empleando el archivo `S_clavuligerus_proteome.fasta`
+
+2.  Cambia los permisos para que las OTRAS personas cuenten con todos los permisos (escritura, lectura y ejecución) sobre el archivo `FASTA`.
+
+3.  ¿Cuántas líneas tiene el archivo `FASTA`?
+
+4.  ¿Cuántos registros ("\>") tiene el archivo FASTA?
+
+5.  ¿Cuántas veces aparece el motivo `DDXXD` en el archivo `FASTA`?
+
+6.  ¿Cuántos de esos registros son "Uncharacterized protein"?
+
+7.  ¿Cuántos de esos registros cuentan con evidencia experimental (PE=1)?
+
+8.  ¿De cuántos provienen las secuencias presentes en el archivo `FASTA`?
+
+::: {.callout-tip collapse="true" icon="false"}
+#### Solución
+
+```         
+1. 
+```
+:::
+::::
+
+## Archivo BED
+
+### dadsasd
+
+:::: callout-note
+
+### Ejercicio 7. Extracción de información de archivos fasta
+
+1.  Colocate dentro de la carpeta `_files` de `unix.bioinfo.rsgecuador-gh-pages`. En mi caso sería empleando:
+
+    ``` bash
+    cd /Users/ecoss/Documents/LCG2025_IntroBioinfo_S1/practica/unix.bioinfo.rsgecuador-gh-pages/_files
+    ```
+
+    Contesta las siguientes preguntas empleando el archivo `S_clavuligerus_proteome.fasta`
+
+2.  Cambia los permisos para que las OTRAS personas cuenten con todos los permisos (escritura, lectura y ejecución) sobre el archivo `FASTA`.
+
+3.  ¿Cuántas líneas tiene el archivo `FASTA`?
+
+4.  ¿Cuántos registros ("\>") tiene el archivo FASTA?
+
+5.  ¿Cuántas veces aparece el motivo `DDXXD` en el archivo `FASTA`?
+
+6.  ¿Cuántos de esos registros son "Uncharacterized protein"?
+
+7.  ¿Cuántos de esos registros cuentan con evidencia experimental (PE=1)?
+
+8.  ¿De cuántos provienen las secuencias presentes en el archivo `FASTA`?
+
+::: {.callout-tip collapse="true" icon="false"}
+#### Solución
+
+```         
+1.
+```
+:::
+::::
+
+## Archivo GTF
+
+### dada
+
+:::: callout-note
+
+### Ejercicio 7. Extracción de información de archivos fasta
+
+1.  Colocate dentro de la carpeta `_files` de `unix.bioinfo.rsgecuador-gh-pages`. En mi caso sería empleando:
+
+    ``` bash
+    cd /Users/ecoss/Documents/LCG2025_IntroBioinfo_S1/practica/unix.bioinfo.rsgecuador-gh-pages/_files
+    ```
+
+    Contesta las siguientes preguntas empleando el archivo `S_clavuligerus_proteome.fasta`
+
+2.  
+
+::: {.callout-tip collapse="true" icon="false"}
+#### Solución
+
+```         
+1. 
+```
+:::
+::::
+
+## Material suplementario
+
+-   [Comandos de Unix para minería de datos](https://plantsandpython.github.io/PlantsAndPython/L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/1_Practica.html)

@@ -99,6 +99,8 @@ Aquí les dejo el link al [Método de selección](https://github.com/RegRNALab/T
 | [`Infernal`](http://eddylab.org/infernal/)                                              | Busca coincidencias estructurales en secuencias usando modelos de covarianza y escanea bases de datos | `cmsearch`                                         | Secuencias/nucleótidos (FASTA)                            | [Rfam](https://rfam.org/)                                                                        |
 +-----------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+----------------------------------------------------+-----------------------------------------------------------+--------------------------------------------------------------------------------------------------+
 
+![Diagrama de flujo de la anotación de lncRNAs en Arabidopsis thaliana](img/pipeline_lncrnas.png){fig-align="center" width="611"}
+
 ::: callout-note
 -   Si el transcrito **no tiene similitud con proteínas conocidas**, **no contiene péptido señal**, **no tiene dominios transmembranales**, y **no presenta dominios conservados**, es **probablemente no codificante**.
 

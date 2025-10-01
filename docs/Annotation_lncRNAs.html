@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>8&nbsp; Exploración y clasificación de lncRNAs – Introducción a la Bioinformática</title>
+<title>10&nbsp; Exploración y clasificación de lncRNAs – Introducción a la Bioinformática</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./genes_orf.html" rel="prev">
+<link href="./awk.html" rel="next">
+<link href="./Anotation_ejercicios.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -247,7 +248,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Annotation_lncRNAs.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Exploración y clasificación de lncRNAs</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Annotation_lncRNAs.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Exploración y clasificación de lncRNAs</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -337,7 +338,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ScriptBash.html" class="sidebar-item-text sidebar-link">
+  <a href="./REGEX.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Wildcards y Streams</span></span></a>
   </div>
 </li>
@@ -349,8 +350,26 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./ScriptBash.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Scripts en Bash</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Anotation_ejercicios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Archivo FASTA</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./Annotation_lncRNAs.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Exploración y clasificación de lncRNAs</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Exploración y clasificación de lncRNAs</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./awk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">AWK</span></span></a>
   </div>
 </li>
     </ul>
@@ -363,12 +382,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introducción-didáctica" id="toc-introducción-didáctica" class="nav-link active" data-scroll-target="#introducción-didáctica"><span class="header-section-number">8.0.1</span> Introducción didáctica</a></li>
-  <li><a href="#características-de-los-lncrnas" id="toc-características-de-los-lncrnas" class="nav-link" data-scroll-target="#características-de-los-lncrnas"><span class="header-section-number">8.1</span> Características de los lncRNAs</a></li>
-  <li><a href="#cómo-clasifican-los-lncrnas" id="toc-cómo-clasifican-los-lncrnas" class="nav-link" data-scroll-target="#cómo-clasifican-los-lncrnas"><span class="header-section-number">8.2</span> ¿Cómo clasifican los lncRNAs?</a></li>
-  <li><a href="#detección-de-genes-codificantes-vecinos-neighboring-gene-pair" id="toc-detección-de-genes-codificantes-vecinos-neighboring-gene-pair" class="nav-link" data-scroll-target="#detección-de-genes-codificantes-vecinos-neighboring-gene-pair"><span class="header-section-number">9</span> Detección de genes codificantes vecinos (neighboring gene pair)</a>
+  <li><a href="#introducción-didáctica" id="toc-introducción-didáctica" class="nav-link active" data-scroll-target="#introducción-didáctica"><span class="header-section-number">10.0.1</span> Introducción didáctica</a></li>
+  <li><a href="#características-de-los-lncrnas" id="toc-características-de-los-lncrnas" class="nav-link" data-scroll-target="#características-de-los-lncrnas"><span class="header-section-number">10.1</span> Características de los lncRNAs</a></li>
+  <li><a href="#cómo-clasifican-los-lncrnas" id="toc-cómo-clasifican-los-lncrnas" class="nav-link" data-scroll-target="#cómo-clasifican-los-lncrnas"><span class="header-section-number">10.2</span> ¿Cómo clasifican los lncRNAs?</a></li>
+  <li><a href="#detección-de-genes-codificantes-vecinos-neighboring-gene-pair" id="toc-detección-de-genes-codificantes-vecinos-neighboring-gene-pair" class="nav-link" data-scroll-target="#detección-de-genes-codificantes-vecinos-neighboring-gene-pair"><span class="header-section-number">11</span> Detección de genes codificantes vecinos (neighboring gene pair)</a>
   <ul>
-  <li><a href="#material-suplementario" id="toc-material-suplementario" class="nav-link" data-scroll-target="#material-suplementario"><span class="header-section-number">9.1</span> Material suplementario</a></li>
+  <li><a href="#material-suplementario" id="toc-material-suplementario" class="nav-link" data-scroll-target="#material-suplementario"><span class="header-section-number">11.1</span> Material suplementario</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -379,7 +398,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Exploración y clasificación de lncRNAs</span></h1>
+<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Exploración y clasificación de lncRNAs</span></h1>
 </div>
 
 
@@ -396,8 +415,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introducción-didáctica" class="level3" data-number="8.0.1">
-<h3 data-number="8.0.1" class="anchored" data-anchor-id="introducción-didáctica"><span class="header-section-number">8.0.1</span> Introducción didáctica</h3>
+<section id="introducción-didáctica" class="level3" data-number="10.0.1">
+<h3 data-number="10.0.1" class="anchored" data-anchor-id="introducción-didáctica"><span class="header-section-number">10.0.1</span> Introducción didáctica</h3>
 <p>Los <strong>lncRNAs (long non-coding RNAs o ARN largos no codificantes)</strong> representan una clase diversa de transcritos que no codifican proteínas pero desempeñan funciones clave en la regulación génica. Este capítulo se enfoca en:</p>
 <ul>
 <li>🔍 <strong>Anotación de nuevos transcritos</strong> a partir de datos de RNA-seq</li>
@@ -405,8 +424,8 @@ ul.task-list li input[type="checkbox"] {
 <li>🛠️ <strong>Ejercicios prácticos en Bash</strong> para identificar y clasificar lncRNAs intergénicos</li>
 </ul>
 </section>
-<section id="características-de-los-lncrnas" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="características-de-los-lncrnas"><span class="header-section-number">8.1</span> Características de los lncRNAs</h2>
+<section id="características-de-los-lncrnas" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="características-de-los-lncrnas"><span class="header-section-number">10.1</span> Características de los lncRNAs</h2>
 <p>Los lncRNAs son moléculas de ARN de más de <strong>200 nucleótidos que no codifican proteínas</strong>, pero desempeñan funciones clave en la regulación génica y celular. Aquí tienes un resumen bilingüe y modular de sus características principales:</p>
 <ul>
 <li>Longitud &gt;200 nucleótidos</li>
@@ -421,24 +440,31 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 </section>
-<section id="cómo-clasifican-los-lncrnas" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="cómo-clasifican-los-lncrnas"><span class="header-section-number">8.2</span> ¿Cómo clasifican los lncRNAs?</h2>
+<section id="cómo-clasifican-los-lncrnas" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="cómo-clasifican-los-lncrnas"><span class="header-section-number">10.2</span> ¿Cómo clasifican los lncRNAs?</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/lncRNAs_classification.png" class="img-fluid figure-img"></p>
 <figcaption>Modificado de Shafiq S, et al, 2015. Biochimica et Biophysica Acta</figcaption>
 </figure>
 </div>
+<p>zcat</p>
 </section>
-<section id="detección-de-genes-codificantes-vecinos-neighboring-gene-pair" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> Detección de genes codificantes vecinos (neighboring gene pair)</h1>
+<section id="detección-de-genes-codificantes-vecinos-neighboring-gene-pair" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> Detección de genes codificantes vecinos (neighboring gene pair)</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://academic.oup.com/bib/article/18/5/789/2562763?login=true"><img src="img/coexpression.jpeg" class="img-fluid figure-img"></a></p>
+<figcaption>Figura 3. Predicción de la función del ARN largo no codificante (lincRNA) basada en la red de coexpresión. Las relaciones de coexpresión entre los genes codificantes (nodos azules) y los genes lincRNA (nodos amarillos) constituyen una red completa. En la subred del módulo, por ejemplo, hay 4 genes lincRNA y 39 genes codificantes, entre los cuales 24 (nodos azul oscuro) tienen la función X y 15 (nodos azul claro) tienen otras funciones. Este módulo está significativamente enriquecido con la función X a través del análisis estadístico. En consecuencia, los cuatro lincRNA de este módulo se predicen como función X. Traducción realizada con la versión gratuita del traductor DeepL.com</figcaption>
+</figure>
+</div>
 <p>Ejercicio de clasificacion de lncRNAs en humanos</p>
 <p><a href="https://www.gencodegenes.org/human/" class="uri">https://www.gencodegenes.org/human/</a></p>
 <p><a href="https://github.com/RegRNALab/Transcriptome-guided_lncRNA_annotation/blob/master/02_Classification_of_lncRNAs_by_categories.md" class="uri">https://github.com/RegRNALab/Transcriptome-guided_lncRNA_annotation/blob/master/02_Classification_of_lncRNAs_by_categories.md</a></p>
 <p>Bedtools intersect</p>
 <p><a href="https://bedtools.readthedocs.io/en/latest/content/quick-start.html" class="uri">https://bedtools.readthedocs.io/en/latest/content/quick-start.html</a></p>
-<section id="material-suplementario" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="material-suplementario"><span class="header-section-number">9.1</span> Material suplementario</h2>
+<section id="material-suplementario" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="material-suplementario"><span class="header-section-number">11.1</span> Material suplementario</h2>
 <ul>
 <li><a href="https://www.weizmann.ac.il/dept/irb/igor-ulitsky/pipeline-lncrna-annotation-rna-seq-data-plar">Pipeline for lncRNA annotation from RNA-seq data (PLAR)</a></li>
 <li><a href="https://robertslab.github.io/sams-notebook/posts/2023/2023-05-02-lncRNA-Identification---P.generosa-lncRNAs-using-CPC2-and-bedtools/index.html">lncRNA Identification - P.generosa lncRNAs using CPC2 and bedtools</a></li>
@@ -864,11 +890,14 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./genes_orf.html" class="pagination-link" aria-label="Definición actualizada y didáctica del gen">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Definición actualizada y didáctica del gen</span></span>
+      <a href="./Anotation_ejercicios.html" class="pagination-link" aria-label="Archivo FASTA">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Archivo FASTA</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./awk.html" class="pagination-link" aria-label="AWK">
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">AWK</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
