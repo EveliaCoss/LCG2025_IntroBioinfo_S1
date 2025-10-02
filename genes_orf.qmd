@@ -59,7 +59,7 @@ La distinción entre transcritos **codificantes** y **no codificantes** es esenc
 |                                                                                                                          |                                                                                                            |                                                                                         | ```                                                                   |
 +--------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+-----------------------------------------------------------------------+
 
-### Herramientas bioinformáticas clave
+### Herramientas clave en bioinformáticas
 
 [![](img/pipeline_lncrnas.jpg){fig-align="center"}](https://www.sciencedirect.com/science/article/pii/S1360138508001088?via%3Dihub)
 

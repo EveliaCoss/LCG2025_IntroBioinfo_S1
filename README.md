@@ -34,9 +34,30 @@ En este curso se abordarán los conceptos fundamentales para el uso y manejo de 
 - Material: [Presentación](https://eveliacoss.github.io/LCG2025_S1_Buenaspracticas_presentacion/Dia1_BuenasPracticas.html#1)  
 - Tarea: Checa las [instrucciones](https://eveliacoss.github.io/LCG2025_S1_Buenaspracticas_presentacion/Dia1_BuenasPracticas.html?panelset_002=repositorios-acad%25C3%25A9micos-y-cient%25C3%25ADficos2#41)
 
-
 ### Introducción a Markdown
 
 - Instructora: Evelia Coss
 - Fecha: 4 de septiembre, 2025
 - Material: [Libro](https://eveliacoss.github.io/LCG2025_IntroBioinfo_S1/)  
+
+### Introducción a Markdown
+
+- Instructora: Evelia Coss
+- Fecha: 30 de septiembre, 2025
+- Material: 
+  + [Mis primeros pasos en Bash](https://eveliacoss.github.io/LCG2025_IntroBioinfo_S1/Bash.html) 
+  + [Análisis de datos de RNA-Seq](https://eveliacoss.github.io/LCG2025_IntroBioinfo_S1/Rnaseq_intro.html) 
+  + [Wilcards, streams y expresiones regulares](https://eveliacoss.github.io/LCG2025_IntroBioinfo_S1/REGEX.html) 
+
+### Introducción a Markdown
+
+- Instructora: Evelia Coss
+- Fecha: 2 de octubre, 2025
+- Material:
+  + [Definición actualizada y didáctica del gen](https://eveliacoss.github.io/LCG2025_IntroBioinfo_S1/genes_orf.html) 
+  + [Scripts en Bash](https://eveliacoss.github.io/LCG2025_IntroBioinfo_S1/ScriptBash.html) 
+  + [Extracción de información de diversos archivos](https://eveliacoss.github.io/LCG2025_IntroBioinfo_S1/Anotation_ejercicios.html) 
+  + [Aplicaciones](https://eveliacoss.github.io/LCG2025_IntroBioinfo_S1/Annotation_lncRNAs.html) 
+  
+----------
+Cursos hechos con amor 💜
