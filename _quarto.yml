@@ -9,6 +9,7 @@ book:
   page-navigation: true
   chapters:
     - index.qmd
+    - temario.qmd
     - intro.qmd
     - Parte3.qmd
     - Parte4.qmd
@@ -19,7 +20,6 @@ book:
     - ScriptBash.qmd
     - Anotation_ejercicios.qmd
     - Annotation_lncRNAs.qmd
-    - awk.qmd
   # Information
   repo-url: https://github.com/EveliaCoss/LCG2025_IntroBioinfo_S1 # link de Github
   sharing: [twitter, facebook, linkedin]

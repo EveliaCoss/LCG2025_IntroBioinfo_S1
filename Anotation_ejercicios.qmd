@@ -2,6 +2,18 @@
 
 ## Archivo FASTA
 
+Un archivo **FASTA** es un formato estándar para almacenar **secuencias biológicas**, como ADN, ARN o proteínas. Cada secuencia está compuesta por:
+
+-   Una **línea de encabezado** que comienza con el símbolo `>`
+-   Una o más líneas con la **secuencia** en formato de texto plano
+
+Ejemplo:
+
+```         
+>ENSMUSG00000049605 Olfr418-ps1
+ATGGCCTGTTTCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTG
+```
+
 ### Encabezado FASTA explicado (UniProtKB)
 
 Este ejemplo describe una proteína curada manualmente en UniProt (Swiss-Prot), identificada como **(+)-T-muurolol synthase**, una enzima que convierte farnesyl diphosphate en terpenos. Proviene de la cepa ATCC 27064 de *Streptomyces clavuligerus*. El gen responsable es **SCLAV_p0068**, y hay evidencia experimental directa de su existencia (PE=1).
@@ -83,110 +95,244 @@ Este ejemplo describe una proteína curada manualmente en UniProt (Swiss-Prot), 
 :::
 ::::
 
-## Archivo de salida de BLAST
+## Archivo GTF
 
-### sadasdasdd
+Un archivo [**GTF**](https://genome.ucsc.edu/FAQ/FAQformat.html#format4)(Gene Transfer Format) es un formato tabular utilizado para **anotar elementos genómicos**, como genes, exones, transcritos y regiones codificantes. Es ampliamente usado en bioinformática para describir la estructura de genes en un genoma de referencia.
+
+Cada línea representa una **característica genómica** y contiene **9 columnas** separadas por tabulaciones.
+
+Ejemplo:
+
+```         
+1  pseudogene                          gene         3054233    3054733    .  +  .  gene_id  "ENSMUSG00000090025";  gene_name      "Gm16088";             gene_source  "havana";          gene_biotype  "pseudogene";
+```
+
+### Columnas del GTF
+
++----+------------------+-------------+----------------------------------------------------------------------------+
+| Nº | Nombre (ES)      | Name (EN)   | Descripción                                                                |
++====+==================+=============+============================================================================+
+| 1  | Cromosoma        | `seqname`   | Nombre del cromosoma o contig (ej. `chr1`)                                 |
++----+------------------+-------------+----------------------------------------------------------------------------+
+| 2  | Fuente           | `source`    | Programa o base de datos que generó la anotación (ej. `ENSEMBL`)           |
++----+------------------+-------------+----------------------------------------------------------------------------+
+| 3  | Característica   | `feature`   | Tipo de elemento anotado (`gene`, `exon`, `CDS`, etc.)                     |
++----+------------------+-------------+----------------------------------------------------------------------------+
+| 4  | Inicio           | `start`     | Posición inicial del elemento (1-based)                                    |
++----+------------------+-------------+----------------------------------------------------------------------------+
+| 5  | Fin              | `end`       | Posición final del elemento                                                |
++----+------------------+-------------+----------------------------------------------------------------------------+
+| 6  | Puntuación       | `score`     | Valor de calidad o puntuación (`.` si no aplica)                           |
++----+------------------+-------------+----------------------------------------------------------------------------+
+| 7  | Hebra            | `strand`    | Hebra del ADN: `+` para sentido, `-` para antisentido                      |
++----+------------------+-------------+----------------------------------------------------------------------------+
+| 8  | Marco de lectura | `frame`     | Marco de lectura para CDS: `0`, `1`, `2` o `.` si no aplica                |
++----+------------------+-------------+----------------------------------------------------------------------------+
+| 9  | Atributos        | `attribute` | Campo con pares clave-valor (`gene_id`, `gene_name`, `gene_biotype`, etc.) |
++----+------------------+-------------+----------------------------------------------------------------------------+
 
 :::: callout-note
-### Ejercicio 7. Extracción de información de archivos fasta
+### Ejercicio 8. Extracción de información de archivos BED
 
-1.  Colocate dentro de la carpeta `_files` de `unix.bioinfo.rsgecuador-gh-pages`. En mi caso sería empleando:
+-   Crear una carpeta llamada `GTF` dentro de `_files`.
 
-    ``` bash
-    cd /Users/ecoss/Documents/LCG2025_IntroBioinfo_S1/practica/unix.bioinfo.rsgecuador-gh-pages/_files
-    ```
+-   Descargar el archivo GTF del cromosoma 1 de ratón (Mus_musculus.GRCm38.75_chr1)
 
-    Contesta las siguientes preguntas empleando el archivo `S_clavuligerus_proteome.fasta`
+``` bash
+curl -O https://raw.githubusercontent.com/Data-Skills/bds-files/master/chapter-07-unix-data-tools/Mus_musculus.GRCm38.75_chr1.gtf
+```
 
-2.  Cambia los permisos para que las OTRAS personas cuenten con todos los permisos (escritura, lectura y ejecución) sobre el archivo `FASTA`.
+Contesta las siguientes preguntas empleando el archivo `Mus_musculus.GRCm38.75_chr1.gtf`
 
-3.  ¿Cuántas líneas tiene el archivo `FASTA`?
+1.  Muestra las primeras tres líneas del archivo GTF que **no sean comentarios (#)**, y **extrae únicamente las primeras ocho columnas** de cada línea.
 
-4.  ¿Cuántos registros ("\>") tiene el archivo FASTA?
+2.  Filtra las líneas tipo `gene` y cuenta cuántas tienen `gene_biotype "protein_coding".`
 
-5.  ¿Cuántas veces aparece el motivo `DDXXD` en el archivo `FASTA`?
+3.  Filtra las líneas tipo `gene` y cuenta cuántas tienen `gene_biotype "lincRNA".`
 
-6.  ¿Cuántos de esos registros son "Uncharacterized protein"?
+4.  Extrae los primeros cinco identificadores de genes (`gene_id`) del archivo GTF usando una expresión regular.
 
-7.  ¿Cuántos de esos registros cuentan con evidencia experimental (PE=1)?
+5.  ¿Cuántos genes tenemos de cada `gene_biotype` que aparece en el archivo GTF?
 
-8.  ¿De cuántos provienen las secuencias presentes en el archivo `FASTA`?
+6.  Cuenta cuántas veces aparece cada tipo de **característica genómica** (columna 3) en el archivo GTF, excluyendo los comentarios.
+
+7.  Identifica cuántas veces aparece cada tipo de **característica genómica** (columna 3) asociada al gen `ENSMUSG00000033793` en el archivo GTF.
+
+8.  Extrae los primeros diez identificadores únicos de genes (`gene_id`) del archivo GTF, eliminando duplicados y ordenándolos alfabéticamente.
+
+9.  Genera un nuevo archivo llamado `gene_id_name.tsv` que contenga dos columnas:  1) gene_id y 2) gene_name.
 
 ::: {.callout-tip collapse="true" icon="false"}
 #### Solución
 
 ```         
-1. 
+1. grep -v "^#" Mus_musculus.GRCm38.75_chr1.gtf | cut -f1-8 | head -n 3 # o grep -v "^#" Mus_musculus.GRCm38.75_chr1.gtf | cut -f1-8 | column -t | head -n 3
+# column -t:  genera el formato de tabla
+
+2. grep -v "^#" Mus_musculus.GRCm38.75_chr1.gtf | \
+grep -w "gene" | \
+grep 'gene_biotype "protein_coding"' | \
+wc -l # 1240
+
+3. grep -v "^#" Mus_musculus.GRCm38.75_chr1.gtf | \
+grep -w "gene" | \
+grep 'gene_biotype "lincRNA"' | \
+wc -l # 89
+
+4. grep -E -o 'gene_id "\w+"' Mus_musculus.GRCm38.75_chr1.gtf | head -n 5
+# 'gene_id "\w+"': busca el texto gene_id " seguido de una cadena alfanumérica (el ID del gen) entre comillas.
+
+5. grep -v "^#" Mus_musculus.GRCm38.75_chr1.gtf | \
+grep -w "gene" | \
+sed -n 's/.*gene_biotype "\([^"]*\)".*/\1/p' | \
+sort | uniq -c
+
+# -n: suprime la salida automática de sed, solo imprime si se usa p.
+# 's/.../.../p': aplica una sustitución y muestra el resultado si hay coincidencia.
+#  .*gene_biotype ": busca cualquier texto antes de gene_biotype " (incluido).
+#  \([^"]*\): captura el contenido entre comillas (el valor del biotipo).
+# .*: ignora el resto de la línea.
+# \1: imprime solo lo capturado (el biotipo).
+# p: imprime la línea modificada.
+
+6. grep -v "^#" Mus_musculus.GRCm38.75_chr1.gtf | cut -f3 | sort | uniq -c
+
+7. grep "ENSMUSG00000033793" Mus_musculus.GRCm38.75_chr1.gtf | cut -f3 | sort | uniq -c
+
+8. grep -E -o 'gene_id "\w+"' Mus_musculus.GRCm38.75_chr1.gtf | cut -f2 -d" " | sed 's/"//g' | sort | uniq | head -n 10
+ 
+9. grep -v "^#" Mus_musculus.GRCm38.75_chr1.gtf | \
+grep -w "gene" | \
+sed -n 's/.*gene_id "\([^"]*\)";.*gene_name "\([^"]*\)".*/\1\t\2/p' > gene_id_name.tsv
+# cut -f2 -d" " : Separa por espacio y toma el segundo campo (el ID)
+# sed 's/"//g': Elimina las comillas dobles
+# sort: Ordena alfabéticamente
+
+# -n: suprime la salida automática de sed, solo imprime si se usa p.
+# 's/.../.../p': aplica una sustitución y muestra el resultado si hay coincidencia.
+#  .*gene_id ": busca cualquier texto antes de gene_id " (incluido).
+# \([^"]*\): captura el contenido entre comillas (el valor del gene_id).
+#  .*gene_name ": busca cualquier texto entre gene_id y gene_name.
+# \([^"]*\): captura el valor del gene_name.
+#  .*: ignora el resto de la línea.
+# \1\t\2: imprime los dos valores capturados, separados por tabulación.
+# p: imprime la línea modificada.
+
+grep -v "^#" Mus_musculus.GRCm38.75_chr1.gtf | head -n 3 | sed -E -n 's/.*transcript_id "([^"]+)".*/\1/p'
 ```
 :::
 ::::
 
 ## Archivo BED
 
-### dadsasd
+Un archivo [**BED**](https://genome.ucsc.edu/FAQ/FAQformat.html#format1.7)(Browser Extensible Data) es un formato tabular utilizado para representar **intervalos genómicos**. Es ampliamente usado en bioinformática para definir regiones como genes, exones, picos de ChIP-seq, regiones repetitivas, entre otros.
+
+Cada línea representa una región en el genoma y contiene **al menos tres columnas obligatorias**, aunque puede incluir hasta doce.
+
+Ejemplo:
+
+```         
+chr22 1000 5000 cloneA 960 + 1000 5000 0 2 567,488, 0,3512
+chr22 2000 6000 cloneB 900 - 2000 6000 0 2 433,399, 0,3601
+```
+
+### Columnas del BED
+
++------+------------------+-------------------------------------------+---------------------------------------------------------+
+| Nº   | Nombre (ES)      | Name (EN)                                 | Descripción                                             |
++======+==================+===========================================+=========================================================+
+| 1    | Cromosoma        | `chrom`                                   | Nombre del cromosoma (ej. `chr1`, `chrX`)               |
++------+------------------+-------------------------------------------+---------------------------------------------------------+
+| 2    | Inicio           | `start`                                   | Posición inicial (0-based, inclusiva)                   |
++------+------------------+-------------------------------------------+---------------------------------------------------------+
+| 3    | Fin              | `end`                                     | Posición final (exclusiva)                              |
++------+------------------+-------------------------------------------+---------------------------------------------------------+
+| 4    | Nombre           | `name`                                    | (Opcional) Identificador de la región                   |
++------+------------------+-------------------------------------------+---------------------------------------------------------+
+| 5    | Puntuación       | `score`                                   | (Opcional) Valor entre 0 y 1000                         |
++------+------------------+-------------------------------------------+---------------------------------------------------------+
+| 6    | Hebra            | `strand`                                  | (Opcional) Hebra del ADN: `+` o `-`                     |
++------+------------------+-------------------------------------------+---------------------------------------------------------+
+| 7–12 | Campos avanzados | `thickStart`, `thickEnd`, `itemRgb`, etc. | (Opcionales) Usados en visualización en genome browsers |
++------+------------------+-------------------------------------------+---------------------------------------------------------+
 
 :::: callout-note
+### Ejercicio 9. Extracción de información de archivos fasta
 
-### Ejercicio 7. Extracción de información de archivos fasta
+Convertir el archivo GTF a BED
 
-1.  Colocate dentro de la carpeta `_files` de `unix.bioinfo.rsgecuador-gh-pages`. En mi caso sería empleando:
+``` bash
+grep -v "^#" Mus_musculus.GRCm38.75_chr1.gtf | \
+grep -w "gene" | \
+sed -n 's/.*gene_name "\([^"]*\)".*/\1/p' | \
+paste -d'\t' <(grep -v "^#" Mus_musculus.GRCm38.75_chr1.gtf | grep -w "gene" | cut -f1,4,5,7) - > Mus_musculus.GRCm38.75_chr1.bed
+```
 
-    ``` bash
-    cd /Users/ecoss/Documents/LCG2025_IntroBioinfo_S1/practica/unix.bioinfo.rsgecuador-gh-pages/_files
-    ```
+-   grep -v "\^#" : Elimina las líneas de comentario (que empiezan con `#`)
+-   grep -w "gene" : Filtra solo las líneas que anotan **genes** (no exones, CDS, etc.)
+-   sed -n 's/.*gene_name "(\[\^"\]*)".\*/\\1/p' : Extrae el valor del campo `gene_name` usando una expresión regular.
+-   paste -d'\t' \<(...) - : Une dos flujos de datos por columnas, separados por tabulación.
+-   \<(grep ... \| cut -f1,4,5,7) : Extrae las columnas:
+    -   `1`: cromosoma
+    -   `4`: posición inicial
+    -   `5`: posición final
+    -   `7`: hebra (`+` o `-`)
 
-    Contesta las siguientes preguntas empleando el archivo `S_clavuligerus_proteome.fasta`
+Otra manera de hacer esta transformación de GTF a BED es con [**convert_GTF_to_BED12.sh**](https://gist.github.com/gireeshkbogu/f478ad8495dca56545746cd391615b93)
 
-2.  Cambia los permisos para que las OTRAS personas cuenten con todos los permisos (escritura, lectura y ejecución) sobre el archivo `FASTA`.
+Contesta las siguientes preguntas empleando el archivo `Mus_musculus.GRCm38.75_chr1.bed.`
 
-3.  ¿Cuántas líneas tiene el archivo `FASTA`?
+1.  ¿Cuál es el tamaño de este archivo?
 
-4.  ¿Cuántos registros ("\>") tiene el archivo FASTA?
+2.  ¿Cuántas líneas contiene este archivo?
 
-5.  ¿Cuántas veces aparece el motivo `DDXXD` en el archivo `FASTA`?
+3.  Agrega el prefijo `Chr` **solo** a la primera columna de un archivo BED.
 
-6.  ¿Cuántos de esos registros son "Uncharacterized protein"?
-
-7.  ¿Cuántos de esos registros cuentan con evidencia experimental (PE=1)?
-
-8.  ¿De cuántos provienen las secuencias presentes en el archivo `FASTA`?
+4.  Agrega una columna con el tamaño del transcrito usando solo herramientas básicas (`cut`, `paste`, `expr`, `while`).
 
 ::: {.callout-tip collapse="true" icon="false"}
 #### Solución
 
 ```         
-1.
+1. ls -lh Mus_musculus.GRCm38.75_chr1.bed
+
+2. wc -l Mus_musculus.GRCm38.75_chr1.bed # 2027
+
+3. cut -f1 Mus_musculus.GRCm38.75_chr1.bed | sed 's/^/Chr/' > col1.tmp
+cut -f2- Mus_musculus.GRCm38.75_chr1.bed > col2plus.tmp
+paste col1.tmp col2plus.tmp > genes_prefijoChr.bed
+rm col1.tmp col2plus.tmp
+
+4a.  while IFS=$'\t' read -r chr start end strand name; do
+    size=$(expr $end - $start)
+    echo -e "${chr}\t${start}\t${end}\t${strand}\t${name}\t${size}"
+done < Mus_musculus.GRCm38.75_chr1.bed > Mus_musculus.lengthGenes.bed
+
+# expr $end - $start: Calcula el tamaño del transcrito
+# echo -e : Imprime la línea original más la nueva columna
+
+4b. awk '{size = $3 - $2; print $0 "\t" size}' Mus_musculus.GRCm38.75_chr1.bed > Mus_musculus.lengthGenes_v2.bed
+
+# awk : Ejecuta instrucciones sobre cada línea del archivo  
+# $3 - $2: 	Calcula el tamaño: end - start
+# size = ... : Guarda el resultado en la variable size
+# print $0 "\t" size: 	Imprime la línea original ($0) más una tabulación y el tamaño
 ```
 :::
 ::::
 
-## Archivo GTF
+# AWK
 
-### dada
+**AWK** es un lenguaje de programación diseñado para procesar datos de texto, ya sean ficheros o flujos de datos. El nombre **AWK** deriva de las iniciales de los apellidos de sus autores: Alfred **A**ho, Peter **W**einberger, y Brian **K**ernighan. `awk`, cuando está escrito todo en minúsculas, hace referencia al programa de UNIX que interpreta programas escritos en el lenguaje de programación AWK. Es decir, **AWK** es un lenguaje interpretado por el intérprete de comandos.
 
-:::: callout-note
+## Más ejercicios
 
-### Ejercicio 7. Extracción de información de archivos fasta
+Para el ejercicio 6.3 debes saber sobre AWK, puedes aprender más sobre el siguiento esta guia [**Curso avanzado de programación AWK y Bash para bioinformática y biocómputo en sistemas GNU/Linux**](https://vinuesa.github.io/intro2linux/index.html#el-lenguaje-de-procesamiento-de-patrones-awk-y-su-sucesor-gawk)**.**
 
-1.  Colocate dentro de la carpeta `_files` de `unix.bioinfo.rsgecuador-gh-pages`. En mi caso sería empleando:
-
-    ``` bash
-    cd /Users/ecoss/Documents/LCG2025_IntroBioinfo_S1/practica/unix.bioinfo.rsgecuador-gh-pages/_files
-    ```
-
-    Contesta las siguientes preguntas empleando el archivo `S_clavuligerus_proteome.fasta`
-
-2.  
-
-::: {.callout-tip collapse="true" icon="false"}
-#### Solución
-
-```         
-1. 
-```
-:::
-::::
+Aqui les dejo la [informacion](https://vinuesa.github.io/intro2linux/index.html#el-lenguaje-de-procesamiento-de-patrones-awk-y-su-sucesor-gawk) que se puede consultar, solo sepan que existe.
 
 ## Material suplementario
 
 -   [Comandos de Unix para minería de datos](https://plantsandpython.github.io/PlantsAndPython/L_6_MINERIA_DE_DATOS_EN_LA_LINEA_DE_COMANDOS_DE_UNIX/1_Practica.html)
+-   [Bash scripting](https://plantsandpython.github.io/PlantsAndPython/N_7_PROGRAMANDO_CON_BASH/1_Practica.html)
+-   [Unix Data Tools](https://data-skills.github.io/unix-and-bash/02-unix-data-tools/index.html)

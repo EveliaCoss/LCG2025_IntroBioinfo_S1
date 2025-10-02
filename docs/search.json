@@ -10,8 +10,8 @@
     ]
   },
   {
-    "objectID": "intro.html",
-    "href": "intro.html",
+    "objectID": "temario.html",
+    "href": "temario.html",
     "title": "1  Temario",
     "section": "",
     "text": "El Plan de clases detallado con actividades, recursos, plantillas, material de lectura esta disponible en pdf. Aquí listamos la organización de los temas y las habilidades que el alumno debe lograr.\n\n\n\nTemas\nObjetivo\n\n\n\n\nIntroducción a la bioinformática\n\nComprender qué es Unix, sus características principales y su utilidad en entornos científicos y técnicos.\n\n\n\nConceptos Unix y GNU/Linux y protocolos de internet\n\nIdentificar los principales protocolos de intercambio de datos en internet y entender su funcionamiento básico.\nAplicar el protocolo de transferencia de archivos (FTP/SFTP) y acceder a servidores remotos de forma segura y eficiente.\n\n\n\nMis primeros pasos en Bash (archivos y permisos) y creación de scripts completos\n\nComprender la estructura del sistema de archivos en Unix y saber desplazarse por él eficientemente.\nConocer y aplicar comandos básicos para gestionar archivos y directorios.\nIdentificar los tipos de archivos en Unix, visualizar su contenido y entender su manejo.\nUtilizar herramientas para comprimir y descomprimir archivos.\n\n\n\nBuenas prácticas en Bioinformática\n\nAplicar buenas prácticas en bioinformática para asegurar que los análisis sean reproducibles, claros y colaborativos, mediante código modular, documentación precisa y control de calidad.\n\n\n\nIntroducción a Markdown\n\nUsar Markdown como formato estándar en bioinformática.\nComprender las fases del análisis de datos bioinformáticos.",
@@ -20,563 +20,613 @@
     ]
   },
   {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "2  Conceptos Unix y GNU/Linux",
+    "section": "",
+    "text": "2.1 ¿Qué es UNIX?",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Conceptos Unix y GNU/Linux</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#qué-es-unix",
+    "href": "intro.html#qué-es-unix",
+    "title": "2  Conceptos Unix y GNU/Linux",
+    "section": "",
+    "text": "Sistema operativo (SO) creado por Ken Thompson y Dennis Ritchie de la empresa Bell Laboratories en 1969.\nSO multitarea y multiusuario.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Conceptos Unix y GNU/Linux</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#gnulinux",
+    "href": "intro.html#gnulinux",
+    "title": "2  Conceptos Unix y GNU/Linux",
+    "section": "2.2 GNU/Linux",
+    "text": "2.2 GNU/Linux\n\nEn 1983 Richard Stallman lideró la iniciativa GNU (GNU’s Not Unix), SO compatible con UNIX de libre distribución y acceso sin restricciones al código fuente.\nEn 1991 Linus Torvalds creó su propio kernel (Linux), que es la parte del SO que permite la comunicación con los componentes de Hardware. Este kernel fue distribuido de forma libre y gratuita.\nAmbos proyectos se juntaron y se creó GNU/Linux",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Conceptos Unix y GNU/Linux</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#filosofía-gnulinux",
+    "href": "intro.html#filosofía-gnulinux",
+    "title": "2  Conceptos Unix y GNU/Linux",
+    "section": "2.3 Filosofía GNU/Linux",
+    "text": "2.3 Filosofía GNU/Linux\n\nLos usuarios son libres de ejecutar, copiar, distribuir, estudiar, cambiar y mejorar el software.\nEl software libre se refiere a las libertades mencionadas, no al precio.\n“open source” vs “free software”.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Conceptos Unix y GNU/Linux</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#ubuntu",
+    "href": "intro.html#ubuntu",
+    "title": "2  Conceptos Unix y GNU/Linux",
+    "section": "2.4 Ubuntu",
+    "text": "2.4 Ubuntu\n\nUna de las distribuciones de GNU/Linux más populares.\nEstá basada en Debian y fue desarrollada por la empresa Canonical\nFacilidad de uso e instalación.\nInterfaz de usuario amigable.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Conceptos Unix y GNU/Linux</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#shell-bash-bash-shell",
+    "href": "intro.html#shell-bash-bash-shell",
+    "title": "2  Conceptos Unix y GNU/Linux",
+    "section": "2.5 Shell / Bash / Bash Shell",
+    "text": "2.5 Shell / Bash / Bash Shell\n\nLa shell es el programa que provee una interfaz de línea de comandos (CLI), que permite la comunicación entre el usuario y el SO.\nLa mayoría de distribuciones de Linux tienen por defecto bash (“Bourne Again SHell”) como shell. Hay otros tipos de shell como sh, csh, tcsh, ksh, zsh, entre otras.\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nBash es un intérprete de comandos que te da el poder de hacer tareas simples rápidamente.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Conceptos Unix y GNU/Linux</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#material-suplementario",
+    "href": "intro.html#material-suplementario",
+    "title": "2  Conceptos Unix y GNU/Linux",
+    "section": "2.6 Material suplementario",
+    "text": "2.6 Material suplementario\nSi quieren aprender temas más sobre UNIX, GNU/Linux, bash, emulador de terminal y otros tema, pueden explorar los siguientes recursos, que son de acceso libre:\n\nKross, S. (2017). The unix workbench. Leanpub. https://leanpub.com/unix\nRoss, A. (2019). The Ultimate Linux Newbie Guide. https://linuxnewbieguide.org/\nShotts, W. (2019). The Linux command line: a complete introduction. No Starch Press. http://www.linuxcommand.org/tlcl.php/index.php\nLinux Journey. (2020). Linux Journey. https://linuxjourney.com/\nGNU. (2020). GNU. https://www.gnu.org/\nGNU/Linux para bioinformatica",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Conceptos Unix y GNU/Linux</span>"
+    ]
+  },
+  {
     "objectID": "Parte3.html",
     "href": "Parte3.html",
-    "title": "2  Buenas prácticas en bioinformática",
+    "title": "3  Buenas prácticas en bioinformática",
     "section": "",
-    "text": "2.1 Materiales informativos\nNotas personales recabadas a partir de los tutoriales y ejemplos 😊. Espero que les funcione 💜\n💪 Estuve muy intensa viendo su codigo. Muchas gracias por tenerlos publico.",
+    "text": "3.1 Materiales informativos\nNotas personales recabadas a partir de los tutoriales y ejemplos 😊. Espero que les funcione 💜\n💪 Estuve muy intensa viendo su codigo. Muchas gracias por tenerlos publico.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Buenas prácticas en bioinformática</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Buenas prácticas en bioinformática</span>"
     ]
   },
   {
     "objectID": "Parte3.html#materiales-informativos",
     "href": "Parte3.html#materiales-informativos",
-    "title": "2  Buenas prácticas en bioinformática",
+    "title": "3  Buenas prácticas en bioinformática",
     "section": "",
     "text": "Curso de Joselyn Cristina Chávez Fuentes\nMe ayudo mucho este Video\nDocumentación de funciones de Andrés Arredondo Cruz",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Buenas prácticas en bioinformática</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Buenas prácticas en bioinformática</span>"
     ]
   },
   {
     "objectID": "Parte3.html#un-algoritmo-nos-permite-resolver-un-problema",
     "href": "Parte3.html#un-algoritmo-nos-permite-resolver-un-problema",
-    "title": "2  Buenas prácticas en bioinformática",
-    "section": "2.2 Un algoritmo nos permite resolver un problema ⭐",
-    "text": "2.2 Un algoritmo nos permite resolver un problema ⭐\nUn algoritmo es un método para resolver un problema mediante una serie de pasos definidos, precisos y finitos.\n\nDefinido: si se sigue dos veces, se obtiene el mismo resultado. Es reproducible.\nPreciso: implica el orden de realización de cada uno de los pasos.\nFinito: Tiene un numero determinado de pasos, implica que tiene un fin.\n\n\nUn algoritmo podemos definirlo como un programa o software.",
+    "title": "3  Buenas prácticas en bioinformática",
+    "section": "3.2 Un algoritmo nos permite resolver un problema ⭐",
+    "text": "3.2 Un algoritmo nos permite resolver un problema ⭐\nUn algoritmo es un método para resolver un problema mediante una serie de pasos definidos, precisos y finitos.\n\nDefinido: si se sigue dos veces, se obtiene el mismo resultado. Es reproducible.\nPreciso: implica el orden de realización de cada uno de los pasos.\nFinito: Tiene un numero determinado de pasos, implica que tiene un fin.\n\n\nUn algoritmo podemos definirlo como un programa o software.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Buenas prácticas en bioinformática</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Buenas prácticas en bioinformática</span>"
     ]
   },
   {
     "objectID": "Parte3.html#para-escribir-un-buen-software-necesitas",
     "href": "Parte3.html#para-escribir-un-buen-software-necesitas",
-    "title": "2  Buenas prácticas en bioinformática",
-    "section": "2.3 Para escribir un buen software necesitas:",
-    "text": "2.3 Para escribir un buen software necesitas:\n\nEscribir código mantenible (maintainable code), usar control de versiones (version control) y rastreadores de problemas (issue trackers), revisiones de código (code reviews), pruebas unitarias (unit testing) y automatización de tareas (task automation).\nWilson, et al. 2014. PLOS Biology\n\nEn bioinformática, es fundamental garantizar el uso ético y responsable de datos sensibles, como los genomas humanos, respetando la privacidad y los marcos legales vigentes. Al mismo tiempo, se debe fomentar la ciencia abierta mediante prácticas transparentes y reproducibles, sin comprometer la integridad de la información. Estas acciones no solo fortalecen la confianza en los resultados, sino que también previenen errores graves que podrían derivar en la retracción de artículos científicos.\n\n\n\n\n\n\n\n\n\n\n\nPasos para escribir un buen software\n\n\n\n\nAnálisis del problema / Definir el problema\nDiseño del algoritmo / Diseño del programa\nCodificación / Escribir el código\nCompilación y ejecución del programa\nVerificación / Realizar pruebas\nDepuración / Detectar los errores y corregirlos\n\n\nProgramacion defensiva\n\n\nDocumentación",
+    "title": "3  Buenas prácticas en bioinformática",
+    "section": "3.3 Para escribir un buen software necesitas:",
+    "text": "3.3 Para escribir un buen software necesitas:\n\nEscribir código mantenible (maintainable code), usar control de versiones (version control) y rastreadores de problemas (issue trackers), revisiones de código (code reviews), pruebas unitarias (unit testing) y automatización de tareas (task automation).\nWilson, et al. 2014. PLOS Biology\n\nEn bioinformática, es fundamental garantizar el uso ético y responsable de datos sensibles, como los genomas humanos, respetando la privacidad y los marcos legales vigentes. Al mismo tiempo, se debe fomentar la ciencia abierta mediante prácticas transparentes y reproducibles, sin comprometer la integridad de la información. Estas acciones no solo fortalecen la confianza en los resultados, sino que también previenen errores graves que podrían derivar en la retracción de artículos científicos.\n\n\n\n\n\n\n\n\n\n\n\nPasos para escribir un buen software\n\n\n\n\nAnálisis del problema / Definir el problema\nDiseño del algoritmo / Diseño del programa\nCodificación / Escribir el código\nCompilación y ejecución del programa\nVerificación / Realizar pruebas\nDepuración / Detectar los errores y corregirlos\n\n\nProgramacion defensiva\n\n\nDocumentación",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Buenas prácticas en bioinformática</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Buenas prácticas en bioinformática</span>"
     ]
   },
   {
     "objectID": "Parte3.html#paso-7-documentación",
     "href": "Parte3.html#paso-7-documentación",
-    "title": "2  Buenas prácticas en bioinformática",
-    "section": "2.4 Paso 7: Documentación",
-    "text": "2.4 Paso 7: Documentación\n\n\n\n\n\n\nNote\n\n\n\n\nTítulo (opcional)\nAutor (author): Su nombre\nDia (date): Fecha de creación\nPaquetes (packages)\nDirectorio de trabajo (Working directory): En que carpeta se encuentra tu datos y programa.\nInformación descriptiva del programa (Description): ¿Para qué sirve el programa? Ej: El siguiente programa realiza la suma de dos numeros enteros a partir de la entrada del usuario y posteriormente la imprime en pantalla.\nUsage ¿Cómo se utiliza?\nArgumentos (Arguments)\n\nInformación de entrada (Data Inputs): Ej: Solo numeros enteros (sin decimales).\nInformación de salida (Outpus): Graficas, figuras, tablas, etc.",
+    "title": "3  Buenas prácticas en bioinformática",
+    "section": "3.4 Paso 7: Documentación",
+    "text": "3.4 Paso 7: Documentación\n\n\n\n\n\n\nNote\n\n\n\n\nTítulo (opcional)\nAutor (author): Su nombre\nDia (date): Fecha de creación\nPaquetes (packages)\nDirectorio de trabajo (Working directory): En que carpeta se encuentra tu datos y programa.\nInformación descriptiva del programa (Description): ¿Para qué sirve el programa? Ej: El siguiente programa realiza la suma de dos numeros enteros a partir de la entrada del usuario y posteriormente la imprime en pantalla.\nUsage ¿Cómo se utiliza?\nArgumentos (Arguments)\n\nInformación de entrada (Data Inputs): Ej: Solo numeros enteros (sin decimales).\nInformación de salida (Outpus): Graficas, figuras, tablas, etc.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Buenas prácticas en bioinformática</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Buenas prácticas en bioinformática</span>"
     ]
   },
   {
     "objectID": "Parte3.html#puntos-claves-para-buenas-prácticas-en-bioinfo",
     "href": "Parte3.html#puntos-claves-para-buenas-prácticas-en-bioinfo",
-    "title": "2  Buenas prácticas en bioinformática",
-    "section": "2.5 Puntos claves para buenas prácticas en bioinfo ⭐",
-    "text": "2.5 Puntos claves para buenas prácticas en bioinfo ⭐\n\nEscriba programas para personas, no para computadoras (Documenta qué hace y por qué). - Se coherente en la nomenclatura, indentación y otros aspectos del estilo.\nModularidad: Divide los programas en funciones cortas de un solo propósito. 💻 📚\nNo repitas tu código. Crea pasos reproducibles o que se repitan por si solas. ➰\nPlanifique los errores (Programacion defensiva) 🚩\nOptimice el software sólo después de que funcione correctamente. - Si funciona no lo modifiques, simplificalo.\nColaborar - Busque siempre bibliotecas de software bien mantenidas que hagan lo que necesita. 👥\n\n\n\n\n\n\n\nEjemplo de como realizo mis documentos 💜\n\n\n\nAqui les dejo el script que les doy a mis alumnos VisualizacionDatos.R del curso de Análisis de datos de RNA-Seq.",
+    "title": "3  Buenas prácticas en bioinformática",
+    "section": "3.5 Puntos claves para buenas prácticas en bioinfo ⭐",
+    "text": "3.5 Puntos claves para buenas prácticas en bioinfo ⭐\n\nEscriba programas para personas, no para computadoras (Documenta qué hace y por qué). - Se coherente en la nomenclatura, indentación y otros aspectos del estilo.\nModularidad: Divide los programas en funciones cortas de un solo propósito. 💻 📚\nNo repitas tu código. Crea pasos reproducibles o que se repitan por si solas. ➰\nPlanifique los errores (Programacion defensiva) 🚩\nOptimice el software sólo después de que funcione correctamente. - Si funciona no lo modifiques, simplificalo.\nColaborar - Busque siempre bibliotecas de software bien mantenidas que hagan lo que necesita. 👥\n\n\n\n\n\n\n\nEjemplo de como realizo mis documentos 💜\n\n\n\nAqui les dejo el script que les doy a mis alumnos VisualizacionDatos.R del curso de Análisis de datos de RNA-Seq.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Buenas prácticas en bioinformática</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Buenas prácticas en bioinformática</span>"
     ]
   },
   {
     "objectID": "Parte3.html#referencias",
     "href": "Parte3.html#referencias",
-    "title": "2  Buenas prácticas en bioinformática",
-    "section": "2.6 Referencias",
-    "text": "2.6 Referencias\n\nPresentación de Reproducibilidad de Miriam Lerma\nPresentación introducción a Git, GitHub y Zenodo de Miriam Lerma\nPresentación de Introducción a la Bioinformática - Heladia Salgado\nMi próximo artículo científico en R de Florencia D´Andrea\nKristie Reproducible Research\nPresentación de Kristie\nFAIR- bioinformatic\nUnidad 1 Bioinformática e investigación reproducible\nThe five pillars of computational reproducibility: bioinformatics and beyond\nInvestigación reproducible y análisis de datos\nHaydee tutorial: Temas Selectos de Análisis Numérico y Computación Científica: Computo científico para el análisis de datos\nAlejandra Medina tutorial: Control de versiones con GitHub y RStudio\nWilson, et al. 2014. Best Practices for Scientific Computing. PLOS Biology\nEvelia Coss - tutorial Buenas practicas en R\nEvelia Coss - Make your CV tutorial\nMarkdwn Guide - Getting Started\nAllison Horst - Imagenes\nStatistical Computing using R and Python\nTraining Materials\nVisual Studio Code\nArticulo reproducibilidad",
+    "title": "3  Buenas prácticas en bioinformática",
+    "section": "3.6 Referencias",
+    "text": "3.6 Referencias\n\nPresentación de Reproducibilidad de Miriam Lerma\nPresentación introducción a Git, GitHub y Zenodo de Miriam Lerma\nPresentación de Introducción a la Bioinformática - Heladia Salgado\nMi próximo artículo científico en R de Florencia D´Andrea\nKristie Reproducible Research\nPresentación de Kristie\nFAIR- bioinformatic\nUnidad 1 Bioinformática e investigación reproducible\nThe five pillars of computational reproducibility: bioinformatics and beyond\nInvestigación reproducible y análisis de datos\nHaydee tutorial: Temas Selectos de Análisis Numérico y Computación Científica: Computo científico para el análisis de datos\nAlejandra Medina tutorial: Control de versiones con GitHub y RStudio\nWilson, et al. 2014. Best Practices for Scientific Computing. PLOS Biology\nEvelia Coss - tutorial Buenas practicas en R\nEvelia Coss - Make your CV tutorial\nMarkdwn Guide - Getting Started\nAllison Horst - Imagenes\nStatistical Computing using R and Python\nTraining Materials\nVisual Studio Code\nArticulo reproducibilidad",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Buenas prácticas en bioinformática</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Buenas prácticas en bioinformática</span>"
     ]
   },
   {
     "objectID": "Parte4.html",
     "href": "Parte4.html",
-    "title": "3  Introducción a Markdown",
+    "title": "4  Introducción a Markdown",
     "section": "",
-    "text": "3.1 ¿Qué es Markdown?\nMarkdown es un lenguaje de marcado ligero que permite añadir elementos de formato a documentos de texto plano. Creado por John Gruber en 2004, Markdown es actualmente uno de los lenguajes más populares del mundo.",
+    "text": "4.1 ¿Qué es Markdown?\nMarkdown es un lenguaje de marcado ligero que permite añadir elementos de formato a documentos de texto plano. Creado por John Gruber en 2004, Markdown es actualmente uno de los lenguajes más populares del mundo.",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introducción a Markdown</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Introducción a Markdown</span>"
     ]
   },
   {
     "objectID": "Parte4.html#qué-es-markdown",
     "href": "Parte4.html#qué-es-markdown",
-    "title": "3  Introducción a Markdown",
+    "title": "4  Introducción a Markdown",
     "section": "",
     "text": "Sencillo y legible, sin necesidad de usar editores complicados o HTML.\nlenguaje de marcado ligero: Escribir texto que incluye instrucciones simples para darle formato.\n\n\n\n\n\n\n\n🧩 ¿Por qué se llama “ligero”?\n\n\n\nPorque:\n\nUsa símbolos sencillos como *, #, o - para indicar formato.\nNo requiere cerrar etiquetas como &lt;strong&gt; o &lt;div&gt; (como en HTML).\nEs minimalista y limpio, ideal para escribir rápido sin distracciones.",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introducción a Markdown</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Introducción a Markdown</span>"
     ]
   },
   {
     "objectID": "Parte4.html#para-qué-se-usa",
     "href": "Parte4.html#para-qué-se-usa",
-    "title": "3  Introducción a Markdown",
-    "section": "3.2 🧠 ¿Para qué se usa?",
-    "text": "3.2 🧠 ¿Para qué se usa?\n\nCrear documentación técnica o científica\nEscribir README.md en proyectos de GitHub\nGenerar contenido para sitios web\nCrear tesis, notas, libros, presentaciones y posters\n\nEn R\n\n\n\nPaquete / Programa\nUso principal\n\n\n\n\nrmarkdown\nCrear documentos reproducibles con texto, código y resultados\n\n\nknitr\nEjecutar chunks de código en RMarkdown\n\n\nQuarto\nPlataforma moderna para documentos con R, Python, etc.\n\n\nbookdown\nCrear libros técnicos con Markdown + RMarkdown\n\n\nblogdown\nGenerar blogs científicos usando Markdown y Hugo\n\n\nflexdashboard\nDashboards interactivos escritos en Markdown\n\n\n\nEn Python\n\n\n\n\n\n\n\nPaquete / Programa\nUso principal\n\n\n\n\nJupyter Notebooks\nCeldas Markdown para explicar y documentar junto con código\n\n\nQuarto\nIgual que en R, permite combinar Markdown con código Python\n\n\nmkdocs\nGenerar sitios web de documentación técnica desde archivos Markdown\n\n\nSphinx + MyST\nDocumentación avanzada con soporte para Markdown\n\n\nmarkdown, mistune\nLibrerías para convertir Markdown a HTML\n\n\nnbconvert\nExportar notebooks con Markdown a PDF, HTML, LaTeX, etc.",
+    "title": "4  Introducción a Markdown",
+    "section": "4.2 🧠 ¿Para qué se usa?",
+    "text": "4.2 🧠 ¿Para qué se usa?\n\nCrear documentación técnica o científica\nEscribir README.md en proyectos de GitHub\nGenerar contenido para sitios web\nCrear tesis, notas, libros, presentaciones y posters\n\nEn R\n\n\n\nPaquete / Programa\nUso principal\n\n\n\n\nrmarkdown\nCrear documentos reproducibles con texto, código y resultados\n\n\nknitr\nEjecutar chunks de código en RMarkdown\n\n\nQuarto\nPlataforma moderna para documentos con R, Python, etc.\n\n\nbookdown\nCrear libros técnicos con Markdown + RMarkdown\n\n\nblogdown\nGenerar blogs científicos usando Markdown y Hugo\n\n\nflexdashboard\nDashboards interactivos escritos en Markdown\n\n\n\nEn Python\n\n\n\n\n\n\n\nPaquete / Programa\nUso principal\n\n\n\n\nJupyter Notebooks\nCeldas Markdown para explicar y documentar junto con código\n\n\nQuarto\nIgual que en R, permite combinar Markdown con código Python\n\n\nmkdocs\nGenerar sitios web de documentación técnica desde archivos Markdown\n\n\nSphinx + MyST\nDocumentación avanzada con soporte para Markdown\n\n\nmarkdown, mistune\nLibrerías para convertir Markdown a HTML\n\n\nnbconvert\nExportar notebooks con Markdown a PDF, HTML, LaTeX, etc.",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introducción a Markdown</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Introducción a Markdown</span>"
     ]
   },
   {
     "objectID": "Parte4.html#cómo-funciona",
     "href": "Parte4.html#cómo-funciona",
-    "title": "3  Introducción a Markdown",
-    "section": "3.3 ¿Cómo funciona?",
-    "text": "3.3 ¿Cómo funciona?\nPasos generales:\n\nCrear un archivo Markdown con un editor de texto o una aplicación específica. El archivo debe tener la extensión .md o .markdown.\nSe abre el archivo Markdown en una aplicación Markdown.\nSe utiliza la aplicación Markdown para convertir el archivo Markdown en un documento HTML.\nVisualización del archivo HTML en un navegador web o use la aplicación Markdown para convertirlo a otro formato de archivo, como PDF.\n\n\n\n\n\n\n\nNote\n\n\n\nLa aplicación y el procesador de Markdown son dos componentes independientes. Para simplificar, los he combinado en un solo elemento (“aplicación de Markdown”) en la figura a continuación.\n\n\n\n\n\nImagen tomada de: https://www.markdownguide.org/getting-started/",
+    "title": "4  Introducción a Markdown",
+    "section": "4.3 ¿Cómo funciona?",
+    "text": "4.3 ¿Cómo funciona?\nPasos generales:\n\nCrear un archivo Markdown con un editor de texto o una aplicación específica. El archivo debe tener la extensión .md o .markdown.\nSe abre el archivo Markdown en una aplicación Markdown.\nSe utiliza la aplicación Markdown para convertir el archivo Markdown en un documento HTML.\nVisualización del archivo HTML en un navegador web o use la aplicación Markdown para convertirlo a otro formato de archivo, como PDF.\n\n\n\n\n\n\n\nNote\n\n\n\nLa aplicación y el procesador de Markdown son dos componentes independientes. Para simplificar, los he combinado en un solo elemento (“aplicación de Markdown”) en la figura a continuación.\n\n\n\n\n\nImagen tomada de: https://www.markdownguide.org/getting-started/",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introducción a Markdown</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Introducción a Markdown</span>"
     ]
   },
   {
     "objectID": "Parte4.html#sintaxis-de-escritura-y-formato-básicos",
     "href": "Parte4.html#sintaxis-de-escritura-y-formato-básicos",
-    "title": "3  Introducción a Markdown",
-    "section": "3.4 Sintaxis de escritura y formato básicos",
-    "text": "3.4 Sintaxis de escritura y formato básicos\nRevisar la documentación de GitHub",
+    "title": "4  Introducción a Markdown",
+    "section": "4.4 Sintaxis de escritura y formato básicos",
+    "text": "4.4 Sintaxis de escritura y formato básicos\nRevisar la documentación de GitHub",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introducción a Markdown</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Introducción a Markdown</span>"
     ]
   },
   {
     "objectID": "Parte4.html#ejercicio-individual-página-de-inicio-en-github",
     "href": "Parte4.html#ejercicio-individual-página-de-inicio-en-github",
-    "title": "3  Introducción a Markdown",
-    "section": "3.5 Ejercicio individual: Página de inicio en GitHub",
-    "text": "3.5 Ejercicio individual: Página de inicio en GitHub\n\n\n\n\n\n\nActividad\n\n\n\n\nEn GitHub, crea un repositorio con el mismo nombre de usuario. Ejemplo: Mi usuario es EveliaCoss y mi repositorio se llama EveliaCoss, dandome la siguiente liga https://github.com/EveliaCoss/EveliaCoss\nAgrega un README al repositorio con tu informacion. Por Default ya trae una plantilla, modificala y adaptala a tu gusto.\nVisualiza como cambia tu inicio en el Github.",
+    "title": "4  Introducción a Markdown",
+    "section": "4.5 Ejercicio individual: Página de inicio en GitHub",
+    "text": "4.5 Ejercicio individual: Página de inicio en GitHub\n\n\n\n\n\n\nActividad\n\n\n\n\nEn GitHub, crea un repositorio con el mismo nombre de usuario. Ejemplo: Mi usuario es EveliaCoss y mi repositorio se llama EveliaCoss, dandome la siguiente liga https://github.com/EveliaCoss/EveliaCoss\nAgrega un README al repositorio con tu informacion. Por Default ya trae una plantilla, modificala y adaptala a tu gusto.\nVisualiza como cambia tu inicio en el Github.",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introducción a Markdown</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Introducción a Markdown</span>"
     ]
   },
   {
     "objectID": "Parte4.html#referencias",
     "href": "Parte4.html#referencias",
-    "title": "3  Introducción a Markdown",
-    "section": "3.6 Referencias",
-    "text": "3.6 Referencias\n\nDocumentación de GitHub\nLibro de Rmarkdown\nEjercicios con Markdown\nCurso de Heladia Salgado\nCurso de Git y GitHub Evelia Coss\nMarkdown and rmarkdown\nGaleria de Markdown\nLesson 3: Basic Syntax\nIntroduction to Open Data Science with R\nData Science for Psychologists",
+    "title": "4  Introducción a Markdown",
+    "section": "4.6 Referencias",
+    "text": "4.6 Referencias\n\nDocumentación de GitHub\nLibro de Rmarkdown\nEjercicios con Markdown\nCurso de Heladia Salgado\nCurso de Git y GitHub Evelia Coss\nMarkdown and rmarkdown\nGaleria de Markdown\nLesson 3: Basic Syntax\nIntroduction to Open Data Science with R\nData Science for Psychologists",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introducción a Markdown</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Introducción a Markdown</span>"
     ]
   },
   {
     "objectID": "Bash.html",
     "href": "Bash.html",
-    "title": "4  Mis primeros pasos en Bash",
+    "title": "5  Mis primeros pasos en Bash",
     "section": "",
-    "text": "4.1 Entorno de Bash\nEl signo $ es un prompt, que nos muestra que la terminal está esperando una entrada; tu terminal puede usar un carácter diferente como prompt y puede agregar información antes de él. Al teclear comandos, ya sea a partir de estas lecciones o de otras fuentes, no escribas el prompt ($), sólo los comandos que le siguen.",
+    "text": "5.1 Entorno de Bash\nEl signo $ es un prompt, que nos muestra que la terminal está esperando una entrada; tu terminal puede usar un carácter diferente como prompt y puede agregar información antes de él. Al teclear comandos, ya sea a partir de estas lecciones o de otras fuentes, no escribas el prompt ($), sólo los comandos que le siguen.",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Mis primeros pasos en Bash</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Mis primeros pasos en Bash</span>"
     ]
   },
   {
     "objectID": "Bash.html#preparación-del-directorio-de-trabajo",
     "href": "Bash.html#preparación-del-directorio-de-trabajo",
-    "title": "4  Mis primeros pasos en Bash",
-    "section": "4.2 Preparación del directorio de trabajo",
-    "text": "4.2 Preparación del directorio de trabajo\n\nRuta / Camino absoluto\ncd /home/usuario/data/\nRuta / Camino relativo\ncd ../ # Ir a la carpeta anterior\n\n\n\n\n\n\n\nNote\n\n\n\nNOTA 1: Si das cd y no indicas una ruta absoluta, te llevara al Directorio Raiz (~).\nNOTA 2: Puedes usar la tecla TAB para completar el nombre de la carpeta. En caso de que tengas más de dos carpetas que inicien igual, tendrás que terminar de completar el nombre.",
+    "title": "5  Mis primeros pasos en Bash",
+    "section": "5.2 Preparación del directorio de trabajo",
+    "text": "5.2 Preparación del directorio de trabajo\n\nRuta / Camino absoluto\ncd /home/usuario/data/\nRuta / Camino relativo\ncd ../ # Ir a la carpeta anterior\n\n\n\n\n\n\n\nNote\n\n\n\nNOTA 1: Si das cd y no indicas una ruta absoluta, te llevara al Directorio Raiz (~).\nNOTA 2: Puedes usar la tecla TAB para completar el nombre de la carpeta. En caso de que tengas más de dos carpetas que inicien igual, tendrás que terminar de completar el nombre.",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Mis primeros pasos en Bash</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Mis primeros pasos en Bash</span>"
     ]
   },
   {
     "objectID": "Bash.html#conocer-mi-dirección-ubicación",
     "href": "Bash.html#conocer-mi-dirección-ubicación",
-    "title": "4  Mis primeros pasos en Bash",
-    "section": "4.3 Conocer mi dirección / ubicación",
-    "text": "4.3 Conocer mi dirección / ubicación\nAveriguemos dónde estamos, ejecutando el comando pwd (que significa “imprime directorio de trabajo” - “print working directory”). En cualquier momento, nuestro directorio actual es nuestro directorio predeterminado, es decir, el directorio que la computadora supone queremos ejecutar comandos a menos que especifiquemos explícitamente otra cosa. En este caso la respuesta de la computadora es /Users/nelle, el cual es el directorio de inicio de Nelle, también conocido como su directorio home:\npwd # /c/Users/ecoss\nEn la computadora de Evelia, el sistema de archivos se ve así:\n\n\n\n\n\nEn la parte superior está el directorio raíz o root que contiene todo lo demás. Nos referimos a este directorio usando un caracter de barra / por si solo; esta es la barra al inicio de /Users/ecoss.\nDentro de ese directorio hay otros directorios: bin (que es donde se almacenan algunos programas preinstalados), data (para archivos de datos diversos), Users (donde se encuentran los directorios personales de los usuarios), tmp (para archivos temporales que no necesitan ser almacenados a largo plazo), etcétera.\n\n\n\n\n\n\nEjercicio 1\n\n\n\nA partir de /Users/ecoss/data/, ¿Cuál de los siguientes comandos podría Amanda usar para navegar a su directorio de inicio, que es /Users/ecoss?\n\ncd .\ncd /\ncd /home/amanda\ncd ../..\ncd ~\ncd home\ncd ~/data/..\ncd\ncd ..\n\n\n\n\n\n\nSolución\n\n\n\n\n\n\nNo: . significa el directorio actual.\nNo: / significa el directorio raíz.\nNo: El directorio home de Amanda es /Users/amanda.\nNo: sube dos niveles, es decir termina en /Users.\nSí: ~ significa el directorio home del usuario, en este caso /Users/amanda.\nNo: esto navegaría a un directorio home en el directorio actual, si existe.\nSí: innecesariamente complicado, pero correcto.\nSí: un atajo para volver al directorio home del usuario.\nSí: sube un nivel.\n\n\n\n\n\n\n\nEjemplo de rutas:",
+    "title": "5  Mis primeros pasos en Bash",
+    "section": "5.3 Conocer mi dirección / ubicación",
+    "text": "5.3 Conocer mi dirección / ubicación\nAveriguemos dónde estamos, ejecutando el comando pwd (que significa “imprime directorio de trabajo” - “print working directory”). En cualquier momento, nuestro directorio actual es nuestro directorio predeterminado, es decir, el directorio que la computadora supone queremos ejecutar comandos a menos que especifiquemos explícitamente otra cosa. En este caso la respuesta de la computadora es /Users/nelle, el cual es el directorio de inicio de Nelle, también conocido como su directorio home:\npwd # /c/Users/ecoss\nEn la computadora de Evelia, el sistema de archivos se ve así:\n\n\n\n\n\nEn la parte superior está el directorio raíz o root que contiene todo lo demás. Nos referimos a este directorio usando un caracter de barra / por si solo; esta es la barra al inicio de /Users/ecoss.\nDentro de ese directorio hay otros directorios: bin (que es donde se almacenan algunos programas preinstalados), data (para archivos de datos diversos), Users (donde se encuentran los directorios personales de los usuarios), tmp (para archivos temporales que no necesitan ser almacenados a largo plazo), etcétera.\n\n\n\n\n\n\nEjercicio 1\n\n\n\nA partir de /Users/ecoss/data/, ¿Cuál de los siguientes comandos podría Amanda usar para navegar a su directorio de inicio, que es /Users/ecoss?\n\ncd .\ncd /\ncd /home/amanda\ncd ../..\ncd ~\ncd home\ncd ~/data/..\ncd\ncd ..\n\n\n\n\n\n\nSolución\n\n\n\n\n\n\nNo: . significa el directorio actual.\nNo: / significa el directorio raíz.\nNo: El directorio home de Amanda es /Users/amanda.\nNo: sube dos niveles, es decir termina en /Users.\nSí: ~ significa el directorio home del usuario, en este caso /Users/amanda.\nNo: esto navegaría a un directorio home en el directorio actual, si existe.\nSí: innecesariamente complicado, pero correcto.\nSí: un atajo para volver al directorio home del usuario.\nSí: sube un nivel.\n\n\n\n\n\n\n\nEjemplo de rutas:",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Mis primeros pasos en Bash</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Mis primeros pasos en Bash</span>"
     ]
   },
   {
     "objectID": "Bash.html#comandos-básicos",
     "href": "Bash.html#comandos-básicos",
-    "title": "4  Mis primeros pasos en Bash",
-    "section": "4.4 Comandos básicos",
-    "text": "4.4 Comandos básicos\n\n\n\n\n\n\n\n\nComandos\nInformación\nArgumentos\n\n\n\n\nssh\nConexión a servidores\nssh usuario@servidor.mx\n\n\nls\nObservar el contenido de los archivos en una carpeta\nls directorio/\n\n\ncd\nMoverse de directorios\ncd /home/usuario/data/\n\n\nmkdir\nCrear un nuevo directorio\nmkdir data\n\n\nrmdir\nEliminar el directorio\nrmkdir -rf data\n\n\nnano / vim\nEditores de texto plano\nnano Archivo.txt / vim Archivo.txt\n\n\ncp\nCopiar archivos\ncp Archivo1.txt /home/usuario/data/\n\n\nmv\nMover un archivo o carpeta\n\n\n\necho\nPara llamar y/o declarar variables\necho “Hello world”\n\n\nchmod\nCambiar permisos del usuario\nchmod 777 data/\n\n\nrsync\nDescargar o subir archivos\n\n\n\nscp\nDescargar o subir archivos\n\n\n\ncat\nVisualizar contenido de un archivo. Escribe el contenido del archivo de manera secuencial a la salida estándar, a la ventana de Terminal.\n\n\n\nless\nLeer contenido de un archivo sin interrumpir la pantalla de Terminal. Similar a Vim pero sin opción para escribir. Se sale del modo visualización con q.\n\n\n\nfind\nBusca archivos en un directorio específico.\n\n\n\nhead\nVisualizar primeras líneas de un archivo.\n\n\n\ntail\nVisualizar últimas líneas de un archivo.\n\n\n\nwhich\nIndica el directorio donde se encuentra un particular comando o programa que se haya podido encontrar usando los directorios guardados en la variable de estado PATH.\nwhich bash\n\n\n\n\n\n\n\n\n\nAyuda de funciones\n\n\n\nPuedes consultar mas información usando ls --help",
+    "title": "5  Mis primeros pasos en Bash",
+    "section": "5.4 Comandos básicos",
+    "text": "5.4 Comandos básicos\n\n\n\n\n\n\n\n\nComandos\nInformación\nArgumentos\n\n\n\n\nssh\nConexión a servidores\nssh usuario@servidor.mx\n\n\nls\nObservar el contenido de los archivos en una carpeta\nls directorio/\n\n\ncd\nMoverse de directorios\ncd /home/usuario/data/\n\n\nmkdir\nCrear un nuevo directorio\nmkdir data\n\n\nrmdir\nEliminar el directorio\nrmkdir -rf data\n\n\nnano / vim\nEditores de texto plano\nnano Archivo.txt / vim Archivo.txt\n\n\ncp\nCopiar archivos\ncp Archivo1.txt /home/usuario/data/\n\n\nmv\nMover un archivo o carpeta\n\n\n\necho\nPara llamar y/o declarar variables\necho “Hello world”\n\n\nchmod\nCambiar permisos del usuario\nchmod 777 data/\n\n\nrsync\nDescargar o subir archivos\n\n\n\nscp\nDescargar o subir archivos\n\n\n\ncat\nVisualizar contenido de un archivo. Escribe el contenido del archivo de manera secuencial a la salida estándar, a la ventana de Terminal.\n\n\n\nless\nLeer contenido de un archivo sin interrumpir la pantalla de Terminal. Similar a Vim pero sin opción para escribir. Se sale del modo visualización con q.\n\n\n\nfind\nBusca archivos en un directorio específico.\n\n\n\nhead\nVisualizar primeras líneas de un archivo.\n\n\n\ntail\nVisualizar últimas líneas de un archivo.\n\n\n\nwhich\nIndica el directorio donde se encuentra un particular comando o programa que se haya podido encontrar usando los directorios guardados en la variable de estado PATH.\nwhich bash\n\n\n\n\n\n\n\n\n\nAyuda de funciones\n\n\n\nPuedes consultar mas información usando ls --help",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Mis primeros pasos en Bash</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Mis primeros pasos en Bash</span>"
     ]
   },
   {
     "objectID": "Bash.html#consultar-información-sobre-archivos-y-directorios",
     "href": "Bash.html#consultar-información-sobre-archivos-y-directorios",
-    "title": "4  Mis primeros pasos en Bash",
-    "section": "4.5 Consultar información sobre archivos y directorios",
-    "text": "4.5 Consultar información sobre archivos y directorios\n\n4.5.1 Información contenida\nCada columna en la salida anterior tiene un significado:\n\n\n\n4.5.2 Permisos\nCada usuario tiene permisos diferentes cuando crea un archivo. Los permisos pueden modificarse con chmod.\nLos caracteres atribuidos a los permisos son:\n\nr : escritura (Read)\nw : lectura (Write)\nx : ejecución (eXecute)\n\nEn el siguiente ejemplo, el usuario cuenta con todos los permisos activos, mientras que el grupo y otros tienen solo permisos de lectura y ejecución.",
+    "title": "5  Mis primeros pasos en Bash",
+    "section": "5.5 Consultar información sobre archivos y directorios",
+    "text": "5.5 Consultar información sobre archivos y directorios\n\n5.5.1 Información contenida\nCada columna en la salida anterior tiene un significado:\n\n\n\n5.5.2 Permisos\nCada usuario tiene permisos diferentes cuando crea un archivo. Los permisos pueden modificarse con chmod.\nLos caracteres atribuidos a los permisos son:\n\nr : escritura (Read)\nw : lectura (Write)\nx : ejecución (eXecute)\n\nEn el siguiente ejemplo, el usuario cuenta con todos los permisos activos, mientras que el grupo y otros tienen solo permisos de lectura y ejecución.",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Mis primeros pasos en Bash</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Mis primeros pasos en Bash</span>"
     ]
   },
   {
     "objectID": "Bash.html#chmod-cambiar-permisos",
     "href": "Bash.html#chmod-cambiar-permisos",
-    "title": "4  Mis primeros pasos en Bash",
-    "section": "4.6 chmod: Cambiar permisos",
-    "text": "4.6 chmod: Cambiar permisos\nLa representación octal de chmod es muy sencilla\n\nr = Lectura tiene el valor de 4\nw = Escritura tiene el valor de 2\nx = Ejecución tiene el valor de 1\n\n\n\n\nPermisos\nValor\nSignificado\n\n\n\n\nrwx\n7\nLectura, escritura y ejecución\n\n\nrw-\n6\nLectura, escritura\n\n\nr-x\n5\nLectura y ejecución\n\n\nr–\n4\nLectura\n\n\n-wx\n3\nEscritura y ejecución\n\n\n-w-\n2\nEscritura\n\n\n–x\n1\nEjecución\n\n\n—\n0\nSin permisos\n\n\n\nPor lo tanto:\n\n\n\nForma larga\nForma Octal\n\n\n\n\nchmod u=rwx,g=rwx,o=rx\nchmod 775\n\n\nchmod u=rwx,g=rx,o=\nchmod 760\n\n\nchmod u=rw,g=r,o=r\nchmod 644\n\n\nchmod u=rw,g=r,o=\nchmod 640\n\n\nchmod u=rw,go=\nchmod 600\n\n\nchmod u=rwx,go=\nchmod 700",
+    "title": "5  Mis primeros pasos en Bash",
+    "section": "5.6 chmod: Cambiar permisos",
+    "text": "5.6 chmod: Cambiar permisos\nLa representación octal de chmod es muy sencilla\n\nr = Lectura tiene el valor de 4\nw = Escritura tiene el valor de 2\nx = Ejecución tiene el valor de 1\n\n\n\n\nPermisos\nValor\nSignificado\n\n\n\n\nrwx\n7\nLectura, escritura y ejecución\n\n\nrw-\n6\nLectura, escritura\n\n\nr-x\n5\nLectura y ejecución\n\n\nr–\n4\nLectura\n\n\n-wx\n3\nEscritura y ejecución\n\n\n-w-\n2\nEscritura\n\n\n–x\n1\nEjecución\n\n\n—\n0\nSin permisos\n\n\n\nPor lo tanto:\n\n\n\nForma larga\nForma Octal\n\n\n\n\nchmod u=rwx,g=rwx,o=rx\nchmod 775\n\n\nchmod u=rwx,g=rx,o=\nchmod 760\n\n\nchmod u=rw,g=r,o=r\nchmod 644\n\n\nchmod u=rw,g=r,o=\nchmod 640\n\n\nchmod u=rw,go=\nchmod 600\n\n\nchmod u=rwx,go=\nchmod 700",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Mis primeros pasos en Bash</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Mis primeros pasos en Bash</span>"
     ]
   },
   {
     "objectID": "Bash.html#comprimir-y-descomprimir-archivos",
     "href": "Bash.html#comprimir-y-descomprimir-archivos",
-    "title": "4  Mis primeros pasos en Bash",
-    "section": "4.7 Comprimir y descomprimir archivos",
-    "text": "4.7 Comprimir y descomprimir archivos\nLos archivos pueden contener diversos tipos de extensiones, dependiendo del objetivo será necesario descomprimirlos y en otros dejarlos comprimidos para no abarcar tanto espacio en tu espacio de trabajo. \n\n\n\n\n\n\n\n\nTipo de archivo\nComprimir\nDescomprimir\n\n\n\n\nCarpeta.tar\ntar -cvf carpeta.tar /dir/a/comprimir/carpeta\ntar -xvf carpeta.tar\n\n\nCarpeta.tar.gz\ntar -czvf carpeta.tar.gz /carpeta/a/empaquetar/carpeta\ntar -zxvf carpeta.tar.gz\n\n\nCarpeta.gz\ngzip -9 carpeta.gz carpeta/a/empaquetar/carpeta\ngunzip -kd carpeta.gz\n\n\nCarpeta.zip\nzip -r carpeta.zip carpeta\nunzip carpeta.zip\n\n\n\n\n\n\n\n\n\nEjercicio 2\n\n\n\n\nVisita este enlace 👉 unix.bioinfo.rsgecuador .\nHaz clic en el botón verde que dice “CODE”.\nSelecciona la opción “Download ZIP”.\nElige la carpeta donde deseas guardar el archivo en tu computadora. El archivo se almacena con la extension .zip.\nVe a la carpeta donde se guardó el archivo desde la terminal. Ejemplo en mi computadora:\n\ncd \"C:/Users/ecoss/Documents/Respaldos/Github_notes/Workshop_Bash2024/data\"\n\nDescomprime el archivo .zip.\n\nunzip unix.bioinfo.rsgecuador-gh-pages.zip",
+    "title": "5  Mis primeros pasos en Bash",
+    "section": "5.7 Comprimir y descomprimir archivos",
+    "text": "5.7 Comprimir y descomprimir archivos\nLos archivos pueden contener diversos tipos de extensiones, dependiendo del objetivo será necesario descomprimirlos y en otros dejarlos comprimidos para no abarcar tanto espacio en tu espacio de trabajo. \n\n\n\n\n\n\n\n\nTipo de archivo\nComprimir\nDescomprimir\n\n\n\n\nCarpeta.tar\ntar -cvf carpeta.tar /dir/a/comprimir/carpeta\ntar -xvf carpeta.tar\n\n\nCarpeta.tar.gz\ntar -czvf carpeta.tar.gz /carpeta/a/empaquetar/carpeta\ntar -zxvf carpeta.tar.gz\n\n\nCarpeta.gz\ngzip -9 carpeta.gz carpeta/a/empaquetar/carpeta\ngunzip -kd carpeta.gz\n\n\nCarpeta.zip\nzip -r carpeta.zip carpeta\nunzip carpeta.zip\n\n\n\n\n\n\n\n\n\nEjercicio 2\n\n\n\n\nVisita este enlace 👉 unix.bioinfo.rsgecuador .\nHaz clic en el botón verde que dice “CODE”.\nSelecciona la opción “Download ZIP”.\nElige la carpeta donde deseas guardar el archivo en tu computadora. El archivo se almacena con la extension .zip.\nVe a la carpeta donde se guardó el archivo desde la terminal. Ejemplo en mi computadora:\n\ncd \"C:/Users/ecoss/Documents/Respaldos/Github_notes/Workshop_Bash2024/data\"\n\nDescomprime el archivo .zip.\n\nunzip unix.bioinfo.rsgecuador-gh-pages.zip",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Mis primeros pasos en Bash</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Mis primeros pasos en Bash</span>"
     ]
   },
   {
     "objectID": "Bash.html#material-suplementario",
     "href": "Bash.html#material-suplementario",
-    "title": "4  Mis primeros pasos en Bash",
-    "section": "4.8 Material suplementario",
-    "text": "4.8 Material suplementario\n\nSoftware Carpentry. La terminal de Unix\nRSG Ecuador.GNU/Linux para bioinfomatica\nIntroduction to the Unix Shell for TranscriptomicsTutorial.",
+    "title": "5  Mis primeros pasos en Bash",
+    "section": "5.8 Material suplementario",
+    "text": "5.8 Material suplementario\n\nSoftware Carpentry. La terminal de Unix\nRSG Ecuador.GNU/Linux para bioinfomatica\nIntroduction to the Unix Shell for TranscriptomicsTutorial.",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Mis primeros pasos en Bash</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Mis primeros pasos en Bash</span>"
     ]
   },
   {
     "objectID": "Rnaseq_intro.html",
     "href": "Rnaseq_intro.html",
-    "title": "5  Análisis de datos de RNA-Seq",
+    "title": "6  Análisis de datos de RNA-Seq",
     "section": "",
-    "text": "5.1 Bioinformática se conforma de la computación, biológica, matemáticas y estadística\nLa bioinformática, en relación con la genética y la genómica, es una subdisciplina científica que implica el uso de ciencias informáticas para recopilar, almacenar, analizar y diseminar datos biológicos*, como secuencias de ADN y aminoácidos o anotaciones sobre esas secuencias NIH, 2023.",
+    "text": "6.1 Bioinformática se conforma de la computación, biológica, matemáticas y estadística\nLa bioinformática, en relación con la genética y la genómica, es una subdisciplina científica que implica el uso de ciencias informáticas para recopilar, almacenar, analizar y diseminar datos biológicos*, como secuencias de ADN y aminoácidos o anotaciones sobre esas secuencias NIH, 2023.",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Análisis de datos de RNA-Seq</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Análisis de datos de RNA-Seq</span>"
     ]
   },
   {
     "objectID": "Rnaseq_intro.html#transcriptoma",
     "href": "Rnaseq_intro.html#transcriptoma",
-    "title": "5  Análisis de datos de RNA-Seq",
-    "section": "5.2 Transcriptoma",
-    "text": "5.2 Transcriptoma\nEs el conjunto de todas las moléculas de RNA producidos por el genoma bajo condiciones específicas o en una célula específica (scRNA-Seq) o en una población de células (bulk RNA-Seq).\n\n5.2.1 ¿Porque es importante medir los cambios en la expresión génica (transcriptoma)?\n\nLas variaciones en la expresión entre condiciones se puede relacionar con los cambios en los procesos biológicos.\nEl transcriptoma nos da una aproximación de los cambios relativos en la expresión génica de los genes codificantes y no codificantes.\n\n\n\n\n\n\n\nPalabras claves:\n\n\n\n\nGenoma - Fijo\nTranscriptoma - Altamente variable",
+    "title": "6  Análisis de datos de RNA-Seq",
+    "section": "6.2 Transcriptoma",
+    "text": "6.2 Transcriptoma\nEs el conjunto de todas las moléculas de RNA producidos por el genoma bajo condiciones específicas o en una célula específica (scRNA-Seq) o en una población de células (bulk RNA-Seq).\n\n6.2.1 ¿Porque es importante medir los cambios en la expresión génica (transcriptoma)?\n\nLas variaciones en la expresión entre condiciones se puede relacionar con los cambios en los procesos biológicos.\nEl transcriptoma nos da una aproximación de los cambios relativos en la expresión génica de los genes codificantes y no codificantes.\n\n\n\n\n\n\n\nPalabras claves:\n\n\n\n\nGenoma - Fijo\nTranscriptoma - Altamente variable",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Análisis de datos de RNA-Seq</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Análisis de datos de RNA-Seq</span>"
     ]
   },
   {
     "objectID": "Rnaseq_intro.html#el-transcriptoma-varía-según",
     "href": "Rnaseq_intro.html#el-transcriptoma-varía-según",
-    "title": "5  Análisis de datos de RNA-Seq",
-    "section": "5.3 El transcriptoma varía según:",
-    "text": "5.3 El transcriptoma varía según:\n\nTejido / Órgano\nCélula\nAmbiente (estrés)\nMedicamentos (tratamientos)\nSalud\nEdad\nEtapa del desarrollo",
+    "title": "6  Análisis de datos de RNA-Seq",
+    "section": "6.3 El transcriptoma varía según:",
+    "text": "6.3 El transcriptoma varía según:\n\nTejido / Órgano\nCélula\nAmbiente (estrés)\nMedicamentos (tratamientos)\nSalud\nEdad\nEtapa del desarrollo",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Análisis de datos de RNA-Seq</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Análisis de datos de RNA-Seq</span>"
     ]
   },
   {
     "objectID": "Rnaseq_intro.html#idea-principal-de-rna-seq",
     "href": "Rnaseq_intro.html#idea-principal-de-rna-seq",
-    "title": "5  Análisis de datos de RNA-Seq",
-    "section": "5.4 Idea principal de RNA-Seq",
-    "text": "5.4 Idea principal de RNA-Seq\n\n5.4.1 Relacionar un fenotipo con los cambios de expresión de los genes en una condición dada\n\n\n\nImagen tomada de: https://www.acobiom.com/en/rna-seq-en/",
+    "title": "6  Análisis de datos de RNA-Seq",
+    "section": "6.4 Idea principal de RNA-Seq",
+    "text": "6.4 Idea principal de RNA-Seq\n\n6.4.1 Relacionar un fenotipo con los cambios de expresión de los genes en una condición dada\n\n\n\nImagen tomada de: https://www.acobiom.com/en/rna-seq-en/",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Análisis de datos de RNA-Seq</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Análisis de datos de RNA-Seq</span>"
     ]
   },
   {
     "objectID": "Rnaseq_intro.html#pipeline-general",
     "href": "Rnaseq_intro.html#pipeline-general",
-    "title": "5  Análisis de datos de RNA-Seq",
-    "section": "5.5 Pipeline general",
-    "text": "5.5 Pipeline general\n\n\n\nImagen proveniente de mRNA-Seq data analysis workflow",
+    "title": "6  Análisis de datos de RNA-Seq",
+    "section": "6.5 Pipeline general",
+    "text": "6.5 Pipeline general\n\n\n\nImagen proveniente de mRNA-Seq data analysis workflow",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Análisis de datos de RNA-Seq</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Análisis de datos de RNA-Seq</span>"
     ]
   },
   {
     "objectID": "Rnaseq_intro.html#quality-check-quality-control",
     "href": "Rnaseq_intro.html#quality-check-quality-control",
-    "title": "5  Análisis de datos de RNA-Seq",
-    "section": "6.1 Quality Check / Quality Control",
-    "text": "6.1 Quality Check / Quality Control\n\nUno de los pasos más importantes. Dedícale tiempo.\nLa calidad de tus datos importa, bibliotecas mal secuenciadas genera datos desconfiables.\nDebes analizar su calidad para poder reclamar en la secuenciación (~1 semana).\n\n\n\n\n\n\n\nProgramas:\n\n\n\n\nFastQC\nMultiQC",
+    "title": "6  Análisis de datos de RNA-Seq",
+    "section": "7.1 Quality Check / Quality Control",
+    "text": "7.1 Quality Check / Quality Control\n\nUno de los pasos más importantes. Dedícale tiempo.\nLa calidad de tus datos importa, bibliotecas mal secuenciadas genera datos desconfiables.\nDebes analizar su calidad para poder reclamar en la secuenciación (~1 semana).\n\n\n\n\n\n\n\nProgramas:\n\n\n\n\nFastQC\nMultiQC",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Análisis de datos de RNA-Seq</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Análisis de datos de RNA-Seq</span>"
     ]
   },
   {
     "objectID": "Rnaseq_intro.html#archivos-fastq-fastq.gz-fq.gz",
     "href": "Rnaseq_intro.html#archivos-fastq-fastq.gz-fq.gz",
-    "title": "5  Análisis de datos de RNA-Seq",
-    "section": "6.2 Archivos fastq (fastq.gz / fq.gz)",
-    "text": "6.2 Archivos fastq (fastq.gz / fq.gz)\n\nDerivan del formato FASTA.\nMuestra la calidad de cada nucleótido.\nCada secuencia está representada por 4 líneas:\n\n\n\n@ ID del read + información de la corrida\nSecuencia\nSímbolo “+”\nInformación de la calidad de secuenciación de cada base. Cada letra o símbolo representa a una base de la secuencia codificado en formato (Escala Phred y código ASCII)",
+    "title": "6  Análisis de datos de RNA-Seq",
+    "section": "7.2 Archivos fastq (fastq.gz / fq.gz)",
+    "text": "7.2 Archivos fastq (fastq.gz / fq.gz)\n\nDerivan del formato FASTA.\nMuestra la calidad de cada nucleótido.\nCada secuencia está representada por 4 líneas:\n\n\n\n@ ID del read + información de la corrida\nSecuencia\nSímbolo “+”\nInformación de la calidad de secuenciación de cada base. Cada letra o símbolo representa a una base de la secuencia codificado en formato (Escala Phred y código ASCII)",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Análisis de datos de RNA-Seq</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Análisis de datos de RNA-Seq</span>"
     ]
   },
   {
     "objectID": "Rnaseq_intro.html#phred-quality-score-puntuación-de-calidad",
     "href": "Rnaseq_intro.html#phred-quality-score-puntuación-de-calidad",
-    "title": "5  Análisis de datos de RNA-Seq",
-    "section": "6.3 Phred Quality score / Puntuación de calidad",
-    "text": "6.3 Phred Quality score / Puntuación de calidad\nQ = -10 x log10(P) # where P is the probability that a base call is erroneous\n\nQ = Phred Quality score\nP = Probability of incorrect base call\n\n\nEl valor máximo de calidad es = ~40 (zona verde) y los valores &lt; 20 se consideran de baja calidad.\n\n\n\n\n\n\nEjemplo de Buena calidad\n\n\n\nReporte de FastQC con buena calidad de las lecturas en la zona verde.\n\n\n\nEn resumen:\n\n\n\nVisualización de la estructura de un archivo FASTQ y la interpretación de la escala de calidad Phred para nucleótidos. Se clasifican las bases según su precisión en tres categorías: baja calidad (Q &lt; 20), calidad media (20 ≤ Q &lt; 30) y alta calidad (Q ≥ 30).\n\n\n\n\n\n\n\n\nEjercicio 3\n\n\n\n\nVisualiza el contenido del archivo “_files/secuencias_bash.fastq” empleando head.\nhead _files/secuencias_bash.fastq\nCalcula el numero de lineas contenidas en este archivo.\nwc -l _files/secuencias_bash.fastq\nImprime las lineas 4 a 8 del archivo.\n   sed -n '4,8p' _files/secuencias_bash.fastq\nPodemos utilizar la función grep -c para contar el número de secuencias de un archivo (de nuevo, sustituya archivo por el nombre de uno de los archivos):\n   grep -c \"^@SRR\" _files/secuencias_bash.fastq",
+    "title": "6  Análisis de datos de RNA-Seq",
+    "section": "7.3 Phred Quality score / Puntuación de calidad",
+    "text": "7.3 Phred Quality score / Puntuación de calidad\nQ = -10 x log10(P) # where P is the probability that a base call is erroneous\n\nQ = Phred Quality score\nP = Probability of incorrect base call\n\n\nEl valor máximo de calidad es = ~40 (zona verde) y los valores &lt; 20 se consideran de baja calidad.\n\n\n\n\n\n\nEjemplo de Buena calidad\n\n\n\nReporte de FastQC con buena calidad de las lecturas en la zona verde.\n\n\n\nEn resumen:\n\n\n\nVisualización de la estructura de un archivo FASTQ y la interpretación de la escala de calidad Phred para nucleótidos. Se clasifican las bases según su precisión en tres categorías: baja calidad (Q &lt; 20), calidad media (20 ≤ Q &lt; 30) y alta calidad (Q ≥ 30).\n\n\n\n\n\n\n\n\nEjercicio 3\n\n\n\n\nVisualiza el contenido del archivo “_files/secuencias_bash.fastq” empleando head.\nhead _files/secuencias_bash.fastq\nCalcula el numero de lineas contenidas en este archivo.\nwc -l _files/secuencias_bash.fastq\nImprime las lineas 4 a 8 del archivo.\n   sed -n '4,8p' _files/secuencias_bash.fastq\nPodemos utilizar la función grep -c para contar el número de secuencias de un archivo (de nuevo, sustituya archivo por el nombre de uno de los archivos):\n   grep -c \"^@SRR\" _files/secuencias_bash.fastq",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Análisis de datos de RNA-Seq</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Análisis de datos de RNA-Seq</span>"
     ]
   },
   {
     "objectID": "Rnaseq_intro.html#material-suplementario",
     "href": "Rnaseq_intro.html#material-suplementario",
-    "title": "5  Análisis de datos de RNA-Seq",
-    "section": "6.4 Material suplementario",
-    "text": "6.4 Material suplementario\n\nmRNA-Seq data analysis workflow\nQuality Control using FastQC\nFundamentals: FASTQ files\nWikipedia: Formato FASTQ",
+    "title": "6  Análisis de datos de RNA-Seq",
+    "section": "7.4 Material suplementario",
+    "text": "7.4 Material suplementario\n\nmRNA-Seq data analysis workflow\nQuality Control using FastQC\nFundamentals: FASTQ files\nWikipedia: Formato FASTQ",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Análisis de datos de RNA-Seq</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Análisis de datos de RNA-Seq</span>"
     ]
   },
   {
     "objectID": "REGEX.html",
     "href": "REGEX.html",
-    "title": "6  Wildcards y Streams",
+    "title": "7  Wildcards y Streams",
     "section": "",
-    "text": "6.1 Caracteres y strings\nEsto nos dice que el archivo cuenta con 300 lineas, 600 palabras y 12,934 caracteres.\nLos caracteres son unidades de información que se representan con símbolos. Pueden ser de varios tipos como alfanuméricos, números enteros, signos de puntuación. Varios caracteres son interpretados por la shell de manera especial. Estos se llaman caracteres especiales, claro, y permiten desarrollar alguna lógica, dependiendo del contexto. Por ejemplo, algunos caracteres: @ # . ? ! , / \\ &gt; ~ a µ g § R |(pipe).\nLos strings son arreglos de caracteres. Esto quiere decir que son caracteres en conjunto y con un orden en particular. Por ejemplo el string pizza tiene 4 diferentes caracteres: i, p, z, a. Diferentes combinaciones de caracteres pueden formar diferentes strings.\nCreemos un string y luego imprimámoslo en la pantalla del Terminal. Escribe los siguientes comandos:",
+    "text": "7.1 Caracteres y strings\nEsto nos dice que el archivo cuenta con 300 lineas, 600 palabras y 12,934 caracteres.\nLos caracteres son unidades de información que se representan con símbolos. Pueden ser de varios tipos como alfanuméricos, números enteros, signos de puntuación. Varios caracteres son interpretados por la shell de manera especial. Estos se llaman caracteres especiales, claro, y permiten desarrollar alguna lógica, dependiendo del contexto. Por ejemplo, algunos caracteres: @ # . ? ! , / \\ &gt; ~ a µ g § R |(pipe).\nLos strings son arreglos de caracteres. Esto quiere decir que son caracteres en conjunto y con un orden en particular. Por ejemplo el string pizza tiene 4 diferentes caracteres: i, p, z, a. Diferentes combinaciones de caracteres pueden formar diferentes strings.\nCreemos un string y luego imprimámoslo en la pantalla del Terminal. Escribe los siguientes comandos:",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Wildcards y Streams</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Wildcards y Streams</span>"
     ]
   },
   {
     "objectID": "REGEX.html#caracteres-y-strings",
     "href": "REGEX.html#caracteres-y-strings",
-    "title": "6  Wildcards y Streams",
+    "title": "7  Wildcards y Streams",
     "section": "",
     "text": "Note\n\n\n\nCada caracter se asocia a una combinación diferente de teclas en el teclado del computador.\n\n\n\n\nmi_primer_string=\"Taller de bioinformática\"\necho $mi_primer_string",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Wildcards y Streams</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Wildcards y Streams</span>"
     ]
   },
   {
     "objectID": "REGEX.html#wildcards",
     "href": "REGEX.html#wildcards",
-    "title": "6  Wildcards y Streams",
-    "section": "6.2 Wildcards",
-    "text": "6.2 Wildcards\nLos wildcards o wild characters son símbolos utilizados para representar uno o más caracteres. Se pueden utilizar con otros comandos para facilitar el procesamiento o búsqueda de archivos, directorios y datos en general.\n\n\n\n\n\n\n\nWildcard\nFunción\n\n\n\n\n*\nAsocia uno o más caracteres especificados por el usuario, con caracteres en un string con el que se opera.\n\n\n?\nAsocia solo un caracter a la vez en un string.\n\n\n[ ]\nAsocia cuaquiera de los caracteres dentro en un string.\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nEl wildcard más usado es * porque es muy versátil.\n\n\n\n\n\n\n\n\nEjercicio 4\n\n\n\nEl wildcard * me permitiría encontrar todos los archivos en una carpeta que tengan la palabra TESIS en ellos. Primero crea la carpeta:\ntaller_unix\nDespués, debemos generar estos archivos:\ncd taller_unix/\ntouch MI_TESIS.tex MI_TESIS_tutor2.tex TESIS.tex TESIS_YA_ACABATE.tex TESIS_finaaaaal.tex TESIS_final.tex TESIS_tutor1.tex TESIS_tutor2.tex a_reporte_01.txt b_reporte_02.txt c_reporte_03.txt z_reporte_30.txt \n\nEnlista todos los archivos que comiencen con “TESIS”.\nEnlista todos los archivos que terminen con el string “.tex”\nBuscar todos los archivos contengan la palabra “TESIS\" pero con 3 caracteres desconocidos antes.\nBuscar los archivos que terminen con el número 1 o 2 en su nombre antes de la extensión del archivo (.tex).\nEncontrar los archivos que terminen en dos números del 1 al 3 y del 0 al 2 antes del formato del archivo (.txt).\nEncontrar todos los archivos con este formato ?_reporte_[0-3][0-3].txt\nEncontrar todos los archivos que contengan por a o. z.\nBorramos todos estor archivos que terminen en “.txt” y “.tex”\n\n\n\n\n\n\n\nSolución\n\n\n\n\n\n1. ls -l TESIS*\n2. ls -l *.tex\n3. ls -l ???TESIS*\n4. ls -l *[1-2].tex\n5. ls -l *[1-3][0-2].txt\n6. ls -l ?_reporte_[0-3][0-3].txt\n7. ls -l *[az]* o ls -l *[a,z]*\n8. rm *.tex *.txt\n\n\n\n\n\n\n\n\n\n\n\nEjercicios de repaso\n\n\n\nPuedes seguir repasando y aprendiendo de las expresiones regulares en la pagina de RegexOne.",
+    "title": "7  Wildcards y Streams",
+    "section": "7.2 Wildcards",
+    "text": "7.2 Wildcards\nLos wildcards o wild characters son símbolos utilizados para representar uno o más caracteres. Se pueden utilizar con otros comandos para facilitar el procesamiento o búsqueda de archivos, directorios y datos en general.\n\n\n\n\n\n\n\nWildcard\nFunción\n\n\n\n\n*\nAsocia uno o más caracteres especificados por el usuario, con caracteres en un string con el que se opera.\n\n\n?\nAsocia solo un caracter a la vez en un string.\n\n\n[ ]\nAsocia cuaquiera de los caracteres dentro en un string.\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nEl wildcard más usado es * porque es muy versátil.\n\n\n\n\n\n\n\n\nEjercicio 4\n\n\n\nEl wildcard * me permitiría encontrar todos los archivos en una carpeta que tengan la palabra TESIS en ellos. Primero crea la carpeta:\ntaller_unix\nDespués, debemos generar estos archivos:\ncd taller_unix/\ntouch MI_TESIS.tex MI_TESIS_tutor2.tex TESIS.tex TESIS_YA_ACABATE.tex TESIS_finaaaaal.tex TESIS_final.tex TESIS_tutor1.tex TESIS_tutor2.tex a_reporte_01.txt b_reporte_02.txt c_reporte_03.txt z_reporte_30.txt \n\nEnlista todos los archivos que comiencen con “TESIS”.\nEnlista todos los archivos que terminen con el string “.tex”\nBuscar todos los archivos contengan la palabra “TESIS\" pero con 3 caracteres desconocidos antes.\nBuscar los archivos que terminen con el número 1 o 2 en su nombre antes de la extensión del archivo (.tex).\nEncontrar los archivos que terminen en dos números del 1 al 3 y del 0 al 2 antes del formato del archivo (.txt).\nEncontrar todos los archivos con este formato ?_reporte_[0-3][0-3].txt\nEncontrar todos los archivos que contengan por a o. z.\nBorramos todos estor archivos que terminen en “.txt” y “.tex”\n\n\n\n\n\n\n\nSolución\n\n\n\n\n\n1. ls -l TESIS*\n2. ls -l *.tex\n3. ls -l ???TESIS*\n4. ls -l *[1-2].tex\n5. ls -l *[1-3][0-2].txt\n6. ls -l ?_reporte_[0-3][0-3].txt\n7. ls -l *[az]* o ls -l *[a,z]*\n8. rm *.tex *.txt\n\n\n\n\n\n\n\n\n\n\n\nEjercicios de repaso\n\n\n\nPuedes seguir repasando y aprendiendo de las expresiones regulares en la pagina de RegexOne.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Wildcards y Streams</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Wildcards y Streams</span>"
     ]
   },
   {
     "objectID": "REGEX.html#operadores-de-redirección-de-datos-io",
     "href": "REGEX.html#operadores-de-redirección-de-datos-io",
-    "title": "6  Wildcards y Streams",
-    "section": "6.3 Operadores de redirección de datos I/O",
-    "text": "6.3 Operadores de redirección de datos I/O\nUsualmente cuando trabajamos con datos, es necesario pasar el resultado de un comando a otro para hacer un procesamiento de datos apilado, como en un algortimo. Un stream o corriente esta hecha de datos. Es una corriente de datos. Un ejemplo muy familiar es el teclado y la pantalla. El teclado tiene una interfaz en donde por cada tecla presionada, un caracter se guarda en un archivo. Se dice entonces que es una corriente de  entrada. Cuando la pantalla nos muestra lo que estamos escribiendo entonces la data sale hacia nosotros y eso convierte a la pantalla en una corriente de salida. Los dispositivos que hacen este tipo de transmisión de datos se llaman dispositivos I/O (input y output). Los operadores que se encargan de esto se conocen como operadores de redirección. Tres importantes son:\n\n\n\n\n\n\n\nComando\nFunción\n\n\n\n\n&gt;\nStream de salida de datos. Sobre escribre sobre un archivo.\n\n\n&gt;&gt;\nStream de salida de datos. Adjunta nueva salida a datos preexistentes en un archivo.\n\n\n&lt;\nStream de entrada de datos. Recibe datos para procesamiento con algun comando.\n\n\n\n\n\n\n\n\n\nEjercicio 5\n\n\n\n\nCrea el archivo bacterias_generos.txt e imprime su contenido empleando los siguientes comandos:\necho -e \"\\nRickettsia\\nOrientia\\nWolbachia\\nAegyptianella\\nAnaplasma\\nCowdria\\nEhrlichia\\nNeorickettsia\\nCaedibacter\\nHolospora\\nLyticum\\nOdyssella\\nSymbiotes\\nTectibacter\" &gt; bacterias_generos.txt\ncat bacterias_generos.txt\nAgrega una nueva especie en la última fila empleando “&gt;&gt;”.\necho -e \"\\nEscherichia\\n:D\" &gt;&gt; bacterias_generos.txt\ncat bacterias_generos.txt\nAhora usaremos el comando sort para reordenar todos los géneros. Sin embargo notamos que el archivo original no cambia nunca.\nsort &lt; bacterias_generos.txt\nPara hacer un cambio en el archivo bacterias_generos.txt, usamos este comando. Notamos que ahora no usamos &gt;&gt; sino solo &gt;. Esto va a borrar el contenido previo con géneros desordenados y ahora los va a ordenar. El cambio no se puede deshacer, así que ten cuidado con el operador &gt; para que no pierdas datos.\n(sort &lt; bacterias_generos.txt) &gt; bacterias_generos_sorted.txt\ncat bacterias_generos_sorted.txt\n\n\n\n\n\n\n\n\n\nAdvertencia\n\n\n\nEl operador &gt; sobre escribe archivos. Ten cuidado al usarlo para que no pierdas datos.",
+    "title": "7  Wildcards y Streams",
+    "section": "7.3 Operadores de redirección de datos I/O",
+    "text": "7.3 Operadores de redirección de datos I/O\nUsualmente cuando trabajamos con datos, es necesario pasar el resultado de un comando a otro para hacer un procesamiento de datos apilado, como en un algortimo. Un stream o corriente esta hecha de datos. Es una corriente de datos. Un ejemplo muy familiar es el teclado y la pantalla. El teclado tiene una interfaz en donde por cada tecla presionada, un caracter se guarda en un archivo. Se dice entonces que es una corriente de  entrada. Cuando la pantalla nos muestra lo que estamos escribiendo entonces la data sale hacia nosotros y eso convierte a la pantalla en una corriente de salida. Los dispositivos que hacen este tipo de transmisión de datos se llaman dispositivos I/O (input y output). Los operadores que se encargan de esto se conocen como operadores de redirección. Tres importantes son:\n\n\n\n\n\n\n\nComando\nFunción\n\n\n\n\n&gt;\nStream de salida de datos. Sobre escribre sobre un archivo.\n\n\n&gt;&gt;\nStream de salida de datos. Adjunta nueva salida a datos preexistentes en un archivo.\n\n\n&lt;\nStream de entrada de datos. Recibe datos para procesamiento con algun comando.\n\n\n\n\n\n\n\n\n\nEjercicio 5\n\n\n\n\nCrea el archivo bacterias_generos.txt e imprime su contenido empleando los siguientes comandos:\necho -e \"\\nRickettsia\\nOrientia\\nWolbachia\\nAegyptianella\\nAnaplasma\\nCowdria\\nEhrlichia\\nNeorickettsia\\nCaedibacter\\nHolospora\\nLyticum\\nOdyssella\\nSymbiotes\\nTectibacter\" &gt; bacterias_generos.txt\ncat bacterias_generos.txt\nAgrega una nueva especie en la última fila empleando “&gt;&gt;”.\necho -e \"\\nEscherichia\\n:D\" &gt;&gt; bacterias_generos.txt\ncat bacterias_generos.txt\nAhora usaremos el comando sort para reordenar todos los géneros. Sin embargo notamos que el archivo original no cambia nunca.\nsort &lt; bacterias_generos.txt\nPara hacer un cambio en el archivo bacterias_generos.txt, usamos este comando. Notamos que ahora no usamos &gt;&gt; sino solo &gt;. Esto va a borrar el contenido previo con géneros desordenados y ahora los va a ordenar. El cambio no se puede deshacer, así que ten cuidado con el operador &gt; para que no pierdas datos.\n(sort &lt; bacterias_generos.txt) &gt; bacterias_generos_sorted.txt\ncat bacterias_generos_sorted.txt\n\n\n\n\n\n\n\n\n\nAdvertencia\n\n\n\nEl operador &gt; sobre escribe archivos. Ten cuidado al usarlo para que no pierdas datos.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Wildcards y Streams</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Wildcards y Streams</span>"
     ]
   },
   {
     "objectID": "REGEX.html#material-suplementario",
     "href": "REGEX.html#material-suplementario",
-    "title": "6  Wildcards y Streams",
-    "section": "6.4 Material suplementario",
-    "text": "6.4 Material suplementario\n\nRSG Ecuador. Scripts en Bash\nRSG Ecuador. Wildcards y Streams\nRSG Ecuador. Expresiones regulares (regex)\nWildcard Selection in Bash\nExpresiones regulares",
+    "title": "7  Wildcards y Streams",
+    "section": "7.4 Material suplementario",
+    "text": "7.4 Material suplementario\n\nRSG Ecuador. Scripts en Bash\nRSG Ecuador. Wildcards y Streams\nRSG Ecuador. Expresiones regulares (regex)\nWildcard Selection in Bash\nExpresiones regulares",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Wildcards y Streams</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Wildcards y Streams</span>"
     ]
   },
   {
     "objectID": "genes_orf.html",
     "href": "genes_orf.html",
-    "title": "7  Definición actualizada y didáctica del gen",
+    "title": "8  Definición actualizada y didáctica del gen",
     "section": "",
-    "text": "7.1 Potencial codificante\ny en casos simples es considerado: un gen es una secuencia de ADN que codifica un producto proteico o de ARN (mRNA o no codificante).\nEl potencial codificante se refiere a la capacidad de una secuencia de ADN o ARN para ser traducida en una proteína funcional. Se evalúa mediante características como la presencia de codones de inicio y parada, la longitud del marco de lectura, la conservación evolutiva y el uso de codones típico de genes.",
+    "text": "8.1 Potencial codificante\ny en casos simples es considerado: un gen es una secuencia de ADN que codifica un producto proteico o de ARN (mRNA o no codificante).\nEl potencial codificante se refiere a la capacidad de una secuencia de ADN o ARN para ser traducida en una proteína funcional. Se evalúa mediante características como la presencia de codones de inicio y parada, la longitud del marco de lectura, la conservación evolutiva y el uso de codones típico de genes.",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Definición actualizada y didáctica del gen</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Definición actualizada y didáctica del gen</span>"
     ]
   },
   {
     "objectID": "genes_orf.html#marco-de-lectura-abierto-orf",
     "href": "genes_orf.html#marco-de-lectura-abierto-orf",
-    "title": "7  Definición actualizada y didáctica del gen",
-    "section": "7.2 Marco de lectura abierto (ORF)",
-    "text": "7.2 Marco de lectura abierto (ORF)\nUn marco de lectura abierto (ORF) es una secuencia de nucleótidos que comienza con un codón de inicio (generalmente AUG) y termina con un codón de paro (UAA, UAG o UGA), sin interrupciones que impidan la traducción. Es una señal estructural que sugiere que la región podría codificar una proteína, aunque no garantiza funcionalidad.\n\n\n\nRef. Griffiths. Introduction to genetic analysis. Pp 500 libro electronico cap 14. Genomes and genomics\n\n\n\n\n\n\n\n\nNote\n\n\n\n\nNo todos los ORFs son funcionales: algunos pueden ser artefactos o pseudogenes.\nEn transcriptómica y metagenómica, se usan algoritmos para predecir genes basados en ORFs y potencial codificante.",
+    "title": "8  Definición actualizada y didáctica del gen",
+    "section": "8.2 Marco de lectura abierto (ORF)",
+    "text": "8.2 Marco de lectura abierto (ORF)\nUn marco de lectura abierto (ORF) es una secuencia de nucleótidos que comienza con un codón de inicio (generalmente AUG) y termina con un codón de paro (UAA, UAG o UGA), sin interrupciones que impidan la traducción. Es una señal estructural que sugiere que la región podría codificar una proteína, aunque no garantiza funcionalidad.\n\n\n\nRef. Griffiths. Introduction to genetic analysis. Pp 500 libro electronico cap 14. Genomes and genomics\n\n\n\n\n\n\n\n\nNote\n\n\n\n\nNo todos los ORFs son funcionales: algunos pueden ser artefactos o pseudogenes.\nEn transcriptómica y metagenómica, se usan algoritmos para predecir genes basados en ORFs y potencial codificante.",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Definición actualizada y didáctica del gen</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Definición actualizada y didáctica del gen</span>"
     ]
   },
   {
     "objectID": "genes_orf.html#cómo-distinguimos-transcritos-codificantes-de-no-codificantes",
     "href": "genes_orf.html#cómo-distinguimos-transcritos-codificantes-de-no-codificantes",
-    "title": "7  Definición actualizada y didáctica del gen",
-    "section": "7.3 ¿Cómo distinguimos transcritos codificantes de no codificantes?",
-    "text": "7.3 ¿Cómo distinguimos transcritos codificantes de no codificantes?\nLa distinción entre transcritos codificantes y no codificantes es esencial para la anotación funcional del transcriptoma. Aunque los lncRNAs no codifican proteínas, es necesario descartar evidencia de codificación antes de clasificarlos como tales.\n\n\n7.3.1 Tipos de archivos comunes en bioinformática\n\n\n\nFormato\nDescripción\nEmpleo\nEjemplo\n\n\n\n\nFASTA (.fasta / .fa)\nContiene secuencias de nucleótidos o aminoácidos. Cada entrada inicia con &gt; seguido de un identificador.\nGenoma de referencia, proteínas, transcriptos/nucleótidos\n&gt;seq1\nATGCGTACGTAGCTAG\n\n\nFASTQ (.fastq)\nSimilar a FASTA pero incluye calidad de lectura por base (lecturas de secuenciación).\nesencial en pipelines de secuenciación (RNA-seq, WGS).\n@SEQ_ID\nGATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAA\n+\n!''*((((***+))%%%++)(%%%%).1***-+*''))**\n\n\nGTF/GFF (.gtf / .gff)\nArchivos de anotación genómica: definen genes, exones, intrones, etc.\nclave para anotación estructural y funcional.\nchr1  HAVANA  exon  11869  12227  .  +  .  gene_id \"ENSG00000223972\";\n\n\nBED (.bed)\nDefine regiones genómicas (intervalos), útil para visualización y análisis de cobertura.\nLocalización de genes, clasificación de genes, visualización (IGV, UCSC Genome Browser)\nchr7  127471196  127472363  region1\n\n\n\n\n\n7.3.2 Herramientas bioinformáticas clave\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nAquí les dejo el link al Método de selección de lncRNAs empleado en Arabidopsis thaliana. Relacionado con el artículo Transcriptome-guided annotation and functional classification of long non-coding RNAs in Arabidopsis thaliana.\n\n\n\n\n\nSoftware\nPropósito\nFunción\nSecuencia de interés (input)\nBase de datos\n\n\n\n\ngffread\nObtener el FASTA de las secuencias seleccionadas\ngffread\nArchivo de anotación (GTF) y genoma de referencia (FASTA)\nNA\n\n\nEMBOSS/v6.6.0\nObtener el tamaño de las secuencias\ninfoseq\nSecuencias/nucleótidos (FASTA)\nNA\n\n\nkentUtils/v302\nExtraer la secuencia FASTA a partir de IDs y Generar archivo BED a partir del GTF\nfaSomeRecords, gtfToGenePred y genePredToBed\nSecuencias/nucleótidos (FASTA) y IDs.\nArchivo de anotación (GTF) y genoma de referencia (FASTA)\nNA\n\n\nTransDecoder\nPredicción del ORF y la “proteína” codificada\nTransDecoder.LongOrfs y TransDecoder.Predict\nSecuencias/nucleótidos (FASTA)\nNA\n\n\nblastn\nComparación con proteínas conocidas\nblastn\nproteína (.pep)\nUniProtKB/Swiss-Prot (proteínas)\n\n\nblastp\nComparación con proteínas conocidas\nblastp\nSecuencias/nucleótidos (FASTA)\nUniProtKB/Swiss-Prot (nucleótidos)\n\n\nblastx\nComparación con proteínas conocidas\nblastx\nnucleótidos (traducidos)\nUniProtKB/Swiss-Prot (proteínas)\n\n\nblastdbcmd\nExtraer información de la base de datos de BLAST\nblastdbcmd\nIDs de las secuencias\nRefSeq non-redundant proteins\n\n\nSignalP\nPredicción de péptidos señal\nsignalp\nproteína\nNA\n\n\nTMHMM\nPredicción de dominios transmembranales\ntmhmm\nproteína\nNA\n\n\nPhobius\nPredicción de dominios transmembranales y péptidos señal\nphobius.pl\nproteína\nNA\n\n\nHMMER\nBúsqueda de dominios conservados\nhmmscan\nproteína\nPfam\n\n\nInfernal\nBusca coincidencias estructurales en secuencias usando modelos de covarianza y escanea bases de datos\ncmsearch\nSecuencias/nucleótidos (FASTA)\nRfam\n\n\n\n\n\n\nDiagrama de flujo de la anotación de lncRNAs en Arabidopsis thaliana\n\n\n\n\n\n\n\n\nNote\n\n\n\n\nSi el transcrito no tiene similitud con proteínas conocidas, no contiene péptido señal, no tiene dominios transmembranales, y no presenta dominios conservados, es probablemente no codificante.\nSi alguno de estos elementos está presente, se debe considerar como potencialmente codificante y excluirlo de la clasificación como no codificante.",
+    "title": "8  Definición actualizada y didáctica del gen",
+    "section": "8.3 ¿Cómo distinguimos transcritos codificantes de no codificantes?",
+    "text": "8.3 ¿Cómo distinguimos transcritos codificantes de no codificantes?\nLa distinción entre transcritos codificantes y no codificantes es esencial para la anotación funcional del transcriptoma. Aunque los lncRNAs no codifican proteínas, es necesario descartar evidencia de codificación antes de clasificarlos como tales.\n\n\n8.3.1 Tipos de archivos comunes en bioinformática\n\n\n\nFormato\nDescripción\nEmpleo\nEjemplo\n\n\n\n\nFASTA (.fasta / .fa)\nContiene secuencias de nucleótidos o aminoácidos. Cada entrada inicia con &gt; seguido de un identificador.\nGenoma de referencia, proteínas, transcriptos/nucleótidos\n&gt;seq1\nATGCGTACGTAGCTAG\n\n\nFASTQ (.fastq)\nSimilar a FASTA pero incluye calidad de lectura por base (lecturas de secuenciación).\nesencial en pipelines de secuenciación (RNA-seq, WGS).\n@SEQ_ID\nGATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAA\n+\n!''*((((***+))%%%++)(%%%%).1***-+*''))**\n\n\nGTF/GFF (.gtf / .gff)\nArchivos de anotación genómica: definen genes, exones, intrones, etc.\nclave para anotación estructural y funcional.\nchr1  HAVANA  exon  11869  12227  .  +  .  gene_id \"ENSG00000223972\";\n\n\nBED (.bed)\nDefine regiones genómicas (intervalos), útil para visualización y análisis de cobertura.\nLocalización de genes, clasificación de genes, visualización (IGV, UCSC Genome Browser)\nchr7  127471196  127472363  region1\n\n\n\n\n\n8.3.2 Herramientas bioinformáticas clave\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nAquí les dejo el link al Método de selección de lncRNAs empleado en Arabidopsis thaliana. Relacionado con el artículo Transcriptome-guided annotation and functional classification of long non-coding RNAs in Arabidopsis thaliana.\n\n\n\n\n\nSoftware\nPropósito\nFunción\nSecuencia de interés (input)\nBase de datos\n\n\n\n\ngffread\nObtener el FASTA de las secuencias seleccionadas\ngffread\nArchivo de anotación (GTF) y genoma de referencia (FASTA)\nNA\n\n\nEMBOSS/v6.6.0\nObtener el tamaño de las secuencias\ninfoseq\nSecuencias/nucleótidos (FASTA)\nNA\n\n\nkentUtils/v302\nExtraer la secuencia FASTA a partir de IDs y Generar archivo BED a partir del GTF\nfaSomeRecords, gtfToGenePred y genePredToBed\nSecuencias/nucleótidos (FASTA) y IDs.\nArchivo de anotación (GTF) y genoma de referencia (FASTA)\nNA\n\n\nTransDecoder\nPredicción del ORF y la “proteína” codificada\nTransDecoder.LongOrfs y TransDecoder.Predict\nSecuencias/nucleótidos (FASTA)\nNA\n\n\nblastn\nComparación con proteínas conocidas\nblastn\nproteína (.pep)\nUniProtKB/Swiss-Prot (proteínas)\n\n\nblastp\nComparación con proteínas conocidas\nblastp\nSecuencias/nucleótidos (FASTA)\nUniProtKB/Swiss-Prot (nucleótidos)\n\n\nblastx\nComparación con proteínas conocidas\nblastx\nnucleótidos (traducidos)\nUniProtKB/Swiss-Prot (proteínas)\n\n\nblastdbcmd\nExtraer información de la base de datos de BLAST\nblastdbcmd\nIDs de las secuencias\nRefSeq non-redundant proteins\n\n\nSignalP\nPredicción de péptidos señal\nsignalp\nproteína\nNA\n\n\nTMHMM\nPredicción de dominios transmembranales\ntmhmm\nproteína\nNA\n\n\nPhobius\nPredicción de dominios transmembranales y péptidos señal\nphobius.pl\nproteína\nNA\n\n\nHMMER\nBúsqueda de dominios conservados\nhmmscan\nproteína\nPfam\n\n\nInfernal\nBusca coincidencias estructurales en secuencias usando modelos de covarianza y escanea bases de datos\ncmsearch\nSecuencias/nucleótidos (FASTA)\nRfam\n\n\n\n\n\n\nDiagrama de flujo de la anotación de lncRNAs en Arabidopsis thaliana\n\n\n\n\n\n\n\n\nNote\n\n\n\n\nSi el transcrito no tiene similitud con proteínas conocidas, no contiene péptido señal, no tiene dominios transmembranales, y no presenta dominios conservados, es probablemente no codificante.\nSi alguno de estos elementos está presente, se debe considerar como potencialmente codificante y excluirlo de la clasificación como no codificante.",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Definición actualizada y didáctica del gen</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Definición actualizada y didáctica del gen</span>"
     ]
   },
   {
     "objectID": "genes_orf.html#material-suplementario",
     "href": "genes_orf.html#material-suplementario",
-    "title": "7  Definición actualizada y didáctica del gen",
-    "section": "7.4 Material suplementario",
-    "text": "7.4 Material suplementario\n\nCurso del Dr. Cei Abreu - BLAST en la línea de comando\nPipeline for lncRNA annotation from RNA-seq data (PLAR)\nlncRNA Identification - P.generosa lncRNAs using CPC2 and bedtools\nRNA-seq Bioinformatics",
+    "title": "8  Definición actualizada y didáctica del gen",
+    "section": "8.4 Material suplementario",
+    "text": "8.4 Material suplementario\n\nCurso del Dr. Cei Abreu - BLAST en la línea de comando\nPipeline for lncRNA annotation from RNA-seq data (PLAR)\nlncRNA Identification - P.generosa lncRNAs using CPC2 and bedtools\nRNA-seq Bioinformatics",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Definición actualizada y didáctica del gen</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Definición actualizada y didáctica del gen</span>"
     ]
   },
   {
     "objectID": "ScriptBash.html",
     "href": "ScriptBash.html",
-    "title": "8  Scripts en Bash",
+    "title": "9  Scripts en Bash",
     "section": "",
-    "text": "8.1 Actividad grupal\nLos scripts son archivos de texto que contienen instrucciones ejecutables por un intérprete de un lenguaje de programación para la ejecución de tareas. El formato .sh se utiliza para escribir scripts ejecutables por un intérprete como Bash. En esta sección crearemos varios scripts de Bash y usaremos varios comandos y operadores.\nPaso 1. Crear un script en Bash con el nombre demo.sh empleando nano.\nPaso 2. Copia el siguiente código dentro del script demo.sh y guarda los cambios.\nEste código realizará las siguientes instrucciones:\nPaso 3. Deberías correr el script así, una vez que hayas descargado el archivo secuencias_bash.fastq:",
+    "text": "9.1 Actividad grupal\nLos scripts son archivos de texto que contienen instrucciones ejecutables por un intérprete de un lenguaje de programación para la ejecución de tareas. El formato .sh se utiliza para escribir scripts ejecutables por un intérprete como Bash. En esta sección crearemos varios scripts de Bash y usaremos varios comandos y operadores.\nPaso 1. Crear un script en Bash con el nombre demo.sh empleando nano.\nPaso 2. Copia el siguiente código dentro del script demo.sh y guarda los cambios.\nEste código realizará las siguientes instrucciones:\nPaso 3. Deberías correr el script así, una vez que hayas descargado el archivo secuencias_bash.fastq:",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Scripts en Bash</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Scripts en Bash</span>"
     ]
   },
   {
     "objectID": "ScriptBash.html#actividad-grupal",
     "href": "ScriptBash.html#actividad-grupal",
-    "title": "8  Scripts en Bash",
+    "title": "9  Scripts en Bash",
     "section": "",
     "text": "nano demo.sh\n\n\n#!/bin/bash\n# File: demo.sh\n\n# Input de archivo\n# 2. Mostrar el archivo y número de argumentos\necho \"Archivo a procesar &gt; $@\"\necho \"Numero de argumentos: $#\"\n\n# 3. Conteo de secuencias y separación de malas lecturas\nnumero_secuencias=$(grep -c '^@SRR098026' $@)\ngrep -B1 -A2 NNNNNNNNNN $@ &gt; malas_lecturas.fastq\nmalas=$(cat malas_lecturas.fastq | wc -l)\necho \"Número de malas lecturas: $malas\"\n\n# 4. Búsqueda de patrones\necho \"Desea buscar patrones (y/n): \"\nread d\n\nif [[ $d == \"y\" ]]; then\n    echo \"Los patrones se guardarán en: patrones.txt\"\n    echo -e 'ACTG\\nCCCCC\\nNNNCNNN\\nNNNGNNN\\nTTTT\\nTATA\\nAAA' &gt; patrones.txt\n    grep -f patrones.txt $@ &gt; busqueda.txt\n    echo \"Búsqueda de patrones guardada en: busqueda.txt\"\nelse\n    echo \"ok :P\"\nfi\n\n# Mensaje final\necho \"Fin :)\"\n\n\n\n\n\n\nExplicación del código\n\n\n\n\n\n\n1. Comentarios y declaración de archivo\n#!/bin/bash: Indica que el script se ejecutará usando el intérprete de Bash.\n# File: demo.sh: Un comentario que indica el nombre del archivo del script.\n2. Mostrar el archivo y número de argumentos\necho \"Archivo a procesar &gt; $@\": Muestra el nombre del archivo que se pasará como argumento al script. $@ representa todos los argumentos pasados al script.\necho \"Numero de argumentos: $#\": Muestra cuántos argumentos ha recibido el script. $# indica el número de argumentos.\n3. Contar secuencias y separar malas lecturas\nnumero_secuencias=$(grep -c '^@SRR098026' $@): Usa grep para contar cuántas secuencias empiezan con @SRR098026 en el archivo (probablemente sea un prefijo en un archivo FASTQ que identifica secuencias de interés). -c cuenta las coincidencias.\ngrep -B1 -A2 NNNNNNNNNN $@ &gt; malas_lecturas.fastq: Busca secuencias de calidad baja o problemáticas (que contengan 10 nucleótidos seguidos de N, que representan bases no determinadas).\n\n-B1: Muestra 1 línea antes de cada coincidencia de NNNNNNNNNN.\n-A2: Muestra 2 líneas después de la coincidencia.\nEl resultado se guarda en un archivo llamado malas_lecturas.fastq.\n\nmalas=$(cat malas_lecturas.fastq | wc -l): Cuenta el número total de líneas en malas_lecturas.fastq (esto indica la cantidad de malas lecturas encontradas).\necho \"Número de malas lecturas: $malas\": Muestra la cantidad de malas lecturas encontradas\necho \"Numero de argumentos: $#\": Muestra cuántos argumentos ha recibido el script. $# indica el número de argumentos.\n4. Búsqueda de patrones\necho \"Desea buscar patrones (y/n): \": Pregunta al usuario si desea buscar patrones específicos en el archivo.\nread d: Lee la respuesta del usuario y la guarda en la variable d.\nif [[ $d == \"y\" ]]; then: Si la respuesta es “y” (sí), el script procede a buscar los patrones.\n\necho -e 'ACTG\\nCCCCC\\nNNNCNNN\\nNNNGNNN\\nTTTT\\nTATA\\nAAA' &gt; patrones.txt: Crea un archivo patrones.txt que contiene una lista de secuencias de interés (patrones a buscar).\ngrep -f patrones.txt $@ &gt; busqueda.txt: Busca los patrones contenidos en patrones.txt dentro del archivo de entrada. El resultado de la búsqueda se guarda en busqueda.txt.\necho \"Búsqueda de patrones guardada en: busqueda.txt\": Informa al usuario que los resultados de la búsqueda se guardaron en el archivo busqueda.txt.\n\nelse: Si la respuesta es “n” (no), simplemente muestra un mensaje.\n\n\n\n\n\n\nTomará como input el nombre del archivo ./_files/secuencias_bash.fastq de secuencias fastq para analizar.\nBuscará dentro del archivo provisto por el usuario las secuencias con el string @SRR098026 y las contará.\nExportará las malas secuencias a un archivo llamado malas_lecturas.fastq, usando el string “NNNNNNNNNN” como plantilla.\nReportará el número de malas secuencias.\nLuego buscaremos patrones en el archivo buenas_lecturas.fastq, si es que el usuario lo desea.\n\n\nbash demo.sh secuencias_bash.fastq",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Scripts en Bash</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Scripts en Bash</span>"
     ]
   },
   {
     "objectID": "ScriptBash.html#repaso",
     "href": "ScriptBash.html#repaso",
-    "title": "8  Scripts en Bash",
-    "section": "8.2 Repaso",
-    "text": "8.2 Repaso\nAhora que ya sabes realizar Script en Bash, podrias intentar realizar la actividad de 6. Extracción de información de archivos fastq del curso de GNU/Linuz para Bioinformatica organizado por RSG Ecuador.",
+    "title": "9  Scripts en Bash",
+    "section": "9.2 Repaso",
+    "text": "9.2 Repaso\nAhora que ya sabes realizar Script en Bash, podrias intentar realizar la actividad de 6. Extracción de información de archivos fastq del curso de GNU/Linuz para Bioinformatica organizado por RSG Ecuador.",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Scripts en Bash</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Scripts en Bash</span>"
     ]
   },
   {
-    "objectID": "ScriptBash.html#ejercicio-6.-extracción-de-información-de-archivos-fastq",
-    "href": "ScriptBash.html#ejercicio-6.-extracción-de-información-de-archivos-fastq",
-    "title": "8  Scripts en Bash",
-    "section": "8.3 Ejercicio 6. Extracción de información de archivos fastq",
-    "text": "8.3 Ejercicio 6. Extracción de información de archivos fastq\nEn este ejercicio se obtendrá información de archivos fastq, que cotienen secuencias de nucleótidos y la calidad de su proceso de secuenciación. Para esto usaremos los archivos secuencias1.fastq, secuencias2.fastq y secuencias3.fastq que se encuentra en la carpeta _files dentro del directorio raíz del repositorio de GitHub unix.bioinfo.rsgecuador .\nEjercicio 6.1 La letra N representa un nucleótido que no pudo ser leído correctamente, y se reporta como ninguno, o missing data. Imprime el número de secuencias que tenga diez N seguidas por cada uno de los archivos fastq de la carpeta _files.\n\n\n\n\n\n\nNote\n\n\n\nEs posible realizar esto con un comando de una sola línea, intenta resolverlo de esta forma.\n\n\n\n\n\n\n\n\nSolución\n\n\n\n\n\n# cd C:/Users/ecoss/Documents/Respaldos/Github_notes/Workshop_Bash2024/data/unix.bioinfo.rsgecuador-gh-pages\n\n#!/bin/bash\n# File: countseq.sh\n\n# Ruta a la carpeta que contiene los archivos .fastq\nFOLDER=\"_files\"\n\n# Iterar sobre cada archivo .fastq en la carpeta\nfor file in \"$FOLDER\"/*[1-3].fastq; do\n  # Imprimir el nombre del archivo\n  echo \"Archivo: $file\"\n  \n  # Usar grep para buscar secuencias que contengan 10 'N' seguidas y contar cuántas veces aparecen\n  count=$(grep -c 'NNNNNNNNNN' $file )\n  \n  # Imprimir el número de secuencias encontradas\n  echo \"Número de secuencias con 10 N seguidas: $count\"\n  echo \"---------------------------------------\"\ndone\nRecuerda para ejecutar este codigo deberas encontrarte dentro de la carpeta descomprimida unix.bioinfo.rsgecuador-gh-pages/y ejecutar: ./countseq.sh.\nSalida:\n\nsecuencias1.fastq - 1\nsecuencias2.fastq - 58\nsecuencias3.fastq - 75\n\n\n\n\nEjercicio 6.2 Ahora, determina el número de secuencias (lineas) de cada archivo .fastq por separado. Se conoce que los títulos de las corridas de las secuencias en cada archivo .fastq empiezan con el string @SRR098026.\n\n\n\n\n\n\nSolución\n\n\n\n\n\n#!/bin/bash\n# File: countNseq.sh\n\n# Ruta a la carpeta que contiene los archivos .fastq\nFOLDER=\"_files\"\n\n# Iterar sobre cada archivo .fastq en la carpeta\nfor file in \"$FOLDER\"/*[1-3].fastq; do\n  echo \"Archivo: $file\"\n  \n  # Usar grep para contar cuántas líneas empiezan con '@SRR098026'\n  count=$(grep -c '^@SRR098026' $file )\n  \n  echo \"Número de secuencias: $count\"\n  echo \"---------------------------------------\"\ndone\nSalida:\n\nsecuencias1.fastq - 99\nsecuencias2.fastq - 75\nsecuencias3.fastq - 75",
+    "objectID": "ScriptBash.html#extracción-de-información-de-archivos-fastq",
+    "href": "ScriptBash.html#extracción-de-información-de-archivos-fastq",
+    "title": "9  Scripts en Bash",
+    "section": "9.3 Extracción de información de archivos fastq",
+    "text": "9.3 Extracción de información de archivos fastq\nEn este ejercicio se obtendrá información de archivos fastq, que cotienen secuencias de nucleótidos y la calidad de su proceso de secuenciación. Para esto usaremos los archivos secuencias1.fastq, secuencias2.fastq y secuencias3.fastq que se encuentra en la carpeta _files dentro del directorio raíz del repositorio de GitHub unix.bioinfo.rsgecuador .\n\n\n\n\n\n\nEjercicio 6\n\n\n\nEjercicio 6.1 La letra N representa un nucleótido que no pudo ser leído correctamente, y se reporta como ninguno, o missing data. Imprime el número de secuencias que tenga diez N seguidas por cada uno de los archivos fastq de la carpeta _files.\n\n\n\n\n\n\nNote\n\n\n\nEs posible realizar esto con un comando de una sola línea, intenta resolverlo de esta forma.\n\n\n\n\n\n\n\n\nSolución\n\n\n\n\n\n# cd C:/Users/ecoss/Documents/Respaldos/Github_notes/Workshop_Bash2024/data/unix.bioinfo.rsgecuador-gh-pages\n\n#!/bin/bash\n# File: countseq.sh\n\n# Ruta a la carpeta que contiene los archivos .fastq\nFOLDER=\"_files\"\n\n# Iterar sobre cada archivo .fastq en la carpeta\nfor file in \"$FOLDER\"/*[1-3].fastq; do\n  # Imprimir el nombre del archivo\n  echo \"Archivo: $file\"\n  \n  # Usar grep para buscar secuencias que contengan 10 'N' seguidas y contar cuántas veces aparecen\n  count=$(grep -c 'NNNNNNNNNN' $file )\n  \n  # Imprimir el número de secuencias encontradas\n  echo \"Número de secuencias con 10 N seguidas: $count\"\n  echo \"---------------------------------------\"\ndone\nRecuerda para ejecutar este codigo deberas encontrarte dentro de la carpeta descomprimida unix.bioinfo.rsgecuador-gh-pages/y ejecutar: ./countseq.sh.\nSalida:\n\nsecuencias1.fastq - 1\nsecuencias2.fastq - 58\nsecuencias3.fastq - 75\n\n\n\n\nEjercicio 6.2 Ahora, determina el número de secuencias (lineas) de cada archivo .fastq por separado. Se conoce que los títulos de las corridas de las secuencias en cada archivo .fastq empiezan con el string @SRR098026.\n\n\n\n\n\n\nSolución\n\n\n\n\n\n#!/bin/bash\n# File: countNseq.sh\n\n# Ruta a la carpeta que contiene los archivos .fastq\nFOLDER=\"_files\"\n\n# Iterar sobre cada archivo .fastq en la carpeta\nfor file in \"$FOLDER\"/*[1-3].fastq; do\n  echo \"Archivo: $file\"\n  \n  # Usar grep para contar cuántas líneas empiezan con '@SRR098026'\n  count=$(grep -c '^@SRR098026' $file )\n  \n  echo \"Número de secuencias: $count\"\n  echo \"---------------------------------------\"\ndone\nSalida:\n\nsecuencias1.fastq - 99\nsecuencias2.fastq - 75\nsecuencias3.fastq - 75",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Scripts en Bash</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Scripts en Bash</span>"
     ]
   },
   {
     "objectID": "ScriptBash.html#material-suplementario",
     "href": "ScriptBash.html#material-suplementario",
-    "title": "8  Scripts en Bash",
-    "section": "8.4 Material suplementario",
-    "text": "8.4 Material suplementario\n\nRSG Ecuador. Scripts en Bash\nRSG Ecuador. Wildcards y Streams\nRSG Ecuador. Expresiones regulares (regex)\nWildcard Selection in Bash",
+    "title": "9  Scripts en Bash",
+    "section": "9.4 Material suplementario",
+    "text": "9.4 Material suplementario\n\nRSG Ecuador. Scripts en Bash\nRSG Ecuador. Wildcards y Streams\nRSG Ecuador. Expresiones regulares (regex)\nWildcard Selection in Bash",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Scripts en Bash</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Scripts en Bash</span>"
     ]
   },
   {
     "objectID": "Anotation_ejercicios.html",
     "href": "Anotation_ejercicios.html",
-    "title": "9  Extracción de información de diversos archivos",
+    "title": "10  Extracción de información de diversos archivos",
     "section": "",
-    "text": "9.1 Archivo FASTA",
+    "text": "10.1 Archivo FASTA\nUn archivo FASTA es un formato estándar para almacenar secuencias biológicas, como ADN, ARN o proteínas. Cada secuencia está compuesta por:\nEjemplo:",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>**Extracción de información de diversos archivos**</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Extracción de información de diversos archivos</span>"
     ]
   },
   {
     "objectID": "Anotation_ejercicios.html#archivo-fasta",
     "href": "Anotation_ejercicios.html#archivo-fasta",
-    "title": "9  Extracción de información de diversos archivos",
+    "title": "10  Extracción de información de diversos archivos",
     "section": "",
-    "text": "9.1.1 Encabezado FASTA explicado (UniProtKB)\nEste ejemplo describe una proteína curada manualmente en UniProt (Swiss-Prot), identificada como (+)-T-muurolol synthase, una enzima que convierte farnesyl diphosphate en terpenos. Proviene de la cepa ATCC 27064 de Streptomyces clavuligerus. El gen responsable es SCLAV_p0068, y hay evidencia experimental directa de su existencia (PE=1).\n&gt;sp|B5GW45|TMUUS_STRC2 (+)-T-muurolol synthase ((2E,6E)-farnesyl diphosphate cyclizing) OS=Streptomyces clavuligerus (...) OX=443255 GN=SCLAV_p0068 PE=1 SV=1\n\n\n\n\n\n\n\n\nCampo\nSignificado\nTraducción didáctica\n\n\n\n\nsp\nSwiss-Prot: base de datos revisada manualmente\nEntrada curada por expertos\n\n\nB5GW45\nAccession number: identificador único de la proteína\nClave única en UniProt\n\n\nTMUUS_STRC2\nNombre corto: nombre de la proteína + especie\nAbreviación de la enzima en Streptomyces clavuligerus\n\n\n(+)-T-muurolol synthase\nNombre funcional: enzima que cicla farnesyl diphosphate\nEnzima que produce terpenos\n\n\n(2E,6E)-farnesyl diphosphate cyclizing\nActividad específica\nTipo de reacción química que realiza\n\n\nOS=Streptomyces clavuligerus (...)\nOrganism Species: especie y cepas\nOrganismo fuente y cepas de referencia\n\n\nOX=443255\nOrganism Taxonomy ID\nID taxonómico en NCBI\n\n\nGN=SCLAV_p0068\nGene Name\nNombre del gen que codifica esta proteína\n\n\nPE=1\nProtein Existence: nivel de evidencia\n\nNivel 1 = evidencia experimental a nivel proteína\nNivel 2 = evidencia experimental a nivel ARN (ej. RT-PCR, RNA-seq)\nNivel 3 = Inferida por homología con proteínas similares en otros organismos\nNivel 4 = Predicción computacional sin evidencia experimental directa\nNivel 5 = Existencia incierta; datos insuficientes o contradictorios\n\n\n\nSV=1\nSequence Version\nVersión de la secuencia en UniProt\n\n\n\n\n\n\n\n\n\nEjercicio 7. Extracción de información de archivos fasta\n\n\n\n\nColocate dentro de la carpeta _files de unix.bioinfo.rsgecuador-gh-pages. En mi caso sería empleando:\ncd /Users/ecoss/Documents/LCG2025_IntroBioinfo_S1/practica/unix.bioinfo.rsgecuador-gh-pages/_files\nContesta las siguientes preguntas empleando el archivo S_clavuligerus_proteome.fasta\nCambia los permisos para que las OTRAS personas cuenten con todos los permisos (escritura, lectura y ejecución) sobre el archivo FASTA.\n¿Cuántas líneas tiene el archivo FASTA?\n¿Cuántos registros (“&gt;”) tiene el archivo FASTA?\n¿Cuántas veces aparece el motivo DDXXD en el archivo FASTA?\n¿Cuántos de esos registros son “Uncharacterized protein”?\n¿Cuántos de esos registros cuentan con evidencia experimental (PE=1)?\n¿De cuántos provienen las secuencias presentes en el archivo FASTA?\n\n\n\n\n\n\n\nSolución\n\n\n\n\n\n1. cd TU_DIRECCION\n2. chmod 757 S_clavuligerus_proteome.fasta\n3. wc -l S_clavuligerus_proteome.fasta # 40739\n4. grep -c \"&gt;\" S_clavuligerus_proteome.fasta # 6439 o grep '^&gt;' S_clavuligerus_proteome.fasta | wc -l # 6439\n5. grep -v '^&gt;' S_clavuligerus_proteome.fasta | tr -d '\\n' | grep -oE 'DD[A-Z]{2}D' | wc -l #314 \n6. grep '^&gt;' S_clavuligerus_proteome.fasta | grep -oE 'Uncharacterized protein' | wc -l #2689 \n7. grep '^&gt;' S_clavuligerus_proteome.fasta | grep 'PE=1' | wc -l # 6 registros\n8. grep '^&gt;' S_clavuligerus_proteome.fasta | grep -o 'OS=[^=]*' | sort | uniq | wc -l # solo una especie",
+    "text": "Una línea de encabezado que comienza con el símbolo &gt;\nUna o más líneas con la secuencia en formato de texto plano\n\n\n&gt;ENSMUSG00000049605 Olfr418-ps1\nATGGCCTGTTTCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTG\n\n10.1.1 Encabezado FASTA explicado (UniProtKB)\nEste ejemplo describe una proteína curada manualmente en UniProt (Swiss-Prot), identificada como (+)-T-muurolol synthase, una enzima que convierte farnesyl diphosphate en terpenos. Proviene de la cepa ATCC 27064 de Streptomyces clavuligerus. El gen responsable es SCLAV_p0068, y hay evidencia experimental directa de su existencia (PE=1).\n&gt;sp|B5GW45|TMUUS_STRC2 (+)-T-muurolol synthase ((2E,6E)-farnesyl diphosphate cyclizing) OS=Streptomyces clavuligerus (...) OX=443255 GN=SCLAV_p0068 PE=1 SV=1\n\n\n\n\n\n\n\n\nCampo\nSignificado\nTraducción didáctica\n\n\n\n\nsp\nSwiss-Prot: base de datos revisada manualmente\nEntrada curada por expertos\n\n\nB5GW45\nAccession number: identificador único de la proteína\nClave única en UniProt\n\n\nTMUUS_STRC2\nNombre corto: nombre de la proteína + especie\nAbreviación de la enzima en Streptomyces clavuligerus\n\n\n(+)-T-muurolol synthase\nNombre funcional: enzima que cicla farnesyl diphosphate\nEnzima que produce terpenos\n\n\n(2E,6E)-farnesyl diphosphate cyclizing\nActividad específica\nTipo de reacción química que realiza\n\n\nOS=Streptomyces clavuligerus (...)\nOrganism Species: especie y cepas\nOrganismo fuente y cepas de referencia\n\n\nOX=443255\nOrganism Taxonomy ID\nID taxonómico en NCBI\n\n\nGN=SCLAV_p0068\nGene Name\nNombre del gen que codifica esta proteína\n\n\nPE=1\nProtein Existence: nivel de evidencia\n\nNivel 1 = evidencia experimental a nivel proteína\nNivel 2 = evidencia experimental a nivel ARN (ej. RT-PCR, RNA-seq)\nNivel 3 = Inferida por homología con proteínas similares en otros organismos\nNivel 4 = Predicción computacional sin evidencia experimental directa\nNivel 5 = Existencia incierta; datos insuficientes o contradictorios\n\n\n\nSV=1\nSequence Version\nVersión de la secuencia en UniProt\n\n\n\n\n\n\n\n\n\nEjercicio 7. Extracción de información de archivos fasta\n\n\n\n\nColocate dentro de la carpeta _files de unix.bioinfo.rsgecuador-gh-pages. En mi caso sería empleando:\ncd /Users/ecoss/Documents/LCG2025_IntroBioinfo_S1/practica/unix.bioinfo.rsgecuador-gh-pages/_files\nContesta las siguientes preguntas empleando el archivo S_clavuligerus_proteome.fasta\nCambia los permisos para que las OTRAS personas cuenten con todos los permisos (escritura, lectura y ejecución) sobre el archivo FASTA.\n¿Cuántas líneas tiene el archivo FASTA?\n¿Cuántos registros (“&gt;”) tiene el archivo FASTA?\n¿Cuántas veces aparece el motivo DDXXD en el archivo FASTA?\n¿Cuántos de esos registros son “Uncharacterized protein”?\n¿Cuántos de esos registros cuentan con evidencia experimental (PE=1)?\n¿De cuántos provienen las secuencias presentes en el archivo FASTA?\n\n\n\n\n\n\n\nSolución\n\n\n\n\n\n1. cd TU_DIRECCION\n2. chmod 757 S_clavuligerus_proteome.fasta\n3. wc -l S_clavuligerus_proteome.fasta # 40739\n4. grep -c \"&gt;\" S_clavuligerus_proteome.fasta # 6439 o grep '^&gt;' S_clavuligerus_proteome.fasta | wc -l # 6439\n5. grep -v '^&gt;' S_clavuligerus_proteome.fasta | tr -d '\\n' | grep -oE 'DD[A-Z]{2}D' | wc -l #314 \n6. grep '^&gt;' S_clavuligerus_proteome.fasta | grep -oE 'Uncharacterized protein' | wc -l #2689 \n7. grep '^&gt;' S_clavuligerus_proteome.fasta | grep 'PE=1' | wc -l # 6 registros\n8. grep '^&gt;' S_clavuligerus_proteome.fasta | grep -o 'OS=[^=]*' | sort | uniq | wc -l # solo una especie",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>**Extracción de información de diversos archivos**</span>"
-    ]
-  },
-  {
-    "objectID": "Anotation_ejercicios.html#archivo-de-salida-de-blast",
-    "href": "Anotation_ejercicios.html#archivo-de-salida-de-blast",
-    "title": "9  Extracción de información de diversos archivos",
-    "section": "9.2 Archivo de salida de BLAST",
-    "text": "9.2 Archivo de salida de BLAST\n\n9.2.1 sadasdasdd\n\n\n\n\n\n\nEjercicio 7. Extracción de información de archivos fasta\n\n\n\n\nColocate dentro de la carpeta _files de unix.bioinfo.rsgecuador-gh-pages. En mi caso sería empleando:\ncd /Users/ecoss/Documents/LCG2025_IntroBioinfo_S1/practica/unix.bioinfo.rsgecuador-gh-pages/_files\nContesta las siguientes preguntas empleando el archivo S_clavuligerus_proteome.fasta\nCambia los permisos para que las OTRAS personas cuenten con todos los permisos (escritura, lectura y ejecución) sobre el archivo FASTA.\n¿Cuántas líneas tiene el archivo FASTA?\n¿Cuántos registros (“&gt;”) tiene el archivo FASTA?\n¿Cuántas veces aparece el motivo DDXXD en el archivo FASTA?\n¿Cuántos de esos registros son “Uncharacterized protein”?\n¿Cuántos de esos registros cuentan con evidencia experimental (PE=1)?\n¿De cuántos provienen las secuencias presentes en el archivo FASTA?\n\n\n\n\n\n\n\nSolución\n\n\n\n\n\n1.",
-    "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>**Extracción de información de diversos archivos**</span>"
-    ]
-  },
-  {
-    "objectID": "Anotation_ejercicios.html#archivo-bed",
-    "href": "Anotation_ejercicios.html#archivo-bed",
-    "title": "9  Extracción de información de diversos archivos",
-    "section": "9.3 Archivo BED",
-    "text": "9.3 Archivo BED\n\n9.3.1 dadsasd\n\n\n\n\n\n\nEjercicio 7. Extracción de información de archivos fasta\n\n\n\n\nColocate dentro de la carpeta _files de unix.bioinfo.rsgecuador-gh-pages. En mi caso sería empleando:\ncd /Users/ecoss/Documents/LCG2025_IntroBioinfo_S1/practica/unix.bioinfo.rsgecuador-gh-pages/_files\nContesta las siguientes preguntas empleando el archivo S_clavuligerus_proteome.fasta\nCambia los permisos para que las OTRAS personas cuenten con todos los permisos (escritura, lectura y ejecución) sobre el archivo FASTA.\n¿Cuántas líneas tiene el archivo FASTA?\n¿Cuántos registros (“&gt;”) tiene el archivo FASTA?\n¿Cuántas veces aparece el motivo DDXXD en el archivo FASTA?\n¿Cuántos de esos registros son “Uncharacterized protein”?\n¿Cuántos de esos registros cuentan con evidencia experimental (PE=1)?\n¿De cuántos provienen las secuencias presentes en el archivo FASTA?\n\n\n\n\n\n\n\nSolución\n\n\n\n\n\n1.",
-    "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>**Extracción de información de diversos archivos**</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Extracción de información de diversos archivos</span>"
     ]
   },
   {
     "objectID": "Anotation_ejercicios.html#archivo-gtf",
     "href": "Anotation_ejercicios.html#archivo-gtf",
-    "title": "9  Extracción de información de diversos archivos",
-    "section": "9.4 Archivo GTF",
-    "text": "9.4 Archivo GTF\n\n9.4.1 dada\n\n\n\n\n\n\nEjercicio 7. Extracción de información de archivos fasta\n\n\n\n\nColocate dentro de la carpeta _files de unix.bioinfo.rsgecuador-gh-pages. En mi caso sería empleando:\ncd /Users/ecoss/Documents/LCG2025_IntroBioinfo_S1/practica/unix.bioinfo.rsgecuador-gh-pages/_files\nContesta las siguientes preguntas empleando el archivo S_clavuligerus_proteome.fasta\n\n\n\n\n\n\n\n\nSolución\n\n\n\n\n\n1.",
+    "title": "10  Extracción de información de diversos archivos",
+    "section": "10.2 Archivo GTF",
+    "text": "10.2 Archivo GTF\nUn archivo GTF(Gene Transfer Format) es un formato tabular utilizado para anotar elementos genómicos, como genes, exones, transcritos y regiones codificantes. Es ampliamente usado en bioinformática para describir la estructura de genes en un genoma de referencia.\nCada línea representa una característica genómica y contiene 9 columnas separadas por tabulaciones.\nEjemplo:\n1  pseudogene                          gene         3054233    3054733    .  +  .  gene_id  \"ENSMUSG00000090025\";  gene_name      \"Gm16088\";             gene_source  \"havana\";          gene_biotype  \"pseudogene\";\n\n10.2.1 Columnas del GTF\n\n\n\n\n\n\n\n\n\nNº\nNombre (ES)\nName (EN)\nDescripción\n\n\n\n\n1\nCromosoma\nseqname\nNombre del cromosoma o contig (ej. chr1)\n\n\n2\nFuente\nsource\nPrograma o base de datos que generó la anotación (ej. ENSEMBL)\n\n\n3\nCaracterística\nfeature\nTipo de elemento anotado (gene, exon, CDS, etc.)\n\n\n4\nInicio\nstart\nPosición inicial del elemento (1-based)\n\n\n5\nFin\nend\nPosición final del elemento\n\n\n6\nPuntuación\nscore\nValor de calidad o puntuación (. si no aplica)\n\n\n7\nHebra\nstrand\nHebra del ADN: + para sentido, - para antisentido\n\n\n8\nMarco de lectura\nframe\nMarco de lectura para CDS: 0, 1, 2 o . si no aplica\n\n\n9\nAtributos\nattribute\nCampo con pares clave-valor (gene_id, gene_name, gene_biotype, etc.)\n\n\n\n\n\n\n\n\n\nEjercicio 8. Extracción de información de archivos BED\n\n\n\n\nCrear una carpeta llamada GTF dentro de _files.\nDescargar el archivo GTF del cromosoma 1 de ratón (Mus_musculus.GRCm38.75_chr1)\n\ncurl -O https://raw.githubusercontent.com/Data-Skills/bds-files/master/chapter-07-unix-data-tools/Mus_musculus.GRCm38.75_chr1.gtf\nContesta las siguientes preguntas empleando el archivo Mus_musculus.GRCm38.75_chr1.gtf\n\nMuestra las primeras tres líneas del archivo GTF que no sean comentarios (#), y extrae únicamente las primeras ocho columnas de cada línea.\nFiltra las líneas tipo gene y cuenta cuántas tienen gene_biotype \"protein_coding\".\nFiltra las líneas tipo gene y cuenta cuántas tienen gene_biotype \"lincRNA\".\nExtrae los primeros cinco identificadores de genes (gene_id) del archivo GTF usando una expresión regular.\n¿Cuántos genes tenemos de cada gene_biotype que aparece en el archivo GTF?\nCuenta cuántas veces aparece cada tipo de característica genómica (columna 3) en el archivo GTF, excluyendo los comentarios.\nIdentifica cuántas veces aparece cada tipo de característica genómica (columna 3) asociada al gen ENSMUSG00000033793 en el archivo GTF.\nExtrae los primeros diez identificadores únicos de genes (gene_id) del archivo GTF, eliminando duplicados y ordenándolos alfabéticamente.\nGenera un nuevo archivo llamado gene_id_name.tsv que contenga dos columnas: 1) gene_id y 2) gene_name.\n\n\n\n\n\n\n\nSolución\n\n\n\n\n\n1. grep -v \"^#\" Mus_musculus.GRCm38.75_chr1.gtf | cut -f1-8 | head -n 3 # o grep -v \"^#\" Mus_musculus.GRCm38.75_chr1.gtf | cut -f1-8 | column -t | head -n 3\n# column -t:  genera el formato de tabla\n\n2. grep -v \"^#\" Mus_musculus.GRCm38.75_chr1.gtf | \\\ngrep -w \"gene\" | \\\ngrep 'gene_biotype \"protein_coding\"' | \\\nwc -l # 1240\n\n3. grep -v \"^#\" Mus_musculus.GRCm38.75_chr1.gtf | \\\ngrep -w \"gene\" | \\\ngrep 'gene_biotype \"lincRNA\"' | \\\nwc -l # 89\n\n4. grep -E -o 'gene_id \"\\w+\"' Mus_musculus.GRCm38.75_chr1.gtf | head -n 5\n# 'gene_id \"\\w+\"': busca el texto gene_id \" seguido de una cadena alfanumérica (el ID del gen) entre comillas.\n\n5. grep -v \"^#\" Mus_musculus.GRCm38.75_chr1.gtf | \\\ngrep -w \"gene\" | \\\nsed -n 's/.*gene_biotype \"\\([^\"]*\\)\".*/\\1/p' | \\\nsort | uniq -c\n\n# -n: suprime la salida automática de sed, solo imprime si se usa p.\n# 's/.../.../p': aplica una sustitución y muestra el resultado si hay coincidencia.\n#  .*gene_biotype \": busca cualquier texto antes de gene_biotype \" (incluido).\n#  \\([^\"]*\\): captura el contenido entre comillas (el valor del biotipo).\n# .*: ignora el resto de la línea.\n# \\1: imprime solo lo capturado (el biotipo).\n# p: imprime la línea modificada.\n\n6. grep -v \"^#\" Mus_musculus.GRCm38.75_chr1.gtf | cut -f3 | sort | uniq -c\n\n7. grep \"ENSMUSG00000033793\" Mus_musculus.GRCm38.75_chr1.gtf | cut -f3 | sort | uniq -c\n\n8. grep -E -o 'gene_id \"\\w+\"' Mus_musculus.GRCm38.75_chr1.gtf | cut -f2 -d\" \" | sed 's/\"//g' | sort | uniq | head -n 10\n \n9. grep -v \"^#\" Mus_musculus.GRCm38.75_chr1.gtf | \\\ngrep -w \"gene\" | \\\nsed -n 's/.*gene_id \"\\([^\"]*\\)\";.*gene_name \"\\([^\"]*\\)\".*/\\1\\t\\2/p' &gt; gene_id_name.tsv\n# cut -f2 -d\" \" : Separa por espacio y toma el segundo campo (el ID)\n# sed 's/\"//g': Elimina las comillas dobles\n# sort: Ordena alfabéticamente\n\n# -n: suprime la salida automática de sed, solo imprime si se usa p.\n# 's/.../.../p': aplica una sustitución y muestra el resultado si hay coincidencia.\n#  .*gene_id \": busca cualquier texto antes de gene_id \" (incluido).\n# \\([^\"]*\\): captura el contenido entre comillas (el valor del gene_id).\n#  .*gene_name \": busca cualquier texto entre gene_id y gene_name.\n# \\([^\"]*\\): captura el valor del gene_name.\n#  .*: ignora el resto de la línea.\n# \\1\\t\\2: imprime los dos valores capturados, separados por tabulación.\n# p: imprime la línea modificada.\n\ngrep -v \"^#\" Mus_musculus.GRCm38.75_chr1.gtf | head -n 3 | sed -E -n 's/.*transcript_id \"([^\"]+)\".*/\\1/p'",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>**Extracción de información de diversos archivos**</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Extracción de información de diversos archivos</span>"
+    ]
+  },
+  {
+    "objectID": "Anotation_ejercicios.html#archivo-bed",
+    "href": "Anotation_ejercicios.html#archivo-bed",
+    "title": "10  Extracción de información de diversos archivos",
+    "section": "10.3 Archivo BED",
+    "text": "10.3 Archivo BED\nUn archivo BED(Browser Extensible Data) es un formato tabular utilizado para representar intervalos genómicos. Es ampliamente usado en bioinformática para definir regiones como genes, exones, picos de ChIP-seq, regiones repetitivas, entre otros.\nCada línea representa una región en el genoma y contiene al menos tres columnas obligatorias, aunque puede incluir hasta doce.\nEjemplo:\nchr22 1000 5000 cloneA 960 + 1000 5000 0 2 567,488, 0,3512\nchr22 2000 6000 cloneB 900 - 2000 6000 0 2 433,399, 0,3601\n\n10.3.1 Columnas del BED\n\n\n\n\n\n\n\n\n\nNº\nNombre (ES)\nName (EN)\nDescripción\n\n\n\n\n1\nCromosoma\nchrom\nNombre del cromosoma (ej. chr1, chrX)\n\n\n2\nInicio\nstart\nPosición inicial (0-based, inclusiva)\n\n\n3\nFin\nend\nPosición final (exclusiva)\n\n\n4\nNombre\nname\n(Opcional) Identificador de la región\n\n\n5\nPuntuación\nscore\n(Opcional) Valor entre 0 y 1000\n\n\n6\nHebra\nstrand\n(Opcional) Hebra del ADN: + o -\n\n\n7–12\nCampos avanzados\nthickStart, thickEnd, itemRgb, etc.\n(Opcionales) Usados en visualización en genome browsers\n\n\n\n\n\n\n\n\n\nEjercicio 9. Extracción de información de archivos fasta\n\n\n\nConvertir el archivo GTF a BED\ngrep -v \"^#\" Mus_musculus.GRCm38.75_chr1.gtf | \\\ngrep -w \"gene\" | \\\nsed -n 's/.*gene_name \"\\([^\"]*\\)\".*/\\1/p' | \\\npaste -d'\\t' &lt;(grep -v \"^#\" Mus_musculus.GRCm38.75_chr1.gtf | grep -w \"gene\" | cut -f1,4,5,7) - &gt; Mus_musculus.GRCm38.75_chr1.bed\n\ngrep -v “^#” : Elimina las líneas de comentario (que empiezan con #)\ngrep -w “gene” : Filtra solo las líneas que anotan genes (no exones, CDS, etc.)\nsed -n ‘s/.gene_name “([^”])“.*/\\1/p’ : Extrae el valor del campo gene_name usando una expresión regular.\npaste -d’ &lt;(…) - : Une dos flujos de datos por columnas, separados por tabulación.\n&lt;(grep … | cut -f1,4,5,7) : Extrae las columnas:\n\n1: cromosoma\n4: posición inicial\n5: posición final\n7: hebra (+ o -)\n\n\nOtra manera de hacer esta transformación de GTF a BED es con convert_GTF_to_BED12.sh\nContesta las siguientes preguntas empleando el archivo Mus_musculus.GRCm38.75_chr1.bed.\n\n¿Cuál es el tamaño de este archivo?\n¿Cuántas líneas contiene este archivo?\nAgrega el prefijo Chr solo a la primera columna de un archivo BED.\nAgrega una columna con el tamaño del transcrito usando solo herramientas básicas (cut, paste, expr, while).\n\n\n\n\n\n\n\nSolución\n\n\n\n\n\n1. ls -lh Mus_musculus.GRCm38.75_chr1.bed\n\n2. wc -l Mus_musculus.GRCm38.75_chr1.bed # 2027\n\n3. cut -f1 Mus_musculus.GRCm38.75_chr1.bed | sed 's/^/Chr/' &gt; col1.tmp\ncut -f2- Mus_musculus.GRCm38.75_chr1.bed &gt; col2plus.tmp\npaste col1.tmp col2plus.tmp &gt; genes_prefijoChr.bed\nrm col1.tmp col2plus.tmp\n\n4a.  while IFS=$'\\t' read -r chr start end strand name; do\n    size=$(expr $end - $start)\n    echo -e \"${chr}\\t${start}\\t${end}\\t${strand}\\t${name}\\t${size}\"\ndone &lt; Mus_musculus.GRCm38.75_chr1.bed &gt; Mus_musculus.lengthGenes.bed\n\n# expr $end - $start: Calcula el tamaño del transcrito\n# echo -e : Imprime la línea original más la nueva columna\n\n4b. awk '{size = $3 - $2; print $0 \"\\t\" size}' Mus_musculus.GRCm38.75_chr1.bed &gt; Mus_musculus.lengthGenes_v2.bed\n\n# awk : Ejecuta instrucciones sobre cada línea del archivo  \n# $3 - $2:  Calcula el tamaño: end - start\n# size = ... : Guarda el resultado en la variable size\n# print $0 \"\\t\" size:   Imprime la línea original ($0) más una tabulación y el tamaño",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Extracción de información de diversos archivos</span>"
+    ]
+  },
+  {
+    "objectID": "Anotation_ejercicios.html#más-ejercicios",
+    "href": "Anotation_ejercicios.html#más-ejercicios",
+    "title": "10  Extracción de información de diversos archivos",
+    "section": "11.1 Más ejercicios",
+    "text": "11.1 Más ejercicios\nPara el ejercicio 6.3 debes saber sobre AWK, puedes aprender más sobre el siguiento esta guia Curso avanzado de programación AWK y Bash para bioinformática y biocómputo en sistemas GNU/Linux.\nAqui les dejo la informacion que se puede consultar, solo sepan que existe.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Extracción de información de diversos archivos</span>"
     ]
   },
   {
     "objectID": "Anotation_ejercicios.html#material-suplementario",
     "href": "Anotation_ejercicios.html#material-suplementario",
-    "title": "9  Extracción de información de diversos archivos",
-    "section": "9.5 Material suplementario",
-    "text": "9.5 Material suplementario\n\nComandos de Unix para minería de datos",
+    "title": "10  Extracción de información de diversos archivos",
+    "section": "11.2 Material suplementario",
+    "text": "11.2 Material suplementario\n\nComandos de Unix para minería de datos\nBash scripting\nUnix Data Tools",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>**Extracción de información de diversos archivos**</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Extracción de información de diversos archivos</span>"
     ]
   },
   {
     "objectID": "Annotation_lncRNAs.html",
     "href": "Annotation_lncRNAs.html",
-    "title": "10  Exploración y clasificación de lncRNAs",
+    "title": "11  Aplicaciones",
     "section": "",
-    "text": "10.0.1 Introducción didáctica\nLos lncRNAs (long non-coding RNAs o ARN largos no codificantes) representan una clase diversa de transcritos que no codifican proteínas pero desempeñan funciones clave en la regulación génica. Este capítulo se enfoca en:",
+    "text": "11.1 Exploración y clasificación de lncRNAs",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Exploración y clasificación de lncRNAs</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Aplicaciones</span>"
     ]
   },
   {
-    "objectID": "Annotation_lncRNAs.html#características-de-los-lncrnas",
-    "href": "Annotation_lncRNAs.html#características-de-los-lncrnas",
-    "title": "10  Exploración y clasificación de lncRNAs",
-    "section": "10.1 Características de los lncRNAs",
-    "text": "10.1 Características de los lncRNAs\nLos lncRNAs son moléculas de ARN de más de 200 nucleótidos que no codifican proteínas, pero desempeñan funciones clave en la regulación génica y celular. Aquí tienes un resumen bilingüe y modular de sus características principales:\n\nLongitud &gt;200 nucleótidos\nExpresión específica por tejido y etapa: Se expresan de forma diferencial según el tipo celular, tejido (como el testículo) y etapa del desarrollo\nRegulación génica en cis y trans: Modulando la expresión de genes vecinos o lejanos.\nDiversidad de mecanismos moleculares\n\n\n\n\nModificado de Sun & Kraus, 2015. Endocrine Reviews.",
+    "objectID": "Annotation_lncRNAs.html#exploración-y-clasificación-de-lncrnas",
+    "href": "Annotation_lncRNAs.html#exploración-y-clasificación-de-lncrnas",
+    "title": "11  Aplicaciones",
+    "section": "",
+    "text": "11.1.1 Introducción didáctica\nLos lncRNAs (long non-coding RNAs o ARN largos no codificantes) representan una clase diversa de transcritos que no codifican proteínas pero desempeñan funciones clave en la regulación génica. Este capítulo se enfoca en:\n\n🔍 Anotación de nuevos transcritos a partir de datos de RNA-seq\n🧠 Clasificación funcional y estructural de lncRNAs\n🛠️ Ejercicios prácticos en Bash para identificar y clasificar lncRNAs intergénicos\n\n\n\n11.1.2 Características de los lncRNAs\nLos lncRNAs son moléculas de ARN de más de 200 nucleótidos que no codifican proteínas, pero desempeñan funciones clave en la regulación génica y celular. Aquí tienes un resumen bilingüe y modular de sus características principales:\n\nLongitud &gt;200 nucleótidos\nExpresión específica por tejido y etapa: Se expresan de forma diferencial según el tipo celular, tejido (como el testículo) y etapa del desarrollo\nRegulación génica en cis y trans: Modulando la expresión de genes vecinos o lejanos.\nDiversidad de mecanismos moleculares\n\n\n\n\nModificado de Sun & Kraus, 2015. Endocrine Reviews.\n\n\n\n\n11.1.3 ¿Cómo clasifican los lncRNAs?\nBedtools puede emplearse eficazmente en la clasificación de lncRNAs al facilitar el análisis espacial de sus coordenadas genómicas mediante archivos BED. Por ejemplo, permite identificar si una lncRNA se solapa con regiones codificantes, intrones, promotores u otras anotaciones funcionales, lo cual es clave para distinguir entre tipos como intergénicas, intrónicas o antisentido. Al usar comandos como intersect, closest o coverage, los investigadores pueden comparar las posiciones de las lncRNAs con otros elementos genómicos, generando clasificaciones reproducibles y fácilmente integrables en flujos bioinformáticos.\n\n\n\nModificado de Shafiq S, et al, 2015. Biochimica et Biophysica Acta\n\n\n\n\n\n11.1.4 Detección de genes codificantes vecinos (neighboring gene pair)\n\n\n\nFigura 3. Predicción de la función del ARN largo no codificante (lincRNA) basada en la red de coexpresión. Las relaciones de coexpresión entre los genes codificantes (nodos azules) y los genes lincRNA (nodos amarillos) constituyen una red completa. En la subred del módulo, por ejemplo, hay 4 genes lincRNA y 39 genes codificantes, entre los cuales 24 (nodos azul oscuro) tienen la función X y 15 (nodos azul claro) tienen otras funciones. Este módulo está significativamente enriquecido con la función X a través del análisis estadístico. En consecuencia, los cuatro lincRNA de este módulo se predicen como función X. Traducción realizada con la versión gratuita del traductor DeepL.com",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Exploración y clasificación de lncRNAs</span>"
-    ]
-  },
-  {
-    "objectID": "Annotation_lncRNAs.html#cómo-clasifican-los-lncrnas",
-    "href": "Annotation_lncRNAs.html#cómo-clasifican-los-lncrnas",
-    "title": "10  Exploración y clasificación de lncRNAs",
-    "section": "10.2 ¿Cómo clasifican los lncRNAs?",
-    "text": "10.2 ¿Cómo clasifican los lncRNAs?\n\n\n\nModificado de Shafiq S, et al, 2015. Biochimica et Biophysica Acta\n\n\nzcat",
-    "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Exploración y clasificación de lncRNAs</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Aplicaciones</span>"
     ]
   },
   {
     "objectID": "Annotation_lncRNAs.html#material-suplementario",
     "href": "Annotation_lncRNAs.html#material-suplementario",
-    "title": "10  Exploración y clasificación de lncRNAs",
-    "section": "11.1 Material suplementario",
-    "text": "11.1 Material suplementario\n\nPipeline for lncRNA annotation from RNA-seq data (PLAR)\nlncRNA Identification - P.generosa lncRNAs using CPC2 and bedtools\nRNA-seq Bioinformatics",
+    "title": "11  Aplicaciones",
+    "section": "11.2 Material suplementario",
+    "text": "11.2 Material suplementario\n\nPipeline for lncRNA annotation from RNA-seq data (PLAR)\nlncRNA Identification - P.generosa lncRNAs using CPC2 and bedtools\nRNA-seq Bioinformatics",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Exploración y clasificación de lncRNAs</span>"
-    ]
-  },
-  {
-    "objectID": "awk.html",
-    "href": "awk.html",
-    "title": "11  AWK",
-    "section": "",
-    "text": "AWK es un lenguaje de programación diseñado para procesar datos de texto, ya sean ficheros o flujos de datos. El nombre AWK deriva de las iniciales de los apellidos de sus autores: Alfred Aho, Peter Weinberger, y Brian Kernighan. awk, cuando está escrito todo en minúsculas, hace referencia al programa de UNIX que interpreta programas escritos en el lenguaje de programación AWK. Es decir, AWK es un lenguaje interpretado por el intérprete de comandos.\n\n\n\n\n\n\nAWK\n\n\n\nPara el ejercicio 6.3 debes saber sobre AWK, puedes aprender mas sobre el siguiento esta guia Curso avanzado de programación AWK y Bash para bioinformática y biocómputo en sistemas GNU/Linux.\n\n\nAqui les dejo la informacion que se puede consultar, solo sepan que existe.",
-    "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>AWK</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Aplicaciones</span>"
     ]
   }
 ]

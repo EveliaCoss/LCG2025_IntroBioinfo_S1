@@ -1,27 +1,51 @@
-# Temario
+# Conceptos Unix y GNU/Linux
 
-El Plan de clases detallado con actividades, recursos, plantillas, material de lectura esta disponible en pdf. Aquí listamos la organización de los temas y las habilidades que el alumno debe lograr.
+## ¿Qué es UNIX?
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Temas                                                                                                                                                                                                                          | Objetivo                                                                                                                                                                                       |
-+================================================================================================================================================================================================================================+:==============================================================================================================================================================================================:+
-| [Introducción a la bioinformática](https://lcg-cursos.github.io/material/introbioinfo/L3-shell.html#1)                                                                                                                         | -   Comprender qué es Unix, sus características principales y su utilidad en entornos científicos y técnicos.                                                                                  |
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| [Conceptos Unix y GNU/Linux](https://lcg-cursos.github.io/material/introbioinfo/L3-shell.html#20) y [protocolos de internet](https://lcg-cursos.github.io/material/introbioinfo/L3-shell.html#1)                               | -   Identificar los principales protocolos de intercambio de datos en internet y entender su funcionamiento básico.                                                                            |
-|                                                                                                                                                                                                                                | -   Aplicar el protocolo de transferencia de archivos (FTP/SFTP) y acceder a servidores remotos de forma segura y eficiente.                                                                   |
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Mis primeros pasos en Bash ([archivos](https://lcg-cursos.github.io/material/introbioinfo/L3-shell.html#70) y [permisos](https://lcg-cursos.github.io/material/introbioinfo/L3-shell.html#90)) y creación de scripts completos | -   Comprender la estructura del sistema de archivos en Unix y saber desplazarse por él eficientemente.                                                                                        |
-|                                                                                                                                                                                                                                | -   Conocer y aplicar comandos básicos para gestionar archivos y directorios.                                                                                                                  |
-|                                                                                                                                                                                                                                | -   Identificar los tipos de archivos en Unix, visualizar su contenido y entender su manejo.                                                                                                   |
-|                                                                                                                                                                                                                                | -   Utilizar herramientas para comprimir y descomprimir archivos.                                                                                                                              |
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Buenas prácticas en Bioinformática                                                                                                                                                                                             | -   Aplicar buenas prácticas en bioinformática para asegurar que los análisis sean reproducibles, claros y colaborativos, mediante código modular, documentación precisa y control de calidad. |
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Introducción a Markdown                                                                                                                                                                                                        | -   Usar Markdown como formato estándar en bioinformática.                                                                                                                                     |
-|                                                                                                                                                                                                                                |                                                                                                                                                                                                |
-|                                                                                                                                                                                                                                | -   Comprender las fases del análisis de datos bioinformáticos.                                                                                                                                |
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-|                                                                                                                                                                                                                                |                                                                                                                                                                                                |
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-|                                                                                                                                                                                                                                |                                                                                                                                                                                                |
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+-   Sistema operativo (SO) creado por **Ken Thompson y Dennis Ritchie** de la empresa *Bell Laboratories* en 1969.
+-   SO multitarea y multiusuario.
+
+## GNU/Linux
+
+-   En 1983 **Richard Stallman** lideró la iniciativa [GNU](https://www.gnu.org/) (GNU's Not Unix), SO compatible con UNIX de libre distribución y acceso sin restricciones al código fuente.
+-   En 1991 **Linus Torvalds** creó su propio [kernel](https://linuxjourney.com/lesson/kernel-overview) (Linux), que es la parte del SO que permite la comunicación con los componentes de Hardware. Este kernel fue distribuido de forma libre y gratuita.
+-   Ambos proyectos se juntaron y se creó **GNU/Linux**
+
+[![](https://rsg-ecuador.github.io/unix.bioinfo.rsgecuador/_images/GNU_LIN1.png){fig-align="center"}](https://rsg-ecuador.github.io/unix.bioinfo.rsgecuador/content/Curso_basico/01_Unix_GNU-Linux/1_Conceptos_Unix_GNU_Linux.html)
+
+## Filosofía GNU/Linux
+
+-   Los usuarios son libres de **ejecutar, copiar, distribuir, estudiar, cambiar y mejorar** el software.
+-   El [software libre](https://www.gnu.org/philosophy/free-sw.html) se refiere a las libertades mencionadas, no al precio.
+-   ["open source"](https://opensource.org/) vs ["free software"](https://www.gnu.org/philosophy/free-sw.html).
+
+## Ubuntu
+
+-   Una de las distribuciones de GNU/Linux más populares.
+-   Está basada en [Debian](https://www.debian.org/) y fue desarrollada por la empresa [*Canonical*](https://canonical.com/)
+-   Facilidad de uso e instalación.
+-   Interfaz de usuario amigable.
+
+[![](https://rsg-ecuador.github.io/unix.bioinfo.rsgecuador/_images/ubuntu.png){fig-align="center"}](https://rsg-ecuador.github.io/unix.bioinfo.rsgecuador/content/Curso_basico/01_Unix_GNU-Linux/1_Conceptos_Unix_GNU_Linux.html)
+
+## Shell / Bash / Bash Shell
+
+-   La [*shell*](https://en.wikipedia.org/wiki/Unix_shell) es el programa que provee una **interfaz de línea de comandos (CLI)**, que permite la comunicación entre el usuario y el SO.
+-   La mayoría de distribuciones de Linux tienen por defecto [*bash*](https://www.gnu.org/software/bash/) ("Bourne Again SHell") como *shell*. Hay [otros tipos de shell](https://www.educba.com/types-of-shells-in-linux/) como **sh, csh, tcsh, ksh, zsh**, entre otras.
+
+![](https://rsg-ecuador.github.io/unix.bioinfo.rsgecuador/_images/b.png){fig-align="center" width="400"}
+
+::: callout-note
+Bash es un intérprete de comandos que te da el poder de hacer tareas simples rápidamente.
+:::
+
+## Material suplementario
+
+Si quieren aprender temas más sobre UNIX, GNU/Linux, bash, emulador de terminal y otros tema, pueden explorar los siguientes recursos, que son de acceso libre:
+
+-   Kross, S. (2017). *The unix workbench*. Leanpub. <https://leanpub.com/unix>
+-   Ross, A. (2019). *The Ultimate Linux Newbie Guide*. <https://linuxnewbieguide.org/>
+-   Shotts, W. (2019). *The Linux command line: a complete introduction*. No Starch Press. <http://www.linuxcommand.org/tlcl.php/index.php>
+-   Linux Journey. (2020). Linux Journey. <https://linuxjourney.com/>
+-   GNU. (2020). GNU. <https://www.gnu.org/>
+-   [GNU/Linux para bioinformatica](https://rsg-ecuador.github.io/unix.bioinfo.rsgecuador/content/Curso_basico/01_Unix_GNU-Linux/1_Conceptos_Unix_GNU_Linux.html)
